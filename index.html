@@ -3,63 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vishnuprasad N | Logistics & Supply Chain Leader</title>
+  <title>Vishnuprasad N | Supply Chain Leader</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #004aad;
+      --accent: #2a9d8f;
+      --bg: #f4f6f8;
+      --text: #333;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header, section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2 {
-      color: #004aad;
-    }
-    .highlight {
-      color: #2a9d8f;
-      font-weight: bold;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
     nav {
-      background: #004aad;
-      color: #fff;
+      background: var(--primary);
       padding: 1rem;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
     nav a {
-      color: #fff;
-      margin: 0 1rem;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    header, section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1.5rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+    }
+    .highlight {
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
     }
     .card {
-      background: #fff;
-      padding: 1rem 2rem;
+      background: white;
       border-radius: 10px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      margin: 1rem 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .tab-section {
       display: none;
-      animation: fade 0.5s ease-in-out;
+      animation: fadeIn 0.4s ease;
     }
     .tab-section.active {
       display: block;
     }
     footer {
+      background: #e0e0e0;
       text-align: center;
       padding: 2rem;
-      background: #eee;
       font-size: 0.9rem;
     }
-    @keyframes fade {
+    @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -75,8 +110,8 @@
 
 <header id="about" class="tab-section active">
   <h1>Vishnuprasad N</h1>
-  <p><strong>Location:</strong> Bengaluru, Karnataka | <strong>Email:</strong> vp2194@outlook.com</p>
-  <p class="highlight">Global Logistics & Supply Chain Leader with 8+ years of experience in pharma, petrochemicals, and export operations.</p>
+  <p><strong>Location:</strong> Bengaluru, India | <strong>Email:</strong> vp2194@outlook.com</p>
+  <p class="highlight">Global Logistics & Supply Chain Leader with 9+ years of experience in biopharma, petrochemicals, and export operations. Proven expertise in cold chain logistics, trade compliance, and operational optimization.</p>
 </header>
 
 <section id="experience" class="tab-section">
@@ -84,24 +119,24 @@
   <div class="card">
     <h3>Assistant Manager – Continual Improvement<br><small>Biocon Biologics | Jul 2024 – Present</small></h3>
     <ul>
-      <li>Led global consolidation and technological process improvements</li>
-      <li>Strengthened cold chain reliability, reduced shipping incidents</li>
-      <li>Conducted audits, optimized inventory, ensured trade compliance</li>
+      <li>Drove global process enhancements & tech integration</li>
+      <li>Improved cold chain reliability; reduced incidents</li>
+      <li>Led audits, training & inventory optimization</li>
     </ul>
   </div>
   <div class="card">
     <h3>Assistant Manager – Global Transportation<br><small>Biocon Biologics | Jul 2023 – Jul 2024</small></h3>
     <ul>
-      <li>Managed outbound logistics for US, EU, APAC from SEZs</li>
-      <li>Reduced logistics costs by 5% through trade lane optimization</li>
-      <li>Resolved temperature excursion issues in cold chain shipping</li>
+      <li>Managed global outbound logistics for US, EU, APAC</li>
+      <li>Achieved 5% cost reduction via trade lane optimization</li>
+      <li>Resolved risk issues (temperature excursions)</li>
     </ul>
   </div>
   <div class="card">
     <h3>Logistics Coordinator<br><small>Bulk Liquid Solutions | May 2022 – Jul 2023</small></h3>
     <ul>
-      <li>Streamlined logistics for bulk liquids and FIBC materials</li>
-      <li>Negotiated freight contracts and ensured compliance</li>
+      <li>Coordinated real-time logistics for bulk and FIBC goods</li>
+      <li>Negotiated contracts and ensured EXIM compliance</li>
     </ul>
   </div>
 </section>
@@ -109,18 +144,18 @@
 <section id="certifications" class="tab-section">
   <h2>Certifications</h2>
   <ul>
-    <li>Procurement and Logistics – CILT International</li>
-    <li>Supply Chain Strategy – ISCEA</li>
-    <li>SAP IBP & GTS – SAP Learning Hub</li>
-    <li>Demand Forecasting – Great Learning</li>
-    <li>Logistics Management – Great Learning</li>
+    <li>CILT – Procurement and Logistics</li>
+    <li>ISCEA – Supply Chain Strategy</li>
+    <li>SAP – IBP, GTS, Business Network for Logistics</li>
+    <li>Great Learning – Demand Forecasting, Logistics Management</li>
+    <li>Alison – Diploma in Supply Chain Management</li>
   </ul>
 </section>
 
 <section id="education" class="tab-section">
   <h2>Education</h2>
-  <p><strong>Diploma in Foreign Trade</strong> – Tolani Commerce College, 2020</p>
-  <p><strong>BSc in Applied Sciences</strong> – PSG College of Technology, 2015</p>
+  <p><strong>Diploma in Foreign Trade</strong><br>Tolani Commerce College, 2020</p>
+  <p><strong>B.Sc. Applied Sciences</strong><br>PSG College of Technology, 2015</p>
 </section>
 
 <section id="contact" class="tab-section">
@@ -130,16 +165,13 @@
 </section>
 
 <footer>
-  &copy; 2025 Vishnuprasad N. Built with 💼 and purpose.
+  &copy; 2025 Vishnuprasad N — All rights reserved. Powered by purpose and progress.
 </footer>
 
 <script>
-  function showTab(tabId) {
-    const tabs = document.querySelectorAll('.tab-section');
-    tabs.forEach(tab => {
-      tab.classList.remove('active');
-    });
-    document.getElementById(tabId).classList.add('active');
+  function showTab(id) {
+    document.querySelectorAll('.tab-section').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
   }
 </script>
 
