@@ -35,6 +35,7 @@
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
     .card {
       background: #fff;
@@ -43,34 +44,43 @@
       margin-bottom: 1.5rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+    .tab-section {
+      display: none;
+      animation: fade 0.5s ease-in-out;
+    }
+    .tab-section.active {
+      display: block;
+    }
     footer {
       text-align: center;
       padding: 2rem;
       background: #eee;
       font-size: 0.9rem;
     }
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#education">Education</a>
-  <a href="#resume">Resume</a>
-  <a href="#contact">Contact</a>
+  <a onclick="showTab('about')">About</a>
+  <a onclick="showTab('experience')">Experience</a>
+  <a onclick="showTab('certifications')">Certifications</a>
+  <a onclick="showTab('education')">Education</a>
+  <a onclick="showTab('contact')">Contact</a>
 </nav>
 
-<header id="about">
+<header id="about" class="tab-section active">
   <h1>Vishnuprasad N</h1>
   <p><strong>Location:</strong> Bengaluru, Karnataka | <strong>Email:</strong> vp2194@outlook.com</p>
   <p class="highlight">Global Logistics & Supply Chain Leader with 8+ years of experience in pharma, petrochemicals, and export operations.</p>
 </header>
 
-<section id="experience">
+<section id="experience" class="tab-section">
   <h2>Experience</h2>
-
   <div class="card">
     <h3>Assistant Manager – Continual Improvement<br><small>Biocon Biologics | Jul 2024 – Present</small></h3>
     <ul>
@@ -79,7 +89,6 @@
       <li>Conducted audits, optimized inventory, ensured trade compliance</li>
     </ul>
   </div>
-
   <div class="card">
     <h3>Assistant Manager – Global Transportation<br><small>Biocon Biologics | Jul 2023 – Jul 2024</small></h3>
     <ul>
@@ -88,7 +97,6 @@
       <li>Resolved temperature excursion issues in cold chain shipping</li>
     </ul>
   </div>
-
   <div class="card">
     <h3>Logistics Coordinator<br><small>Bulk Liquid Solutions | May 2022 – Jul 2023</small></h3>
     <ul>
@@ -98,7 +106,7 @@
   </div>
 </section>
 
-<section id="certifications">
+<section id="certifications" class="tab-section">
   <h2>Certifications</h2>
   <ul>
     <li>Procurement and Logistics – CILT International</li>
@@ -109,26 +117,31 @@
   </ul>
 </section>
 
-<section id="education">
+<section id="education" class="tab-section">
   <h2>Education</h2>
   <p><strong>Diploma in Foreign Trade</strong> – Tolani Commerce College, 2020</p>
   <p><strong>BSc in Applied Sciences</strong> – PSG College of Technology, 2015</p>
 </section>
 
-<section id="resume">
-  <h2>Resume</h2>
-  <p>You can download my full resume here: <a href="https://yourlink.com/resume.pdf" target="_blank">Download Resume (PDF)</a></p>
-</section>
-
-<section id="contact">
+<section id="contact" class="tab-section">
   <h2>Contact</h2>
   <p>📧 Email: <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a></p>
-  <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/[your-profile]">linkedin.com/in/your-profile</a></p>
+  <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></p>
 </section>
 
 <footer>
   &copy; 2025 Vishnuprasad N. Built with 💼 and purpose.
 </footer>
+
+<script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-section');
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
 
 </body>
 </html>
