@@ -1,179 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vishnuprasad N | Supply Chain Leader</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishnuprasad N - Logistics & Supply Chain Expert</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    :root {
-      --primary: #004aad;
-      --accent: #2a9d8f;
-      --bg: #f4f6f8;
-      --text: #333;
-    }
-    * {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
     }
-    nav {
-      background: var(--primary);
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+    .section-header {
+      border-bottom: 2px solid #1d4ed8;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-      transition: color 0.3s ease;
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 2rem;
     }
-    nav a:hover {
-      color: var(--accent);
-    }
-    header, section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1.5rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: var(--primary);
-    }
-    h2 {
-      color: var(--primary);
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 5px;
-    }
-    .highlight {
-      color: var(--accent);
-      font-weight: bold;
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .tab-section {
-      display: none;
-      animation: fadeIn 0.4s ease;
-    }
-    .tab-section.active {
-      display: block;
-    }
-    footer {
-      background: #e0e0e0;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #1d4ed8;
+      border-radius: 50%;
     }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="bg-blue-700 text-white p-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Vishnuprasad N</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:underline">Home</a></li>
+        <li><a href="#experience" class="hover:underline">Experience</a></li>
+        <li><a href="#education" class="hover:underline">Education</a></li>
+        <li><a href="#certifications" class="hover:underline">Certifications</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav>
-  <a onclick="showTab('about')">About</a>
-  <a onclick="showTab('experience')">Experience</a>
-  <a onclick="showTab('certifications')">Certifications</a>
-  <a onclick="showTab('education')">Education</a>
-  <a onclick="showTab('contact')">Contact</a>
-</nav>
+  <!-- Hero Section -->
+  <section id="home" class="bg-blue-100 py-20 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Vishnuprasad N</h2>
+      <p class="text-xl mb-6">Logistics & Supply Chain Expert | 8+ Years of Global Expertise</p>
+      <p class="text-lg max-w-2xl mx-auto">
+        Accomplished professional specializing in cold chain logistics, SAP, and global trade compliance. Proven track record in optimizing supply chains, reducing costs, and ensuring compliance across international markets.
+      </p>
+      <a href="#contact" class="mt-6 inline-block bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-800">Get in Touch</a>
+    </div>
+  </section>
 
-<header id="about" class="tab-section active">
-  <h1>Vishnuprasad N</h1>
-  <p><strong>Location:</strong> Bengaluru, India | <strong>Email:</strong> vp2194@outlook.com</p>
-  <p class="highlight">Global Logistics & Supply Chain Leader with 9+ years of experience in biopharma, petrochemicals, and export operations. Proven expertise in cold chain logistics, trade compliance, and operational optimization.</p>
-</header>
+  <!-- Executive Summary -->
+  <section id="summary" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold section-header">Executive Summary</h2>
+      <p class="text-lg mb-4">
+        With over 8 years of experience managing complex, high-value global supply chains, I specialize in cold chain logistics for biosimilars, crude petroleum, petrochemicals, and FIBC products. Recognized for delivering significant cost reductions, improving operational efficiency, and ensuring strict compliance across intricate international supply chains.
+      </p>
+      <p class="text-lg">
+        Proficient in SAP, INCOTERMS, and global trade compliance, I have a proven track record of optimizing processes, negotiating favorable freight terms, and implementing reliable, cost-effective logistics solutions in dynamic, high-stakes environments.
+      </p>
+    </div>
+  </section>
 
-<section id="experience" class="tab-section">
-  <h2>Experience</h2>
-  <div class="card">
-    <h3>Assistant Manager – Continual Improvement<br><small>Biocon Biologics | Jul 2024 – Present</small></h3>
-    <ul>
-      <li>Drove global process enhancements & tech integration</li>
-      <li>Improved cold chain reliability; reduced incidents</li>
-      <li>Led audits, training & inventory optimization</li>
-    </ul>
-  </div>
-  <div class="card">
-    <h3>Assistant Manager – Global Transportation<br><small>Biocon Biologics | Jul 2023 – Jul 2024</small></h3>
-    <ul>
-      <li>Managed global outbound logistics for US, EU, APAC</li>
-      <li>Achieved 5% cost reduction via trade lane optimization</li>
-      <li>Resolved risk issues (temperature excursions)</li>
-    </ul>
-  </div>
-  <div class="card">
-    <h3>Logistics Coordinator<br><small>Bulk Liquid Solutions | May 2022 – Jul 2023</small></h3>
-    <ul>
-      <li>Coordinated real-time logistics for bulk and FIBC goods</li>
-      <li>Negotiated contracts and ensured EXIM compliance</li>
-    </ul>
-  </div>
-</section>
+  <!-- Professional Experience -->
+  <section id="experience" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold section-header">Professional Experience</h2>
+      <div class="timeline">
+        <!-- Biocon Biologics - Assistant Manager - Continual Improvement -->
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">Assistant Manager - Continual Improvement</h3>
+          <p class="text-gray-600">Biocon Biologics, Bengaluru | Jul 2024 - Present</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Elevated global business performance through advanced technological solutions for consolidation.</li>
+            <li>Strengthened cold chain reliability, reducing shipping incidents and optimizing inventory.</li>
+            <li>Led training sessions and audits to enhance SCM processes and ensure compliance.</li>
+            <li>Built strong stakeholder relationships for seamless communication and customer satisfaction.</li>
+          </ul>
+        </div>
+        <!-- Biocon Biologics - Assistant Manager - Global Transportation -->
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">Assistant Manager - Global Transportation - Advanced Markets</h3>
+          <p class="text-gray-600">Biocon Biologics, Bengaluru | Jul 2023 - Present</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Directed outbound logistics for US, UK, EU, and APAC, ensuring compliant deliveries.</li>
+            <li>Achieved 5% reduction in logistics spending through freight cost negotiations.</li>
+            <li>Enhanced cold chain reliability and ensured trade compliance with accurate documentation.</li>
+            <li>Managed freight bill verification in SAP and resolved shipping issues effectively.</li>
+          </ul>
+        </div>
+        <!-- Bulk Liquid Solutions -->
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">Logistics Coordinator</h3>
+          <p class="text-gray-600">Bulk Liquid Solutions, Bengaluru | May 2022</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Developed efficient logistics strategies for seamless goods movement.</li>
+            <li>Negotiated service contracts to reduce freight costs and enhance efficiency.</li>
+            <li>Ensured regulatory compliance and reconciled shipping documents accurately.</li>
+          </ul>
+        </div>
+        <!-- Enventure Engineering -->
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">Senior Executive</h3>
+          <p class="text-gray-600">Enventure Engineering, Bengaluru | Apr 2021</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Led customer satisfaction evaluations to improve organizational strategies.</li>
+            <li>Served as ISO management representative, ensuring compliance with standards.</li>
+            <li>Collaborated with certifying bodies to maintain ISO certification.</li>
+          </ul>
+        </div>
+        <!-- IMC Limited -->
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">Terminal Assistant - Operations - Liquid Storage</h3>
+          <p class="text-gray-600">IMC Limited, Kandla | Nov 2015</p>
+          <ul class="list-disc ml-6 mt-2">
+            <li>Managed custom bonded warehouse operations for petrochemicals.</li>
+            <li>Conducted internal and safety audits to ensure ISO-QMS compliance.</li>
+            <li>Supervised tank farm operations with precise documentation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="certifications" class="tab-section">
-  <h2>Certifications</h2>
-  <ul>
-    <li>CILT – Procurement and Logistics</li>
-    <li>ISCEA – Supply Chain Strategy</li>
-    <li>SAP – IBP, GTS, Business Network for Logistics</li>
-    <li>Great Learning – Demand Forecasting, Logistics Management</li>
-    <li>Alison – Diploma in Supply Chain Management</li>
-  </ul>
-</section>
+  <!-- Education -->
+  <section id="education" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold section-header">Education</h2>
+      <div class="mb-6">
+        <h3 class="text-xl font-semibold">Diploma in Foreign Trade</h3>
+        <p class="text-gray-600">Tolani Commerce College, Adipur | Jul 2018 - Jul 2020 | GPA: 7.3</p>
+        <p>Specialized in export-import documentation, international marketing, and logistics.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold">Bachelor of Science in Applied Sciences</h3>
+        <p class="text-gray-600">PSG College of Technology, Coimbatore | Jul 2012 - May 2015 | GPA: 6.85</p>
+        <p>Focused on physics, chemistry, computer programming, and engineering practices.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="education" class="tab-section">
-  <h2>Education</h2>
-  <p><strong>Diploma in Foreign Trade</strong><br>Tolani Commerce College, 2020</p>
-  <p><strong>B.Sc. Applied Sciences</strong><br>PSG College of Technology, 2015</p>
-</section>
+  <!-- Certifications -->
+  <section id="certifications" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold section-header">Certifications</h2>
+      <ul class="list-disc ml-6">
+        <li>Procurement and Logistics, CILT International | Jan 2025</li>
+        <li>Diploma in Supply Chain Management, Alison | Jan 2025</li>
+        <li>Demand Forecasting in Supply Chain, Great Learning | Oct 2024</li>
+        <li>Supply Chain Planning and Strategy, ISCEA | Oct 2024</li>
+        <li>SAP Integrated Business Planning for Supply Chain, SAP Learning | Sep 2024</li>
+        <li>SAP Business Network for Logistics, SAP Learning | Sep 2024</li>
+        <li>Basics of SAP Global Trade Services, SAP Learning | Sep 2024</li>
+        <li>Logistics Management, Great Learning | Feb 2023</li>
+        <li>SAP MM (Materials Management), LinkedIn | Jan 2022</li>
+        <li>Supply Chain and Operations, NASBA | Jan 2022</li>
+      </ul>
+    </div>
+  </section>
 
-<section id="contact" class="tab-section">
-  <h2>Contact</h2>
-  <p>📧 Email: <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a></p>
-  <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></p>
-</section>
+  <!-- Awards -->
+  <section id="awards" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold section-header">Awards</h2>
+      <p>Rewards and Recognition - Biocon-tributer - 2024, Biocon Biologics Limited | Sep 2024</p>
+      <p class="ml-6">ACHIEVER - For exceptional contribution in meeting organizational goals in H2-FY24.</p>
+    </div>
+  </section>
 
-<footer>
-  &copy; 2025 Vishnuprasad N — All rights reserved. Powered by purpose and progress.
-</footer>
+  <!-- Contact Form -->
+  <section id="contact" class="bg-blue-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold section-header">Contact Me</h2>
+      <form id="contact-form" class="max-w-lg mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block text-lg mb-2">Name</label>
+          <input type="text" id="name" class="w-full p-2 border rounded" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-lg mb-2">Email</label>
+          <input type="email" id="email" class="w-full p-2 border rounded" required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-lg mb-2">Message</label>
+          <textarea id="message" class="w-full p-2 border rounded" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-800">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-<script>
-  function showTab(id) {
-    document.querySelectorAll('.tab-section').forEach(el => el.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
-</script>
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white py-4 text-center">
+    <p>&copy; 2025 Vishnuprasad N. All rights reserved.</p>
+    <p>
+      <a href="mailto:vp2194@outlook.com" class="hover:underline">vp2194@outlook.com</a> | 
+      <a href="tel:+918807293646" class="hover:underline">+91 8807293646</a> | 
+      <a href="https://linkedin.com" class="hover:underline">LinkedIn</a>
+    </p>
+  </footer>
 
+  <!-- JavaScript for Form Submission -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for your message! I will get back to you soon.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
