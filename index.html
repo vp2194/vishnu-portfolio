@@ -1,205 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vishnuprasad N - Global Logistics & Supply Chain Specialist</title>
-  <style>
-    /* Basic Reset and Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vishnuprasad N - Global Logistics & Supply Chain Specialist</title>
+<style>
+  /* Reset & base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: #f0f4f8;
+    color: #2c3e50;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+  }
+  a {
+    color: #2980b9; text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    body {
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  }
 
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #34495e;
+    margin-bottom: 5px;
+  }
+  header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+  }
+  header .contact-links {
+    margin-top: 15px;
+  }
+  header .contact-links a {
+    margin: 0 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border: 2px solid #2980b9;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  header .contact-links a:hover {
+    background-color: #2980b9;
+    color: #fff;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 50px;
+  }
+  section h2 {
+    font-size: 1.8rem;
+    border-left: 6px solid #2980b9;
+    padding-left: 14px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+  }
+
+  /* Summary */
+  #summary p {
+    font-size: 1.1rem;
+    max-width: 850px;
+    margin: auto;
+    color: #34495e;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    gap: 15px 30px;
+  }
+  .skill {
+    background: #ecf0f1;
+    border-radius: 10px;
+    padding: 12px 15px;
+    box-shadow: inset 0 0 8px #bdc3c7;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .skill-bar {
+    height: 8px;
+    background: #2980b9;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    width: 0;
+    transition: width 1.5s ease;
+  }
+
+  /* Experience */
+  .exp-item {
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+  }
+  .exp-header {
+    background: #2980b9;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .exp-header:hover {
+    background: #1f5f8b;
+  }
+  .exp-header h3 {
+    font-size: 1.2rem;
+  }
+  .exp-header span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  .exp-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9f9f9;
+    padding: 0 20px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+  }
+  .exp-content.open {
+    padding: 16px 20px;
+    max-height: 500px; /* enough for content */
+  }
+  .exp-content ul {
+    margin-top: 10px;
+    list-style: disc inside;
+    color: #34495e;
+  }
+
+  /* Education & Certifications */
+  .edu-cert-list {
+    list-style-type: none;
+    color: #34495e;
+  }
+  .edu-cert-list li {
+    margin-bottom: 15px;
+  }
+  .edu-cert-list strong {
+    color: #2980b9;
+  }
+
+  /* Awards & Volunteering */
+  .award, .volunteer {
+    background: #d6eaf8;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    color: #1b4f72;
+    font-weight: 600;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Dark mode toggle */
+  #toggleTheme {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2980b9;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+    z-index: 1000;
+  }
+  #toggleTheme:hover {
+    background: #1f5f8b;
+  }
+
+  /* Dark mode styles */
+  body.dark {
+    background: #1c1c1c;
+    color: #eee;
+  }
+  body.dark .container {
+    background: #2c2c2c;
+    box-shadow: 0 12px 25px rgba(255 255 255 / 0.1);
+  }
+  body.dark header h1, body.dark header p {
+    color: #d1d1d1;
+  }
+  body.dark header .contact-links a {
+    border-color: #3498db;
+    color: #3498db;
+  }
+  body.dark header .contact-links a:hover {
+    background-color: #3498db;
+    color: #222;
+  }
+  body.dark section h2 {
+    border-left-color: #3498db;
+    color: #d1d1d1;
+  }
+  body.dark .skill {
+    background: #444;
+    box-shadow: inset 0 0 8px #666;
+    color: #ddd;
+  }
+  body.dark .skill-bar {
+    background: #3498db;
+  }
+  body.dark .exp-header {
+    background: #3498db;
+  }
+  body.dark .exp-header:hover {
+    background: #2980b9;
+  }
+  body.dark .exp-content {
+    background: #383838;
+    color: #eee;
+  }
+  body.dark .edu-cert-list li {
+    color: #ddd;
+  }
+  body.dark .award, body.dark .volunteer {
+    background: #3498db;
+    color: #222;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
     .container {
-      max-width: 960px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 25px 20px;
     }
-
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #2c3e50;
+      font-size: 2rem;
     }
-
-    header p {
-      color: #7f8c8d;
+    section h2 {
+      font-size: 1.5rem;
     }
-
-    header a {
-      color: #2980b9;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-
-    section {
-      margin-top: 30px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      color: #34495e;
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    details summary {
-      font-weight: bold;
-      cursor: pointer;
-      color: #2c3e50;
-    }
-
-    details[open] {
-      background: #ecf0f1;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    .skills-list li {
-      display: inline-block;
-      background: #3498db;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 20px;
-      margin: 5px 5px 0 0;
-      font-size: 0.9rem;
-    }
-
-    .btn {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #3498db;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #2980b9;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: #999;
-      font-size: 0.9rem;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Vishnuprasad N</h1>
-      <p>Global Logistics & Supply Chain Specialist</p>
-      <p>
-        Bengaluru, Karnataka, India |
-        <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a> |
-        <a href="https://www.linkedin.com/in/vishnuprasad-n" target="_blank">LinkedIn</a>
-      </p>
-    </header>
 
-    <section>
-      <h2>Summary</h2>
-      <p>
-        Logistics professional with 9+ years of global experience across supply chain, transportation, and procurement. Specialized in cold chain logistics, trade compliance, and end-to-end logistics operations across US, EU, APAC, LATAM, and AFMET regions.
-      </p>
-    </section>
+<button id="toggleTheme" aria-label="Toggle Dark Mode">🌙</button>
 
-    <section>
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Cold Chain Logistics</li>
-        <li>RFP/RFQ</li>
-        <li>Vendor Management</li>
-        <li>Strategic Sourcing</li>
-        <li>Freight Negotiation</li>
-        <li>ISO-QMS (9001:2015)</li>
-        <li>SAP SD</li>
-        <li>Power BI</li>
-        <li>Trade Compliance</li>
-      </ul>
-    </section>
+<div class="container">
+  <header>
+    <h1>Vishnuprasad N</h1>
+    <p>Global Logistics & Supply Chain Specialist | 9+ Years Driving Excellence in Complex International Operations</p>
+    <div class="contact-links" aria-label="Contact and Social Links">
+      <a href="mailto:vp2194@outlook.com" target="_blank" rel="noopener">Email</a>
+      <a href="https://www.linkedin.com/in/vishnuprasad-n" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#summary">Summary</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#awards">Awards</a>
+      <a href="#volunteering">Volunteering</a>
+    </div>
+  </header>
 
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>CSCMP Supply Chain Foundations – May 2025</li>
-        <li>Procurement & Logistics – CILT International – Jan 2025</li>
-      </ul>
-    </section>
+  <section id="summary" tabindex="0" aria-label="Professional Summary">
+    <h2>Summary</h2>
+    <p>Dynamic and results-oriented logistics professional with over 9 years of global experience across transportation, procurement, and vendor management. Proven track record of optimizing supply chains, executing complex logistics projects, and negotiating high-impact freight and service contracts across US, EU, APAC, LATAM, and AFMET regions.</p>
+    <p>Specialized in cold chain logistics, international trade compliance, and end-to-end logistics operations. Adept at managing RFPs/RFQs, consolidating global supplier bases, and driving cost reduction through strategic sourcing and cross-functional alignment. Hands-on leader recognized for analytical thinking, stakeholder engagement, and the ability to deliver scalable, cost-effective logistics solutions in fast-paced, high-growth environments.</p>
+  </section>
 
-    <section>
-      <h2>Experience</h2>
+  <section id="skills" tabindex="0" aria-label="Skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill" data-skill-level="95">Global Logistics Strategy<div class="skill-bar"></div></div>
+      <div class="skill" data-skill-level="90">Cold Chain Logistics<div class="skill-bar"></div></div>
+      <div class="skill" data-skill-level="85">Ocean, Air, LTL, FTL<div class="skill-bar"></div></div>
+      <div class="skill" data-skill-level="80">Procurement & Vendor Management<div class="skill-bar"></div></div>
+      <div class="skill" data-skill-level="88">RFI/RFP/RFQ Process<div class="skill-bar"></div></div>
+      <div class="skill" data-skill-level="92">Contract Negotiation<div class="skill-bar"></div></div>
+      <div class="skill" data-skill-level="85">Operational Excellence & Project Execution<div class="skill-bar"></div></div>
+      <div class="skill" data-skill-level="80">SAP, Power BI, Excel<div class="skill-bar"></div></div>
+      <div class="skill" data-skill-level="90">Trade Compliance & Customs Optimization<div class="skill-bar"></div></div>
+    </div>
+  </section>
 
-      <details open>
-        <summary>Assistant Manager – Global Continual Improvement | Biocon Biologics (Jul 2024 – Present)</summary>
-        <p>Reduced temperature excursion incidents by 25% through continuous improvement in cold chain logistics.</p>
-      </details>
+  <section id="experience" tabindex="0" aria-label="Experience">
+    <h2>Experience</h2>
 
-      <details>
-        <summary>Assistant Manager – Global Transportation | Biocon Biologics (Jul 2023 – Jun 2024)</summary>
-        <p>Led freight negotiations, logistics strategies, and vendor consolidation across multiple regions.</p>
-      </details>
+    <article class="exp-item">
+      <div class="exp-header" tabindex="0" role="button" aria-expanded="false" aria-controls="exp1-details" id="exp1">
+        <h3>Assistant Manager - Global Continual Improvement, Biocon Biologics</h3>
+        <span>Jul 2024 - Present</span>
+      </div>
+      <div class="exp-content" id="exp1-details" aria-labelledby="exp1" hidden>
+        <ul>
+          <li>Developed and led global continuous improvement initiatives in cold chain logistics, reducing temperature excursion incidents by 25%.</li>
+          <li>Improved cold chain operations, reducing shipping incidents and optimizing inventory management.</li>
+          <li>Partnered with procurement and operations teams to align cost, quality, and service expectations across vendors and regions.</li>
+          <li>Spearheaded training initiatives and strategic reviews to empower teams and foster continuous growth.</li>
+        </ul>
+      </div>
+    </article>
 
-      <details>
-        <summary>Logistics Coordinator | Bulk Liquid Solutions (May 2022 – Jun 2023)</summary>
-        <p>Implemented shipment tracking and negotiated 3PL rates to improve reliability and reduce delays.</p>
-      </details>
+    <article class="exp-item">
+      <div class="exp-header" tabindex="0" role="button" aria-expanded="false" aria-controls="exp2-details" id="exp2">
+        <h3>Assistant Manager - Global Transportation - Advanced Markets, Biocon Biologics</h3>
+        <span>Jul 2023 - Jun 2024</span>
+      </div>
+      <div class="exp-content" id="exp2-details" aria-labelledby="exp2" hidden>
+        <ul>
+          <li>Managed logistics strategy and execution across key markets (US, UK, EU, LATAM, APAC, AFMET), achieving a 96% on-time delivery rate.</li>
+          <li>Led RFPs, negotiated multi-year freight and cold chain contracts, achieving 5% annual transport spend reduction.</li>
+          <li>Negotiated and formalized RFPs, NDAs, and long-term vendor agreements ensuring cost control and service reliability.</li>
+          <li>Consolidated vendor base for specialized transport services, enhancing operational efficiency and cost leverage.</li>
+          <li>Collaborated with Trade Compliance, Regulatory, and Supply Planning teams to align logistics with business goals.</li>
+        </ul>
+      </div>
+    </article>
 
-      <details>
-        <summary>Senior Executive | Enventure Engineering (Apr 2021 – Mar 2022)</summary>
-        <p>Managed dashboards, KPIs, and supported project audits for compliance and performance.</p>
-      </details>
+    <article class="exp-item">
+      <div class="exp-header" tabindex="0" role="button" aria-expanded="false" aria-controls="exp3-details" id="exp3">
+        <h3>Logistics Coordinator, Bulk Liquid Solutions</h3>
+        <span>May 2022 - Jun 2023</span>
+      </div>
+      <div class="exp-content" id="exp3-details" aria-labelledby="exp3" hidden>
+        <ul>
+          <li>Developed lane optimization models and real-time shipment tracking protocols, improving service reliability.</li>
+          <li>Negotiated rate agreements with 3PLs and freight carriers, reducing transit delays and saving costs.</li>
+          <li>Ensured full compliance with export/import documentation and customs procedures across multimodal shipments.</li>
+        </ul>
+      </div>
+    </article>
 
-      <details>
-        <summary>Terminal Assistant – IMC Limited (Nov 2015 – Aug 2020)</summary>
-        <p>Oversaw bulk liquid terminal operations and maintained ISO QMS compliance.</p>
-      </details>
-    </section>
+    <article class="exp-item">
+      <div class="exp-header" tabindex="0" role="button" aria-expanded="false" aria-controls="exp4-details" id="exp4">
+        <h3>Senior Executive, Enventure Engineering</h3>
+        <span>Apr 2021 - Mar 2022</span>
+      </div>
+      <div class="exp-content" id="exp4-details" aria-labelledby="exp4" hidden>
+        <ul>
+          <li>Managed client performance dashboards and internal KPIs, contributing to SLA optimization and operational planning.</li>
+          <li>Supported project management teams in coordinating data analysis and compliance audits.</li>
+        </ul>
+      </div>
+    </article>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>PG Diploma in Foreign Trade – Tolani Commerce College (2018–2020)</li>
-        <li>B.Sc. Applied Sciences – PSG College of Technology (2012–2015)</li>
-      </ul>
-    </section>
+    <article class="exp-item">
+      <div class="exp-header" tabindex="0" role="button" aria-expanded="false" aria-controls="exp5-details" id="exp5">
+        <h3>Terminal Assistant - Operations, IMC Limited</h3>
+        <span>Nov 2015 - Aug 2020</span>
+      </div>
+      <div class="exp-content" id="exp5-details" aria-labelledby="exp5" hidden>
+        <ul>
+          <li>Oversaw terminal logistics and storage for crude petroleum and petrochemical products.</li>
+          <li>Ensured ISO 9001:2015 QMS compliance through audits, improving process consistency and safety.</li>
+          <li>Collaborated on SOP implementation and improved turnaround times for product loading/unloading.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
 
-    <section>
-      <h2>Awards</h2>
-      <ul>
-        <li>ACHIEVER – Biocon Biologics (Sep 2024)</li>
-      </ul>
-    </section>
+  <section id="education" tabindex="0" aria-label="Education and Certifications">
+    <h2>Education & Certifications</h2>
+    <ul class="edu-cert-list">
+      <li><strong>PG Diploma in Foreign Trade</strong>, Tolani Commerce College, Gandhidham, India (Jul 2018 - Jul 2020)<br>
+      Focus: Export & Import, Documentation, International Marketing & Logistics Systems<br>GPA: 7.3</li>
 
-    <section>
-      <h2
+      <li><strong>Bachelor of Science (BSc) - Applied Sciences</strong>, PSG College of Technology, Coimbatore, India (Jul 2012 - May 2015)<br>
+      Specialization in Physics, Chemistry, Mathematics, and Computer Programming.<br>GPA: 6.85</li>
+
+      <li><strong>CSCMP Supply Chain Foundations: The Essentials</strong> – Council of Supply Chain Management Professionals (May 2025)</li>
+
+      <li><strong>Procurement and Logistics</strong> – CILT International - Chartered Institute of Logistics & Transport International (Jan 2025)</li>
+    </ul>
+  </section>
+
+  <section id="awards" tabindex="0" aria-label="Awards">
+    <h2>Awards</h2>
+    <div class="award" role="note">
+      ACHIEVER, Biocon Biologics Limited (Sep 2024)<br>
+      For exceptional and ingenious contributions in meeting functional and organizational goals in H2-FY24.
+    </div>
+  </section>
+
+  <section id="volunteering" tabindex="0" aria-label="Volunteering">
+    <h2>Volunteering</h2>
+    <div class="volunteer">
+      Executive Council Member, Student Union - PSG College of Technology (Jul 2014 — May 2015)
+    </div>
+    <div class="volunteer">
+      Coordinator, Youth Red Cross - PSG College of Technology (Jul 2013 — May 2015)
+    </div>
+  </section>
+</div>
+
+<script>
+  // Skill bar animation on scroll
+  function animateSkills() {
+    const skills = document.querySelectorAll('.skill');
+    const triggerBottom = window.innerHeight * 0.85;
+    skills.forEach(skill => {
+      const skillTop = skill.getBoundingClientRect().top;
+      if (skillTop < triggerBottom) {
+        const level = skill.getAttribute('data-skill-level');
+        const bar = skill.querySelector('.skill-bar');
+        bar.style.width = level + '%';
+      }
+    });
+  }
+  window.addEventListener('scroll', animateSkills);
+  window.addEventListener('load', animateSkills);
+
+  // Collapsible experience sections
+  const expHeaders = document.querySelectorAll('.exp-header');
+  expHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.toggle('open');
+      content.hidden = !isOpen;
+      header.setAttribute('aria-expanded', isOpen);
+    });
+    header.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        header.click();
+      }
+    });
+  });
+
+  // Dark mode toggle
+  const toggleBtn = document.getElementById('toggleTheme');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    if(document.body.classList.contains('dark')) {
+      toggleBtn.textContent = '☀️';
+      toggleBtn.setAttribute('aria-label', 'Toggle Light Mode');
+    } else {
+      toggleBtn.textContent = '🌙';
+      toggleBtn.setAttribute('aria-label', 'Toggle Dark Mode');
+    }
+  });
+</script>
+
+</body>
+</html>
