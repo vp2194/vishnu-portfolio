@@ -5,332 +5,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vishnuprasad N - Global Logistics & Supply Chain Specialist</title>
   <style>
-    /* Reset & base */
+    /* Basic Reset and Styles */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     body {
-      background: #f5f7fa;
-      color: #2c3e50;
+      background: #f9f9f9;
+      color: #333;
       line-height: 1.6;
-      font-size: 16px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       padding: 20px;
     }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    h1, h2, h3 {
-      color: #34495e;
-    }
+
     .container {
-      max-width: 900px;
-      width: 100%;
-      background: white;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      padding: 30px 40px;
-      margin-bottom: 40px;
+      max-width: 960px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
+
     header {
       text-align: center;
-      margin-bottom: 40px;
-    }
-    header h1 {
-      font-size: 2.6rem;
-      margin-bottom: 6px;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #7f8c8d;
-    }
-    section {
       margin-bottom: 30px;
     }
-    .skills-list, .certifications-list, .awards-list, .volunteering-list, .education-list, .experience-list {
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    header p {
+      color: #7f8c8d;
+    }
+
+    header a {
+      color: #2980b9;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #34495e;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    ul {
       list-style: none;
       padding-left: 0;
     }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    details summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #2c3e50;
+    }
+
+    details[open] {
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
     .skills-list li {
       display: inline-block;
       background: #3498db;
-      color: white;
-      padding: 6px 12px;
+      color: #fff;
+      padding: 5px 10px;
       border-radius: 20px;
-      margin: 5px 8px 5px 0;
+      margin: 5px 5px 0 0;
       font-size: 0.9rem;
-      cursor: default;
-      user-select: none;
-      transition: background 0.3s ease;
     }
-    .skills-list li:hover {
-      background: #2980b9;
-    }
-    .experience-item, .education-item {
-      margin-bottom: 20px;
-      border-left: 3px solid #3498db;
-      padding-left: 15px;
-    }
-    .experience-item h3, .education-item h3 {
-      margin-bottom: 6px;
-      color: #2c3e50;
-    }
-    .experience-item .company, .education-item .institution {
-      font-weight: 600;
-      color: #34495e;
-      margin-bottom: 4px;
-    }
-    .experience-item .date, .education-item .date {
-      font-size: 0.9rem;
-      color: #7f8c8d;
-      margin-bottom: 8px;
-    }
+
     .btn {
+      margin-top: 10px;
+      padding: 10px 20px;
       background: #3498db;
       color: white;
       border: none;
-      padding: 12px 28px;
-      font-size: 1rem;
       border-radius: 25px;
       cursor: pointer;
-      margin-top: 20px;
-      transition: background 0.3s ease;
     }
+
     .btn:hover {
       background: #2980b9;
     }
+
     footer {
-      margin-top: auto;
-      padding: 15px 10px;
-      font-size: 0.9rem;
-      color: #95a5a6;
       text-align: center;
-    }
-
-    /* Interactive accordion */
-    details {
-      background: #ecf0f1;
-      padding: 15px;
-      border-radius: 6px;
-      margin-bottom: 15px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    details[open] {
-      background: #d6eaf8;
-    }
-    summary {
-      font-weight: 600;
-      font-size: 1.1rem;
-      outline: none;
-      user-select: none;
-    }
-    details p, details ul {
-      margin-top: 10px;
-      color: #2c3e50;
-    }
-    details ul li {
-      margin-bottom: 6px;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      .skills-list li {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-      }
+      margin-top: 40px;
+      color: #999;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Vishnuprasad N</h1>
-    <p>Global Logistics & Supply Chain Specialist | 9+ Years Driving Excellence in Complex International Operations</p>
-    <p>
-      Bengaluru, Karnataka, India | 
-      <a href="mailto:vp2194@outlook.com" target="_blank" rel="noopener noreferrer">vp2194@outlook.com</a> | 
-      <a href="https://www.linkedin.com/in/vishnuprasad-n" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </p>
-  </header>
-
   <div class="container">
-    <section id="summary">
+    <header>
+      <h1>Vishnuprasad N</h1>
+      <p>Global Logistics & Supply Chain Specialist</p>
+      <p>
+        Bengaluru, Karnataka, India |
+        <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a> |
+        <a href="https://www.linkedin.com/in/vishnuprasad-n" target="_blank">LinkedIn</a>
+      </p>
+    </header>
+
+    <section>
       <h2>Summary</h2>
       <p>
-        Dynamic and results-oriented logistics professional with over 9 years of global experience across transportation, procurement, and vendor management. Proven track record of optimizing supply chains, executing complex logistics projects, and negotiating high-impact freight and service contracts across US, EU, APAC, LATAM, and AFMET regions.
-      </p>
-      <p>
-        Specialized in cold chain logistics, international trade compliance, and end-to-end logistics operations. Adept at managing RFPs/RFQs, consolidating global supplier bases, and driving cost reduction through strategic sourcing and cross-functional alignment. Hands-on leader recognized for analytical thinking, stakeholder engagement, and the ability to deliver scalable, cost-effective logistics solutions in fast-paced, high-growth environments.
+        Logistics professional with 9+ years of global experience across supply chain, transportation, and procurement. Specialized in cold chain logistics, trade compliance, and end-to-end logistics operations across US, EU, APAC, LATAM, and AFMET regions.
       </p>
     </section>
 
-    <section id="skills">
+    <section>
       <h2>Skills</h2>
-      <ul class="skills-list" title="Logistics & Supply Chain Management">
-        <li>Global Logistics Strategy</li>
+      <ul class="skills-list">
         <li>Cold Chain Logistics</li>
-        <li>Ocean, Air, LTL, FTL, Surface Transportation</li>
-        <li>Warehousing & Distribution</li>
-        <li>3PL Management</li>
-      </ul>
-      <ul class="skills-list" title="Procurement & Vendor Management">
-        <li>RFI / RFP / RFQ Process Ownership</li>
-        <li>Contract Negotiation & Freight Rate Management</li>
-        <li>Supplier Evaluation & Spend Analysis</li>
-        <li>Strategic Sourcing & Bid Consolidation</li>
-        <li>Master Agreements, NDA, SOW & MSA</li>
-      </ul>
-      <ul class="skills-list" title="Operational Excellence & Project Execution">
-        <li>Cross-Functional Collaboration</li>
-        <li>Cost Reduction & Avoidance Initiatives</li>
-        <li>KPI Development & Supplier Performance Metrics</li>
-        <li>Trade Compliance & Customs Process Optimization</li>
-        <li>ISO-QMS Compliance & Audit Readiness (9001:2015)</li>
-      </ul>
-      <ul class="skills-list" title="Tools & Technical Proficiency">
-        <li>SAP Sales & Distribution</li>
-        <li>Microsoft Excel</li>
+        <li>RFP/RFQ</li>
+        <li>Vendor Management</li>
+        <li>Strategic Sourcing</li>
+        <li>Freight Negotiation</li>
+        <li>ISO-QMS (9001:2015)</li>
+        <li>SAP SD</li>
         <li>Power BI</li>
-        <li>INCOTERMS</li>
-        <li>Global Trade Documentation</li>
-        <li>Transportation Management Systems</li>
-      </ul>
-      <ul class="skills-list" title="Soft Skills">
-        <li>High-Level Stakeholder Communication</li>
-        <li>Cross-Cultural Team Collaboration</li>
-        <li>Analytical Thinking & Data-Driven Decision Making</li>
+        <li>Trade Compliance</li>
       </ul>
     </section>
 
-    <section id="certifications">
+    <section>
       <h2>Certifications</h2>
-      <ul class="certifications-list">
-        <li><strong>CSCMP Supply Chain Foundations:</strong> The Essentials Professional Certificate, Council of Supply Chain Management Professionals (May 2025)</li>
-        <li><strong>Procurement and Logistics:</strong> CILT International - The Chartered Institute of Logistics & Transport International (Jan 2025)</li>
+      <ul>
+        <li>CSCMP Supply Chain Foundations – May 2025</li>
+        <li>Procurement & Logistics – CILT International – Jan 2025</li>
       </ul>
     </section>
 
-    <section id="experience">
+    <section>
       <h2>Experience</h2>
-      
-      <details class="experience-item" open>
-        <summary><strong>Assistant Manager - Global Continual Improvement</strong> at Biocon Biologics (Jul 2024 - Present)</summary>
-        <p>Developed and led global continuous improvement initiatives in cold chain logistics, reducing temperature excursion incidents by 25%.</p>
-        <p>Improved cold chain operations, reducing shipping incidents and optimizing inventory management.</p>
-        <p>Partnered with procurement and operations teams to align cost, quality, and service expectations across vendors and regions.</p>
-        <p>Spearheaded training initiatives and strategic reviews to empower teams and foster continuous growth.</p>
+
+      <details open>
+        <summary>Assistant Manager – Global Continual Improvement | Biocon Biologics (Jul 2024 – Present)</summary>
+        <p>Reduced temperature excursion incidents by 25% through continuous improvement in cold chain logistics.</p>
       </details>
 
-      <details class="experience-item">
-        <summary><strong>Assistant Manager - Global Transportation - Advanced Markets</strong> at Biocon Biologics (Jul 2023 - Jun 2024)</summary>
-        <p>Managed logistics strategy and execution across key markets (US, UK, EU, LATAM, APAC, AFMET), achieving a 96% on-time delivery rate.</p>
-        <p>Led RFPs, negotiated multi-year freight and cold chain contracts, achieving a 5% annual reduction in transportation spend.</p>
-        <p>Negotiated and formalized RFPs, NDAs, and long-term vendor agreements ensuring cost control and service reliability.</p>
-        <p>Consolidated vendor base for specialized transport services, enhancing operational efficiency and cost leverage.</p>
-        <p>Collaborated with cross-functional teams—Trade Compliance, Regulatory, Supply Planning—to align logistics solutions with business goals.</p>
+      <details>
+        <summary>Assistant Manager – Global Transportation | Biocon Biologics (Jul 2023 – Jun 2024)</summary>
+        <p>Led freight negotiations, logistics strategies, and vendor consolidation across multiple regions.</p>
       </details>
 
-      <details class="experience-item">
-        <summary><strong>Logistics Coordinator</strong> at Bulk Liquid Solutions (May 2022 - Jun 2023)</summary>
-        <p>Developed lane optimization models and real-time shipment tracking protocols, improving service reliability.</p>
-        <p>Negotiated rate agreements with 3PLs and freight carriers, reducing transit delays and achieving notable savings.</p>
-        <p>Ensured full compliance with export/import documentation and customs procedures across multimodal shipments.</p>
+      <details>
+        <summary>Logistics Coordinator | Bulk Liquid Solutions (May 2022 – Jun 2023)</summary>
+        <p>Implemented shipment tracking and negotiated 3PL rates to improve reliability and reduce delays.</p>
       </details>
 
-      <details class="experience-item">
-        <summary><strong>Senior Executive</strong> at Enventure Engineering (Apr 2021 - Mar 2022)</summary>
-        <p>Managed client performance dashboards and internal quality KPIs, contributing to SLA optimization and operational planning.</p>
-        <p>Supported project management teams in coordinating data analysis and compliance audits.</p>
+      <details>
+        <summary>Senior Executive | Enventure Engineering (Apr 2021 – Mar 2022)</summary>
+        <p>Managed dashboards, KPIs, and supported project audits for compliance and performance.</p>
       </details>
 
-      <details class="experience-item">
-        <summary><strong>Terminal Assistant - Operations - Liquid Storage in Bulk</strong> at IMC Limited (Nov 2015 - Aug 2020)</summary>
-        <p>Oversaw terminal logistics and storage operations for crude petroleum and petrochemical products.</p>
-        <p>Ensured ISO 9001:2015 QMS compliance through regular audits, improving process consistency and safety.</p>
-        <p>Collaborated with cross-site logistics teams to implement SOPs and enhance turnaround time for product loading/unloading.</p>
+      <details>
+        <summary>Terminal Assistant – IMC Limited (Nov 2015 – Aug 2020)</summary>
+        <p>Oversaw bulk liquid terminal operations and maintained ISO QMS compliance.</p>
       </details>
     </section>
 
-    <section id="education">
+    <section>
       <h2>Education</h2>
-
-      <details class="education-item" open>
-        <summary><strong>PG Diploma in Foreign Trade</strong> - Tolani Commerce College, Gandhidham (Jul 2018 - Jul 2020)</summary>
-        <p>International Business/Trade/Commerce</p>
-        <p>GPA: 7.3</p>
-        <p>Skill-based education to convert theoretical knowledge into practical real-world knowledge.</p>
-        <ul>
-          <li>Introduction to Export & Import</li>
-          <li>Export-Import Documentation</li>
-          <li>International Marketing</li>
-          <li>International Logistics System</li>
-        </ul>
-      </details>
-
-      <details class="education-item">
-        <summary><strong>Bachelor of Science (BSc), Applied Sciences</strong> - PSG College of Technology, Coimbatore (Jul 2012 - May 2015)</summary>
-        <p>GPA: 6.85</p>
-        <p>Specialization in Physics, Chemistry or Mathematics and Computer programming, with exposure to engineering practices and research methodologies.</p>
-      </details>
+      <ul>
+        <li>PG Diploma in Foreign Trade – Tolani Commerce College (2018–2020)</li>
+        <li>B.Sc. Applied Sciences – PSG College of Technology (2012–2015)</li>
+      </ul>
     </section>
 
-    <section id="awards">
+    <section>
       <h2>Awards</h2>
-      <ul class="awards-list">
-        <li><strong>ACHIEVER</strong>, Biocon Biologics Limited (Sep 2024) - For exceptional and ingenious contribution in meeting functional and organizational goals in innovation and service to the patient community.</li>
+      <ul>
+        <li>ACHIEVER – Biocon Biologics (Sep 2024)</li>
       </ul>
     </section>
 
-    <section id="volunteering">
-      <h2>Volunteering</h2>
-      <ul class="volunteering-list">
-        <li><strong>Executive Council Member</strong>, Student Union - PSG College of Technology (Jul 2014 — May 2015)</li>
-        <li><strong>Coordinator</strong>, Youth Red Cross - PSG College of Technology (Jul 2013 — May 2015)</li>
-      </ul>
-    </section>
-
-    <section id="contact" style="text-align:center;">
-      <h2>Contact Me</h2>
-      <p>
-        Feel free to reach out via email at
-        <a href="mailto:vp2194@outlook.com" target="_blank" rel="noopener noreferrer">vp2194@outlook.com</a>
-      </p>
-      <button class="btn" onclick="copyEmail()">Copy Email to Clipboard</button>
-      <p id="copyMessage" style="margin-top:10px; color:green; font-weight:600;"></p>
-    </section>
-  </div>
-
-  <footer>
-    &copy; 2025 Vishnuprasad N. All Rights Reserved.
-  </footer>
-
-  <script>
-    function copyEmail() {
-      const email = "vp2194@outlook.com";
-      navigator.clipboard.writeText(email).then(() => {
-        const msg = document.getElementById("copyMessage");
-        msg.textContent = "Email copied to clipboard!";
-        setTimeout(() => { msg.textContent = ""; }, 3000);
-      }).catch(() => {
-        alert("Failed to copy email, please copy manually.");
-      });
-    }
-  </script>
-</body>
-</html>
+    <section>
+      <h2
