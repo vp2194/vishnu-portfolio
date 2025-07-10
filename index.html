@@ -4,86 +4,99 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vishnuprasad N | Global Logistics & Supply Chain Specialist</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #004080;
+      --accent-color: #0066cc;
+      --text-color: #333;
+      --bg-color: #ffffff;
+      --section-padding: 2rem;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
+      background: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
     }
     header {
-      background: #004080;
+      background: var(--primary-color);
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1.5rem;
       text-align: center;
     }
     header h1 {
-      margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      font-weight: 700;
     }
     header p {
+      font-size: 1.1rem;
       margin-top: 0.5rem;
-      font-size: 1rem;
-      font-weight: 300;
+      font-weight: 400;
     }
     main {
-      padding: 2rem 1rem;
-      max-width: 960px;
+      max-width: 1000px;
       margin: auto;
+      padding: var(--section-padding) 1rem;
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: var(--section-padding);
     }
     h2 {
-      color: #004080;
-      font-size: 1.5rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3rem;
+      font-size: 1.75rem;
+      color: var(--primary-color);
       margin-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
     }
     ul {
-      list-style: disc;
-      padding-left: 1.5rem;
+      list-style-type: none;
+      padding-left: 1rem;
     }
-    footer {
-      background: #004080;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
+    ul li::before {
+      content: "\2022";
+      color: var(--accent-color);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    ul li {
+      margin-bottom: 0.75rem;
     }
     .contact a {
-      color: #fff;
+      color: var(--accent-color);
       text-decoration: none;
     }
     .contact a:hover {
       text-decoration: underline;
     }
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
     @media (max-width: 768px) {
       header h1 {
-        font-size: 1.5rem;
-      }
-      header p, footer {
-        font-size: 0.95rem;
+        font-size: 2rem;
       }
       h2 {
-        font-size: 1.25rem;
-      }
-      main {
-        padding: 1rem;
+        font-size: 1.5rem;
       }
     }
     @media (max-width: 480px) {
       header h1 {
-        font-size: 1.25rem;
-      }
-      header p, footer, .contact a {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
       }
       h2 {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
       }
     }
   </style>
@@ -93,32 +106,56 @@
     <h1>Vishnuprasad N</h1>
     <p>Global Logistics & Supply Chain Specialist | Cold Chain | Control Tower | SAP | Digital SCM</p>
   </header>
+
   <main>
     <section>
       <h2>About Me</h2>
-      <p>With over 9 years of global experience across pharmaceutical, petrochemical, and industrial logistics, I specialize in cold chain, control tower operations, packaging validation, and SAP-integrated supply chain management. I'm passionate about building efficient, compliant, and digitally enabled logistics networks that deliver measurable results across US, EU, LATAM, APAC, and AFMET markets.</p>
+      <p>I am a logistics and supply chain professional with 9+ years of global experience spanning pharmaceutical, petrochemical, and industrial sectors. My core strengths include cold chain compliance, packaging validation, and leading control tower operations for CMO logistics and new product launches. I bring deep hands-on experience with SAP SD and exposure to GTS, MM, and IBP. I focus on building scalable, cost-effective, and digitally enabled logistics networks.</p>
     </section>
+
     <section>
       <h2>Core Competencies</h2>
       <ul>
-        <li>Control Tower Operations & NPL Logistics Execution</li>
-        <li>Cold Chain Logistics & ISTA-7D Packaging Validation</li>
-        <li>Freight Spend Optimization & Global Vendor Governance</li>
-        <li>SAP SD/MM/GTS/IBP (User) | TMS Blueprinting</li>
-        <li>Digital SCM Tools: Power BI Dashboards, RTTVP, IoT-based Monitoring</li>
-        <li>Trade Compliance, GDP, USFDA Readiness & Audit Support</li>
+        <li>Control Tower Operations & NPL Execution</li>
+        <li>Cold Chain Logistics & ISTA-7D Validation</li>
+        <li>Global Freight Spend Optimization</li>
+        <li>Trade Compliance & GDP/USFDA Readiness</li>
+        <li>Digital SCM (Dashboards, IoT, RTTVP)</li>
+        <li>SAP SD/MM/GTS/IBP | TMS Blueprinting</li>
       </ul>
     </section>
+
     <section>
       <h2>Career Highlights</h2>
       <ul>
         <li>Reduced cold chain deviations by 25% through audit-based process improvements</li>
-        <li>Led control tower execution for multiple global New Product Launches (NPL)</li>
-        <li>Delivered freight savings via contract consolidation and lane-level optimization</li>
-        <li>Contributed to global SOP standardization and SOE planning inputs</li>
-        <li>Received 'Excellence in Cold Chain Logistics' and Biocon-Tributer awards</li>
+        <li>Led global logistics for multiple new product launches (US, EU, LATAM, APAC)</li>
+        <li>Delivered freight savings via vendor consolidation and lane optimization</li>
+        <li>Enabled packaging qualification and SOP standardization (ISTA-7D)</li>
+        <li>Received "Excellence in Cold Chain Logistics" and Biocon-Tributer awards</li>
       </ul>
     </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Generative AI for Supply Chain – CSCMP, 2025</li>
+        <li>Supply Chain Foundations – CSCMP, 2025</li>
+        <li>Exploring SAP S/4HANA Transportation Management – SAP, 2025</li>
+        <li>Procurement and Logistics – CILT International, 2025</li>
+        <li>SAP Business Network for Logistics – SAP, 2024</li>
+        <li>SAP Integrated Business Planning – SAP, 2024</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Awards & Recognition</h2>
+      <ul>
+        <li><strong>Excellence in Cold Chain Logistics</strong> – LogiTech Confex, 2025</li>
+        <li><strong>Biocon-Tributer Award</strong> – Biocon Biologics, 2024</li>
+      </ul>
+    </section>
+
     <section>
       <h2>Contact</h2>
       <p class="contact">
@@ -128,6 +165,7 @@
       </p>
     </section>
   </main>
+
   <footer>
     &copy; 2025 Vishnuprasad N | All rights reserved.
   </footer>
