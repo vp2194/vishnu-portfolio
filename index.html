@@ -3,292 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Vishnuprasad N - Global Supply Chain Transformation Leader | SAP Logistics & Cold-Chain Expert | 96% OTD | $4.5M Freight Portfolio"/>
+  <meta name="description" content="Vishnuprasad N – Global Supply Chain Transformation Leader | $4.5M Freight Portfolio | 96% OTD | SAP ECC LE-TRA/SD UAT Expert | Biocon Biologics"/>
   <title>Vishnuprasad N | Global Supply Chain Transformation Leader</title>
 
-  <!-- Preload critical fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous"/>
 
   <style>
     :root {
-      --navy: #0A2342;
-      --navy-light: #1F3F66;
+      --navy: #0A1F3D;
+      --navy-light: #112B52;
       --gold: #FFC300;
-      --gold-dark: #e6af00;
-      --light: #F8F9FA;
-      --gray: #555;
-      --text: #333;
-      --border: #e2e8f0;
+      --gold-glow: #FFD60A;
+      --gray: #94a3b8;
+      --light: #f8fafc;
+      --card: rgba(255, 255, 255, 0.72);
+      --card-border: rgba(255, 255, 255, 0.25);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--light);
-      -webkit-font-smoothing: antialiased;
+      background: linear-gradient(135deg, #0a1425 0%, #0a1f3d 100%);
+      color: #e2e8f0;
+      line-height: 1.7;
+      min-height: 100vh;
     }
 
-    h1, h2, h3, h4 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.2;
-    }
+    .container { width: min(100% - 3rem, 1320px); margin: 0 auto; }
 
-    .container {
-      width: min(100% - 2rem, 1200px);
-      margin-inline: auto;
-    }
-
-    /* Header */
+    /* Hero */
     header {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-      color: white;
-      padding: 100px 0 70px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 80%);
+      padding: 160px 0 110px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
 
     .name {
-      font-size: clamp(2.8rem, 8vw, 5rem);
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(3.8rem, 10vw, 7.5rem);
       font-weight: 900;
-      letter-spacing: -2px;
-      margin-bottom: 0.3rem;
-      text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      letter-spacing: -4px;
+      background: linear-gradient(90deg, #ffffff, var(--gold-glow), #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
     }
 
     .tagline {
-      font-size: clamp(1.2rem, 4vw, 1.7rem);
-      font-weight: 600;
+      font-size: clamp(1.4rem, 4vw 2.3rem);
+      font-weight: 700;
       color: var(--gold);
-      margin-bottom: 1.5rem;
+      margin: 1rem 0 2rem;
     }
 
     .contact-info {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
       justify-content: center;
-      font-size: 1.1rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 1.15rem;
     }
 
-    .contact-info a {
+    .contact-info a, .contact-info span {
       color: white;
       text-decoration: none;
-      transition: color 0.3s;
+      padding: 0.7rem 1.5rem;
+      border-radius: 50px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      transition: all 0.4s;
     }
 
     .contact-info a:hover {
-      color: var(--gold);
-    }
-
-    .contact-info i {
-      margin-right: 8px;
-      width: 20px;
+      background: var(--gold);
+      color: var(--navy);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(255,195,0,0.3);
     }
 
     /* Navigation */
     nav {
-      background: white;
+      background: rgba(10, 31, 61, 0.92);
+      backdrop-filter: blur(16px);
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,195,0,0.2);
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
-      list-style: none;
+      justify-content: center;
+      gap: 3rem;
+      padding: 1.3rem 0;
     }
 
     .nav-links a {
-      color: var(--navy);
+      color: #e2e8f0;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.5rem 0;
       position: relative;
-      transition: color 0.3s;
-    }
-
-    .nav a:hover,
-    nav a.active {
-      color: var(--gold);
+      padding: 0.5rem 0;
     }
 
     .nav-links a::after {
       content: '';
       position: absolute;
       width: 0;
-      height: 3px;
-      bottom: 0;
-      left: 0;
+      height: 4px;
+      bottom: -8px;
+      left: 50%;
       background: var(--gold);
-      transition: width 0.3s;
+      transition: all 0.4s;
+      transform: translateX(-50%);
+      border-radius: 2px;
     }
 
-    .nav-links a:hover::after,
-    .nav-links a.active::after {
-      width: 100%;
-    }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 
-    .hamburger {
-      display: none;
-      font-size: 1.8rem;
-      background: none;
-      border: none;
-      color: var(--navy);
-      cursor: pointer;
-    }
-
-    /* Main Layout */
+    /* Layout */
     .main-content {
       display: grid;
-      gap: 3rem;
-      padding: 3rem 0 5rem;
+      gap: 3.5rem;
+      padding: 5rem 0 7rem;
       grid-template-columns: 1fr;
     }
 
     @media (min-width: 1024px) {
-      .main-content {
-        grid-template-columns: 2.5fr 1.5fr;
-      }
-      .right-column {
-        position: sticky;
-        top: 100px;
-        height: fit-content;
-      }
+      .main-content { grid-template-columns: 2.7fr 1.3fr; }
+      .right-column { position: sticky; top: 110px; height: fit-content; }
     }
 
     .card {
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.8rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-glow));
+      opacity: 0;
+      transition: opacity 0.4s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      transform: translateY(-15px);
+      box-shadow: 0 30px 70px rgba(255,195,0,0.18);
     }
+
+    .card:hover::before { opacity: 1; }
 
     .section-title {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 4px solid var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      position: relative;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      color: var(--navy);
+      gap: 15px;
     }
 
-    /* Impact Section */
-    .impact-card {
-      background: linear-gradient(135deg, #fffdf7 0%, #fffbe6 100%);
-      border: 2px solid var(--gold);
-      text-align: center;
+    .section-title i { color: var(--gold); }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 90px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 3px;
     }
 
+    /* Impact Grid */
     .metrics-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 2rem;
       margin-top: 2rem;
     }
 
     .metric-card {
-      padding: 1.8rem 1rem;
-      background: white;
-      border-radius: 12px;
-      border-top: 6px solid var(--navy);
-      transition: all 0.3s;
+      background: rgba(255,255,255,0.95);
+      padding: 2.2rem 1rem;
+      border-radius: 18px;
+      text-align: center;
+      transition: all 0.4s;
     }
 
     .metric-card:hover {
-      transform: scale(1.08);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      transform: scale(1.15) translateY(-12px);
+      background: white;
+      box-shadow: 0 25px 50px rgba(255,195,0,0.35);
     }
 
     .metric-number {
-      font-size: 3.2rem;
+      font-size: 4.2rem;
       font-weight: 900;
       color: var(--gold);
       line-height: 1;
     }
 
     .metric-label {
-      margin-top: 0.8rem;
+      margin-top: 1rem;
       font-weight: 700;
-      color: var(--navy-light);
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-    }
-
-    /* Experience */
-    .experience-item {
-      margin-bottom: 2.5rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px dashed #ddd;
-    }
-
-    .experience-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .experience-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .job-title {
-      font-size: 1.6rem;
       color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: 0.95rem;
     }
 
-    .company {
-      color: var(--gray);
-      font-weight: 500;
-    }
-
-    .duration {
-      color: var(--gold-dark);
-      font-weight: 700;
-      font-size: 1rem;
-      white-space: nowrap;
-    }
-
+    /* Lists */
     .achievements {
       list-style: none;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
 
     .achievements li {
       position: relative;
-      padding-left: 0.6rem 0 0.6rem 2rem;
-      line-height: 1.5;
+      padding-left: 2.2rem;
+      margin: 1.4rem 0;
+      font-size: 1.05rem;
+      color: #cbd5e1;
     }
 
     .achievements li::before {
@@ -298,307 +263,175 @@
       color: var(--gold);
       position: absolute;
       left: 0;
-      top: 0.7rem;
-    }
-
-    /* Skills & Certifications */
-    .skills-container,
-    .certifications-grid {
-      display: grid;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .certifications-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .expertise-h3 {
+      top: 0.2rem;
       font-size: 1.3rem;
-      color: var(--navy-light);
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem 0;
-      border-bottom: 2px solid var(--gold);
     }
 
-    .skill-group ul,
-    .certifications-grid ul {
-      list-style: none;
+    .job-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 0.3rem;
     }
 
-    .skill-group li,
-    .certifications-grid li {
-      padding: 0.6rem 0;
-      padding-left: 1.8rem;
-      position: relative;
-    }
-
-    .skill-group li::before {
-      content: "\f192";
+    .company {
       color: var(--gold);
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      position: absolute;
-      left: 0;
+      font-weight: 600;
+      font-size: 1.2rem;
     }
 
-    /* Footer */
-    footer {
-      background: var(--navy);
-      color: #ccc;
-      text-align: center;
-      padding: 2.5rem 0;
+    .duration {
+      color: #94a3b8;
       font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+      display: block;
     }
 
-    /* Mobile Menu */
-    @media (max-width: 768px) {
-      .hamburger { display: block; }
-      .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        height: 100vh;
-        width: 80%;
-        max-width: 300px;
-        background: white;
-        flex-direction: column;
-        padding: 3rem 2rem;
-        transition: left 0.4s ease;
-        box-shadow: 5px 0 20px rgba(0,0,0,0.2);
-      }
-
-      .nav-links.active {
-        left: 0;
-      }
-
-      .name { font-size: 3.2rem; }
-      .contact-info { flex-direction: column; gap: 1rem; }
-      .metrics-grid { grid-template-columns: 1fr 1fr; }
+    footer {
+      background: #040a15;
+      color: #64748b;
+      text-align: center;
+      padding: 3.5rem 0;
+      font-size: 1rem;
     }
   </style>
 </head>
-
 <body>
-  <!-- Header -->
+
   <header>
     <div class="container">
       <h1 class="name">Vishnuprasad N</h1>
-      <p class="tagline">Global Supply Chain Transformation Leader<br class="mobile-only">SAP Logistics & Regulated Cold-Chain Expert</p>
+      <p class="tagline">Global Supply Chain Transformation Leader</p>
+      <p style="font-size:1.35rem;opacity:0.95;max-width:900px;margin:0 auto 2.5rem;">
+        $4.5M Freight Portfolio | 96% OTD | 25% Cold-Chain Deviation Reduction | SAP ECC LE-TRA/SD UAT Expert
+      </p>
       <div class="contact-info">
-        <a href="mailto:vp2194@outlook.com" aria-label="Email"><i class="fas fa-envelope"></i> vp2194@outlook.com</a>
-        <a href="https://linkedin.com/in/vp2194" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> /in/vp2194</a>
+        <a href="mailto:vp2194@outlook.com"><i class="fas fa-envelope"></i> vp2194@outlook.com</a>
+        <a href="https://linkedin.com/in/vp2194" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/vp2194</a>
         <span><i class="fas fa-map-marker-alt"></i> Bengaluru, India</span>
       </div>
     </div>
   </header>
 
-  <!-- Navigation -->
   <nav>
-    <div class="container nav-container">
-      <div></div> <!-- Spacer -->
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="active">Profile</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Expertise</a></li>
-        <li><a href="#certifications">Credentials</a></li>
-      </ul>
-      <button class="hamburger" aria-label="Toggle menu" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </button>
+    <div class="container nav-links">
+      <a href="#profile" class="active">Profile</a>
+      <a href="#impact">Impact</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Expertise</a>
+      <a href="#certs">Credentials</a>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="container main-content">
+  <div class="container main-content">
+
     <!-- Left Column -->
     <div class="left-column">
 
-      <section id="about" class="card">
+      <section id="profile" class="card">
         <h2 class="section-title"><i class="fas fa-user-tie"></i> Executive Profile</h2>
-        <p><strong>Global Supply Chain transformation leader with 9.5+ years</strong> driving logistics excellence across pharma/biologics and petrochemical sectors.</p>
-        <p>Managed a <strong>$4.5M annual freight portfolio</strong> spanning Americas, EMEA, APAC, and LATAM — delivering <strong>96% OTD</strong> and <strong>25% reduction in cold-chain deviations</strong>.</p>
-        <p>Proven ability to bridge global process design (playbook rollout, S&OE alignment) with technical execution (<strong>SAP ECC LE-TRA/SD UAT leadership</strong>), ensuring sustainable operational excellence and <strong>100% GDP/GxP audit readiness</strong>.</p>
+        <p>Global supply chain leader with <strong>9.5 years</strong> of proven impact in pharma/biologics and petrochemicals.</p>
+        <p>Led <strong>$4.5M annual freight portfolio</strong> across Americas, EMEA, APAC, and LATAM — delivering <strong>96% on-time delivery</strong> and <strong>25% reduction in cold-chain deviations</strong> through process standardization, real-time KPI visibility, and deep <strong>SAP ECC LE-TRA/SD UAT</strong> leadership.</p>
+        <p>Specialized in global playbook design & rollout, S&OE alignment, cross-regional stakeholder governance, and 100% <strong>GDP/GxP/SOX</strong> compliance.</p>
       </section>
 
       <section id="experience" class="card">
         <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
 
-        <div class="experience-item">
-          <div class="experience-header">
-            <div>
-              <div class="job-title">Assistant Manager – Global Transportation Operations</div>
-              <div class="company">Biocon Biologics, Bengaluru (Pharma/Biologics)</div>
-            </div>
-            <div class="duration">Jul 2023 – Aug 2025</div>
-          </div>
+        <div style="margin-bottom:3rem;">
+          <div class="job-title">Assistant Manager – Global Transportation Operations</div>
+          <div class="company">Biocon Biologics, Bengaluru</div>
+          <span class="duration">July 2023 – August 2025</span>
           <ul class="achievements">
-            <li><strong>Operational Excellence:</strong> Managed $4.5M global freight portfolio → achieved <strong>96% OTD</strong> and <strong>25% cold-chain deviation reduction</strong> across 5 regions</li>
-            <li><strong>Process Transformation:</strong> Authored & deployed <strong>Global Transportation Playbook</strong> across 5 regions, standardizing 15+ critical processes</li>
-            <li><strong>SAP UAT Leadership:</strong> Led defect-free validation for SAP ECC LE-TRA & SD modules across 2 expansions & 3 CMOs</li>
-            <li><strong>Compliance:</strong> 100% adherence to GDP/GxP, SOX; built real-time KPI dashboards with temperature alerts</li>
+            <li>Managed <strong>$4.5M global freight portfolio</strong> across 5 regions → achieved <strong>96% OTD</strong> and <strong>25% cold-chain deviation reduction</strong></li>
+            <li>Authored & deployed <strong>Global Transportation Playbook</strong> across 5 regions, standardizing 15+ critical processes and documentation workflows</li>
+            <li>Led defect-free SAP ECC LE-TRA & SD UAT for 2 regional expansions + 3 CMO onboardings (zero post-go-live critical issues)</li>
+            <li>Built automated KPI dashboards (20+ metrics) with real-time temperature alerts and customs tracking</li>
+            <li>Partnered with global S&OE teams to align logistics capacity with 4 major product launches</li>
+            <li>Ensured <strong>100% GDP/GxP, SOX, and audit compliance</strong> via rigorous documentation governance</li>
           </ul>
         </div>
 
-        <div class="experience-item">
-          <div class="experience-header">
-            <div>
-              <div class="job-title">Terminal Assistant – Operations</div>
-              <div class="company">IMC Limited, Kutch (Petrochemical Terminal)</div>
-            </div>
-            <div class="duration">Nov 2015 – Aug 2020</div>
-          </div>
+        <div style="margin-bottom:3rem;">
+          <div class="job-title">Terminal Assistant – Operations</div>
+          <div class="company">IMC Limited (150,000 KL Petrochemical Terminal), Kutch</div>
+          <span class="duration">Nov 2015 – Aug 2020</span>
           <ul class="achievements">
-            <li>Oversaw operations at 150,000 KL terminal handling 50,000+ MT/month</li>
-            <li>Achieved <strong>20-month incident-free safety record</strong></li>
+            <li>Oversaw jetty, tank farm, and dispatch operations for 50,000+ MT monthly throughput</li>
+            <li>Achieved <strong>20-month incident-free safety record</strong> with zero lost-time incidents</li>
             <li>Drafted and maintained 25+ SOPs for safety, handling, and emergency response</li>
           </ul>
         </div>
 
-        <div class="experience-item">
-          <div class="experience-header">
-            <div>
-              <div class="job-title">Senior Executive - Client Delivery & Quality</div>
-              <div class="company">Enventure Engineering, Bengaluru</div>
-            </div>
-            <div class="duration">Apr 2021 – Mar 2022</div>
-          </div>
+        <div style="margin-bottom:3rem;">
+          <div class="job-title">Logistics Coordinator</div>
+          <div class="company">Bulk Liquid Solutions, Bengaluru</div>
+          <span class="duration">May 2022 – Jun 2023</span>
+          <ul class="achievements">
+            <li>Executed multimodal ISO-tank/flexi-bag shipments with <strong>100% regulatory compliance</strong></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="job-title">Senior Executive – Client Delivery & Quality</div>
+          <div class="company">Enventure Engineering, Bengaluru</div>
+          <span class="duration">Apr 2021 – Mar 2022</span>
           <ul class="achievements">
             <li>Conducted ISO 9001:2015 internal audits → <strong>zero non-conformities</strong></li>
           </ul>
         </div>
-
-        <div class="experience-item">
-          <div class="experience-header">
-            <div>
-              <div class="job-title">Logistics Coordinator</div>
-              <div class="company">Bulk Liquid Solutions, Bengaluru</div>
-            </div>
-            <div class="duration">May 2022 – Jun 2023</div>
-          </div>
-          <ul class="achievements">
-            <li>Executed multimodal shipments with <strong>100% compliance</strong> to customs & DG regulations</li>
-          </ul>
-        </div>
       </section>
+
     </div>
 
     <!-- Right Column -->
     <div class="right-column">
 
-      <section id="impact" class="card impact-card">
-        <h2 class="section-title"><i class="fas fa-rocket"></i> Global Impact Snapshot</h2>
+      <section id="impact" class="card" style="background:linear-gradient(135deg,rgba(255,195,0,0.15),rgba(255,195,0,0.05));border:2px solid rgba(255,195,0,0.4);">
+        <h2 class="section-title"><i class="fas fa-trophy"></i> Proven Impact</h2>
         <div class="metrics-grid">
-          <div class="metric-card">
-            <div class="metric-number">96%</div>
-            <div class="metric-label">On-Time Delivery</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-number">25%</div>
-            <div class="metric-label">Deviation Reduction</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-number">$4.5M</div>
-            <div class="metric-label">Freight Portfolio</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-number">5</div>
-            <div class="metric-label">Defect-Free Go-Lives</div>
-          </div>
+          <div class="metric-card"><div class="metric-number">96%</div><div class="metric-label">On-Time Delivery</div></div>
+          <div class="metric-card"><div class="metric-number">25%</div><div class="metric-label">Deviation Reduction</div></div>
+          <div class="metric-card"><div class="metric-number">$4.5M</div><div class="metric-label">Freight Portfolio</div></div>
+          <div class="metric-card"><div class="metric-number">100%</div><div class="metric-label">Audit Compliance</div></div>
         </div>
       </section>
 
       <section id="skills" class="card">
         <h2 class="section-title"><i class="fas fa-cogs"></i> Core Expertise</h2>
-        <div class="skills-container">
-          <div class="skill-group">
-            <h3 class="expertise-h3">SAP & Systems</h3>
-            <ul>
-              <li><strong>SAP ECC 6.0:</strong> LE-TRA, SD, MM (UAT Expert)</li>
-              <li><strong>S/4HANA Trained:</strong> TM, IBP, GTS, Business Network</li>
-              <li>Power BI, Advanced Excel, Dashboard Automation</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3 class="expertise-h3">Operations & Compliance</h3>
-            <ul>
-              <li>Cold-Chain & Dangerous Goods Logistics</li>
-              <li>Global Process Playbooks & S&OE Alignment</li>
-              <li>GDP/GxP, SOX, US FSVP, ISO 9001</li>
-              <li>Multimodal Freight & Carrier Governance</li>
-            </ul>
-          </div>
-        </div>
+        <p><strong>SAP Systems:</strong> ECC 6.0 Power User (LE-TRA, SD, MM) • S/4HANA TM, IBP, GTS, Business Network</p>
+        <p><strong>Domain:</strong> Cold-Chain & DG Logistics • Multimodal Freight • Global Playbook Design • S&OE • Control Tower</p>
+        <p><strong>Compliance:</strong> GDP/GxP • SOX • ISO 9001 • US FSVP • Global Sanctions</p>
+        <p><strong>Tools:</strong> Power BI • Advanced Excel • KPI Dashboarding • CAPA Framework</p>
       </section>
 
-      <section id="certifications" class="card">
-        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Key Credentials</h2>
-        <div class="certifications-grid">
-          <div>
-            <h3 class="expertise-h3">SAP Learning Hub</h3>
-            <ul>
-              <li>SAP S/4HANA Transportation Management</li>
-              <li>SAP Integrated Business Planning (IBP)</li>
-              <li>SAP Global Trade Services (GTS)</li>
-              <li>SAP Business Network</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="expertise-h3">Professional Certifications</h3>
-            <ul>
-              <li>CSCMP – Supply Chain Professional</li>
-              <li>CILT – Procurement & Logistics</li>
-              <li>ISO 9001:2015 Internal Auditor</li>
-              <li>Lean Six Sigma White Belt</li>
-              <li>US FSVP & Global Sanctions Compliance</li>
-            </ul>
-          </div>
-        </div>
+      <section id="certs" class="card">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Credentials & Certifications</h2>
+        <p><strong>SAP Learning Hub</strong></p>
+        <ul class="achievements">
+          <li>S/4HANA Transportation Management (TM)</li>
+          <li>Integrated Business Planning (IBP)</li>
+          <li>Global Trade Services (GTS)</li>
+          <li>Business Network</li>
+        </ul>
+        <p><strong>Professional Certifications</strong></p>
+        <ul class="achievements">
+          <li>CSCMP – Supply Chain Professional</li>
+          <li>CILT – Procurement & Logistics</li>
+          <li>ISO 9001 Internal Auditor</li>
+          <li>Lean Six Sigma White Belt</li>
+          <li>US FSVP & Global Sanctions</li>
+        </ul>
       </section>
 
     </div>
-  </main>
+  </div>
 
   <footer>
     <div class="container">
-      <p>© 2025 Vishnuprasad N — Global Supply Chain Transformation Leader | Built for Impact</p>
+      <p>© 2025 Vishnuprasad N — Global Supply Chain Transformation Leader | Built for executive impact</p>
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      const icon = hamburger.querySelector('i');
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-times');
-    });
-
-    // Active nav link on scroll
-    window.addEventListener('scroll', () => {
-      let current = '';
-      const sections = ['about', 'impact', 'experience', 'skills', 'certifications'];
-
-      sections.forEach(section => {
-        const el = document.getElementById(section);
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= 150 && rect.bottom >= 150) {
-          current = section;
-        }
-      });
-
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
 </body>
-    </html>
+        </html>
