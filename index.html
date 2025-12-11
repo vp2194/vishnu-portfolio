@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <style>
-        /* Base Reset and Typography */
+        /* --- GLOBAL & BASE STYLES --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; font-size: 16px; }
         body { 
@@ -21,115 +21,119 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.2; color: #1a1a2e; }
         h2 { 
-            font-size: 1.9rem; 
+            font-size: 1.8rem; 
             margin-bottom: 25px; 
             padding-bottom: 5px; 
             border-bottom: 2px solid #e0e0e0; 
             font-weight: 700; 
-            color: #0a0e27; 
+            color: #1a1a2e; /* Darker primary color */
         }
         p, li { font-size: 1rem; }
         
-        /* HEADER - Strong Brand Identity */
+        /* --- HEADER (Brand Anchor) --- */
         header { 
-            background: linear-gradient(135deg, #0a0e27 0%, #203a43 100%); 
+            background: linear-gradient(135deg, #0f1c2c 0%, #1c3d5e 100%); /* Deep Navy/Blue gradient */
             color: white; 
             padding: 80px 0 50px; 
             position: relative; 
             overflow: hidden; 
         }
-        .name { font-size: 3.8rem; margin-bottom: 5px; font-weight: 900; letter-spacing: -2px; }
-        .tagline { font-size: 1.4rem; margin-bottom: 30px; opacity: 0.95; font-weight: 600; }
+        .name { font-size: 4rem; margin-bottom: 5px; font-weight: 900; letter-spacing: -2px; }
+        .tagline { font-size: 1.5rem; margin-bottom: 30px; opacity: 0.95; font-weight: 600; color: #a0c4ff; } /* Accent color */
         .contact-info { display: flex; flex-wrap: wrap; gap: 20px 40px; font-weight: 400; font-size: 1rem; }
         .contact-info a, .contact-info span { color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
-        .contact-info a:hover { color: #667eea; }
+        .contact-info a:hover { color: #a0c4ff; }
 
-        /* NAVIGATION */
+        /* --- NAVIGATION --- */
         nav { background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
         nav a { 
             padding: 15px 25px; 
-            color: #0a0e27; 
+            color: #1c3d5e; /* Matches header dark color */
             text-decoration: none; 
             font-weight: 600; 
             position: relative; 
             transition: color 0.3s; 
         }
-        nav a:hover { color: #764ba2; }
-        nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); transition: 0.3s; transform: translateX(-50%); }
+        nav a:hover { color: #5f8dc4; }
+        nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 4px; background: #5f8dc4; transition: 0.3s; transform: translateX(-50%); }
         nav a:hover::after { width: 80%; }
 
-        /* MAIN CONTENT LAYOUT */
+        /* --- MAIN CONTENT LAYOUT --- */
         .main-content { padding-top: 40px; padding-bottom: 60px; }
         section { margin-bottom: 40px; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Stronger shadow for depth */ }
 
-        /* METRICS / IMPACT SECTION */
+        /* --- METRICS / IMPACT SECTION (Visual Focus) --- */
         .highlight-section { 
             background: #e9eef7; 
-            border-left: 6px solid #667eea; 
-            padding: 35px 30px; 
+            border-left: 8px solid #5f8dc4; /* Thicker left border */
+            padding: 40px 30px; 
         }
         .metrics-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-            gap: 20px; 
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+            gap: 25px; 
         }
         .metric-card { 
             text-align: center; 
             background: white; 
             padding: 25px 15px; 
             border-radius: 8px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-            border-bottom: 4px solid #764ba2;
-            transition: transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+            border-bottom: 4px solid #1c3d5e; /* Darker bottom line */
+            transition: all 0.3s;
         }
-        .metric-card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+        .metric-card:hover { transform: scale(1.03); background: #fffcf2; /* Subtle highlight on hover */ }
 
         .metric-number { 
             font-family: 'Montserrat', sans-serif; 
-            font-size: 2.8rem; 
+            font-size: 3rem; 
             font-weight: 900; 
-            color: #0a0e27; 
+            color: #1c3d5e; 
             line-height: 1; 
             margin-bottom: 5px; 
         }
-        .metric-label { font-size: 0.95rem; color: #555; text-transform: uppercase; font-weight: 600; }
+        .metric-label { font-size: 1rem; color: #555; text-transform: uppercase; font-weight: 600; }
 
-        /* EXPERIENCE SECTION */
-        .experience-item { margin-bottom: 35px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        /* --- EXPERIENCE SECTION (Hierarchy Focus) --- */
+        .experience-item { margin-bottom: 35px; padding-bottom: 20px; border-bottom: 1px solid #ddd; }
         .experience-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
-        .job-title { font-size: 1.25rem; font-weight: 700; color: #0a0e27; }
-        .company { font-size: 1rem; color: #555; margin-top: 3px; }
-        .duration { font-size: 0.9rem; font-weight: 600; color: #764ba2; text-align: right; white-space: nowrap; }
-        .achievements, .experience-item ul { list-style: none; padding-left: 0; margin-top: 10px; }
-        .achievements li, .experience-item ul li { 
+        .job-title { font-size: 1.3rem; font-weight: 800; color: #1c3d5e; } /* Highly emphasized */
+        .company { font-size: 1.1rem; color: #555; margin-top: 3px; font-weight: 500; }
+        .duration { font-size: 0.95rem; font-weight: 600; color: #5f8dc4; text-align: right; white-space: nowrap; }
+        
+        .achievements li { 
             position: relative; 
-            padding-left: 20px; 
-            margin-bottom: 8px; 
-            font-size: 0.95rem; 
+            padding-left: 28px; /* More space for icon */
+            margin-bottom: 12px; 
+            font-size: 1rem; 
+            line-height: 1.4;
         }
-        .achievements li::before, .experience-item ul li::before { 
-            content: '\f058'; /* Checkmark icon */
+        .achievements li::before { 
+            content: '\f058'; 
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute; 
             left: 0; 
-            color: #667eea; 
-            font-size: 0.9rem; 
-            top: 2px; 
+            color: #5f8dc4; /* Accent color for bullet */
+            font-size: 1rem; 
+            top: 1px; 
         }
-
-        /* SKILLS & CERTIFICATIONS GRID */
-        .skill-section h3 { font-size: 1.3rem; color: #667eea; margin-bottom: 10px; border-bottom: 1px dashed #e0e0e0; padding-bottom: 5px; }
+        
+        /* --- SKILLS & CERTIFICATIONS GRID --- */
+        .skill-section h3 { font-size: 1.4rem; color: #1c3d5e; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 2px solid #5f8dc4; }
         .skills-container, .certifications-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
-        .skill-group ul { padding-left: 20px; }
+        .skill-group ul { list-style-type: none; padding-left: 0; }
+        .skill-group ul li { margin-bottom: 8px; position: relative; padding-left: 15px; }
+        .skill-group ul li::before { content: '•'; position: absolute; left: 0; color: #5f8dc4; font-weight: bold; }
 
-        /* FOOTER */
+
+        /* --- FOOTER --- */
         footer { 
             background: #1a1a2e; 
             color: #ccc; 
@@ -137,10 +141,10 @@
             padding: 20px 0; 
             font-size: 0.85rem; 
         }
-        footer a { color: #667eea; text-decoration: none; }
+        footer a { color: #5f8dc4; text-decoration: none; }
 
 
-        /* --- RESPONSIVENESS (Mobile-First) --- */
+        /* --- RESPONSIVENESS --- */
 
         /* Tablet (and smaller PC screens) */
         @media (max-width: 992px) {
@@ -154,31 +158,27 @@
 
         /* Mobile */
         @media (max-width: 600px) {
-            /* Header Adjustments */
             header { padding: 60px 0 30px; }
-            .name { font-size: 2.2rem; }
+            .name { font-size: 2.5rem; letter-spacing: -1px; }
             .tagline { font-size: 1rem; }
             .contact-info { flex-direction: column; gap: 10px; }
 
-            /* Navigation Adjustments */
             nav ul { flex-direction: column; align-items: center; }
             nav a { padding: 10px 15px; width: 100%; text-align: center; }
 
-            /* General Adjustments */
             .card { padding: 20px; }
             h2 { font-size: 1.5rem; margin-bottom: 20px; }
             
-            /* Experience Adjustments */
             .experience-header { flex-direction: column; align-items: flex-start; }
+            .job-title { font-size: 1.1rem; }
             .duration { margin-top: 5px; text-align: left; }
             
-            /* Metrics Adjustments */
             .metrics-grid {
                 grid-template-columns: 1fr 1fr; 
                 gap: 15px;
             }
             .metric-number { font-size: 2.2rem; }
-            .metric-label { font-size: 0.8rem; }
+            .metric-label { font-size: 0.75rem; }
         }
 
         /* Small Mobile Phones */
@@ -254,10 +254,10 @@
                     <div class="duration">July 2023 – August 2025</div>
                 </div>
                 <ul class="achievements">
-                    <li>**Operational Excellence:** Managed $4.5M global freight portfolio, achieving **96% OTD** and a **25% cold-chain deviation reduction**.</li>
-                    <li>**Process Transformation:** Authored and deployed a **Global Transportation Playbook** across 5 regions, standardizing 15+ critical processes.</li>
-                    <li>**SAP Leadership:** Led end-to-end UAT validation for SAP ECC **LE-TRA/SD** modules for 2 regional expansions and 3 CMO onboardings.</li>
-                    <li>**Compliance:** Ensured 100% adherence to GDP/GxP, SOX, and conducted quarterly audit readiness programs.</li>
+                    <li>**Operational Excellence:** Managed $4.5M global freight portfolio, achieving **96% OTD** and a **25% cold-chain deviation reduction** across 5 regions.</li>
+                    <li>**Process Transformation:** Authored and deployed a **Global Transportation Playbook**, standardizing 15+ critical processes and eliminating regional silos.</li>
+                    <li>**SAP Leadership:** Led end-to-end UAT validation for SAP ECC **LE-TRA/SD** modules for 2 regional expansions and 3 CMO onboardings with **zero critical issues**.</li>
+                    <li>**Compliance:** Ensured 100% adherence to GDP/GxP, SOX, and drove documentation governance across the global logistics function.</li>
                 </ul>
             </div>
             
@@ -266,10 +266,10 @@
                     <div><div class="job-title">Terminal Assistant – Operations</div><div class="company">IMC Limited, Kutch (Petrochemical Terminal)</div></div>
                     <div class="duration">Nov 2015 – Aug 2020</div>
                 </div>
-                <ul>
+                <ul class="achievements">
                     <li>Oversaw 1,50,000 KL petrochemical terminal operations (50,000+ MT/month throughput).</li>
-                    <li>Maintained a **20-month incident-free safety record** through strict protocol adherence.</li>
-                    <li>Drafted and updated **25+ SOPs** for safety, emergency response, and operations.</li>
+                    <li>Maintained a **20-month incident-free safety record** through strict protocol adherence and rigorous staff training.</li>
+                    <li>Drafted and updated **25+ SOPs** for material handling, safety, and emergency response.</li>
                 </ul>
             </div>
             
@@ -278,7 +278,9 @@
                     <div><div class="job-title">Logistics Coordinator</div><div class="company">Bulk Liquid Solutions, Bengaluru</div></div>
                     <div class="duration">May 2022 – June 2023</div>
                 </div>
-                <ul><li>Executed multimodal DG/Customs compliant shipments for bulk liquid cargo.</li></ul>
+                <ul class="achievements">
+                    <li>Executed multimodal DG/Customs compliant shipments for bulk liquid cargo (ISO tanks, flexi-bags).</li>
+                </ul>
             </div>
         </section>
 
@@ -289,8 +291,8 @@
                 <div class="skill-group">
                     <h3>SAP & Systems Expertise (Process Integration)</h3>
                     <ul>
-                        <li>**SAP ECC 6.0:** LE-TRA, SD, MM (UAT, Process Validation, Master Data)</li>
-                        <li>**SAP S/4HANA (Trained):** Transportation Management (TM), IBP, GTS, Business Network</li>
+                        <li>**SAP ECC 6.0:** LE-TRA, SD, MM (UAT, Master Data, Process Validation)</li>
+                        <li>**SAP S/4HANA:** Transportation Management (TM), IBP, GTS, Business Network (Trained)</li>
                         <li>Tools & Analytics: Power BI, Advanced MS Excel, Transportation Management Systems</li>
                     </ul>
                 </div>
@@ -338,5 +340,4 @@
         </div>
     </footer>
 </body>
-    </html>
-            
+</html>
