@@ -3,169 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishnuprasad N - Global Supply Chain & SAP Logistics Leader</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Vishnuprasad N - Global Supply Chain Transformation Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* Your original beautiful CSS stays exactly the same – only content is updated below */
+        /* CSS is integrated here for a single file submission */
+
+        /* Base Reset and Typography */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #1a1a2e; background: #0a0e27; overflow-x: hidden; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
-        header { background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: white; padding: 120px 0 80px; position: relative; overflow: hidden; }
-        header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(120,119,198,0.3), transparent 50%), radial-gradient(circle at 80% 80%, rgba(74,144,226,0.3), transparent 50%); animation: gradientShift 15s ease infinite; }
-        @keyframes gradientShift { 0%,100% { opacity: 0.5; } 50% { opacity: 0.8; } }
-        h1 { font-family: 'Poppins', sans-serif; font-size: 4em; margin-bottom: 20px; font-weight: 800; letter-spacing: -2px; line-height: 1.1; }
-        .tagline { font-family: 'Space Grotesk', sans-serif; font-size: 1.6em; margin-bottom: 40px; opacity: 0.95; }
-        .contact-info { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 30px; font-weight: 500; font-size: 1.05em; }
-        .contact-info a, .contact-info span { color: white; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        nav { background: rgba(255,255,255,0.98); box-shadow: 0 5px 30px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background: #f4f7fa; 
+            -webkit-font-smoothing: antialiased; 
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.2; color: #1a1a2e; }
+        h2 { 
+            font-size: 1.8rem; 
+            margin-bottom: 25px; 
+            padding-bottom: 5px; 
+            border-bottom: 2px solid #e0e0e0; 
+            font-weight: 700; 
+            color: #0a0e27; 
+        }
+        p, li { font-size: 1rem; }
+
+        /* Placeholder for Icons (To be replaced with Font Awesome or equivalent in production) */
+        .icon-mail::before { content: '✉ '; }
+        .icon-linkedin::before { content: '🔗 '; }
+        .icon-location::before { content: '📍 '; }
+        .icon-user::before { content: '👤 '; }
+        .icon-bolt::before { content: '⚡ '; }
+        .icon-briefcase::before { content: '💼 '; }
+        .icon-cogs::before { content: '⚙ '; }
+        .icon-badge::before { content: '🏅 '; }
+
+
+        /* HEADER - Strong Brand Identity */
+        header { 
+            background: linear-gradient(135deg, #0a0e27 0%, #203a43 100%); 
+            color: white; 
+            padding: 80px 0 50px; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .name { font-size: 3.5rem; margin-bottom: 5px; font-weight: 900; letter-spacing: -1px; }
+        .tagline { font-size: 1.3rem; margin-bottom: 30px; opacity: 0.9; font-weight: 600; }
+        .contact-info { display: flex; flex-wrap: wrap; gap: 20px 40px; font-weight: 400; font-size: 1rem; }
+        .contact-info a, .contact-info span { color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+
+        /* NAVIGATION */
+        nav { background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav a { padding: 22px 30px; color: #0f2027; text-decoration: none; font-weight: 600; position: relative; }
-        nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 4px; background: linear-gradient(90deg, #667eea, #764ba2); transition: 0.3s; transform: translateX(-50%); }
+        nav a { 
+            padding: 15px 25px; 
+            color: #0a0e27; 
+            text-decoration: none; 
+            font-weight: 600; 
+            position: relative; 
+            transition: color 0.3s; 
+        }
+        nav a:hover { color: #667eea; }
+        nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); transition: 0.3s; transform: translateX(-50%); }
         nav a:hover::after { width: 80%; }
-        /* All other styles remain identical to your original stunning design */
+
+        /* MAIN CONTENT LAYOUT */
+        .main-content { padding-top: 40px; padding-bottom: 60px; }
+        section { margin-bottom: 40px; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+        /* METRICS / IMPACT SECTION */
+        .highlight-section { background: #e6eaff; border-left: 5px solid #667eea; }
+        .metrics-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+        }
+        .metric-card { 
+            text-align: center; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            border-top: 4px solid #764ba2;
+        }
+        .metric-number { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 2.5rem; 
+            font-weight: 900; 
+            color: #0a0e27; 
+            line-height: 1; 
+            margin-bottom: 5px; 
+        }
+        .metric-label { font-size: 0.9rem; color: #555; text-transform: uppercase; font-weight: 500; }
+
+        /* EXPERIENCE SECTION */
+        .experience-item { margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .experience-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .job-title { font-size: 1.15rem; font-weight: 700; color: #0a0e27; }
+        .company { font-size: 1rem; color: #555; margin-top: 3px; }
+        .duration { font-size: 0.9rem; font-weight: 600; color: #764ba2; text-align: right; white-space: nowrap; }
+        .achievements, .experience-item ul { list-style: none; padding-left: 0; margin-top: 10px; }
+        .achievements li, .experience-item ul li { 
+            position: relative; 
+            padding-left: 20px; 
+            margin-bottom: 8px; 
+            font-size: 0.95rem; 
+        }
+        .achievements li::before, .experience-item ul li::before { 
+            content: '•'; 
+            position: absolute; 
+            left: 0; 
+            color: #667eea; 
+            font-weight: bold; 
+            font-size: 1.2rem; 
+            top: -2px; 
+        }
+
+        /* SKILLS & CERTIFICATIONS GRID */
+        .skill-section h3 { font-size: 1.3rem; color: #667eea; margin-bottom: 10px; border-bottom: 1px dashed #e0e0e0; padding-bottom: 5px; }
+        .skills-container, .certifications-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .skill-group ul { padding-left: 20px; }
+
+        /* FOOTER */
+        footer { 
+            background: #1a1a2e; 
+            color: #ccc; 
+            text-align: center; 
+            padding: 20px 0; 
+            font-size: 0.85rem; 
+        }
+        footer a { color: #667eea; text-decoration: none; }
+
+
+        /* --- RESPONSIVENESS (Mobile-First) --- */
+
+        /* Tablet (and smaller PC screens) */
+        @media (max-width: 992px) {
+            .name { font-size: 2.8rem; }
+            .tagline { font-size: 1.15rem; }
+            .skills-container, .certifications-grid {
+                grid-template-columns: 1fr; /* Stack skills and certs on tablets/mobile */
+                gap: 20px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            /* Header Adjustments */
+            header { padding: 60px 0 30px; }
+            .name { font-size: 2.2rem; }
+            .tagline { font-size: 1rem; }
+            .contact-info { flex-direction: column; gap: 10px; }
+
+            /* Navigation Adjustments */
+            nav ul { flex-direction: column; align-items: center; }
+            nav a { padding: 10px 15px; width: 100%; text-align: center; }
+
+            /* General Adjustments */
+            .card { padding: 20px; }
+            h2 { font-size: 1.5rem; margin-bottom: 20px; }
+            
+            /* Experience Adjustments */
+            .experience-header { flex-direction: column; align-items: flex-start; }
+            .duration { margin-top: 5px; text-align: left; }
+            
+            /* Metrics Adjustments */
+            .metrics-grid {
+                grid-template-columns: 1fr 1fr; /* Keep 2 columns on most phones */
+                gap: 15px;
+            }
+            .metric-number { font-size: 2rem; }
+            .metric-label { font-size: 0.8rem; }
+        }
+
+        /* Small Mobile Phones */
+        @media (max-width: 400px) {
+            .metrics-grid {
+                grid-template-columns: 1fr; /* Stack metrics on very small phones */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <h1>Vishnuprasad N</h1>
-            <p class="tagline">Global Supply Chain Professional | SAP Logistics | Cold-Chain & Multimodal Transportation Leader</p>
+            <h1 class="name">Vishnuprasad N</h1>
+            <p class="tagline">Global Supply Chain Transformation Leader | SAP Logistics & Regulated Cold-Chain Expert</p>
             <div class="contact-info">
-                <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a>
-                <a href="https://linkedin.com/in/vp2194" target="_blank">linkedin.com/in/vp2194</a>
-                <span>Bengaluru, India</span>
+                <a href="mailto:vp2194@outlook.com" aria-label="Email"><i class="icon-mail"></i>vp2194@outlook.com</a>
+                <a href="https://linkedin.com/in/vp2194" target="_blank" aria-label="LinkedIn"><i class="icon-linkedin"></i>/in/vp2194</a>
+                <span><i class="icon-location"></i>Bengaluru, India</span>
             </div>
         </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#achievements">Key Achievements</a></li>
+        <ul class="container">
+            <li><a href="#about">Profile</a></li>
+            <li><a href="#metrics">Impact</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#skills">Expertise</a></li>
+            <li><a href="#certifications">Credentials</a></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container main-content">
 
-        <!-- ABOUT -->
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-text">
-                <p>Global Supply Chain professional with <strong>9.5 years</strong> driving logistics excellence across pharma/biologics and petrochemical sectors. Managed <strong>$4.5M annual freight portfolio</strong> spanning Americas, EMEA, APAC, and LATAM, delivering <strong>96% on-time delivery (OTD)</strong> and <strong>25% reduction in cold-chain deviations</strong> through process standardization, KPI visibility enhancement, and SAP ECC LE-TRA/SD expertise.</p>
-                <p>Proven track record in global playbook rollout, UAT leadership, S&OE alignment, and cross-regional stakeholder governance. Expert in cold-chain logistics, dangerous goods handling, multimodal transportation, and regulatory compliance (GDP/GxP, SOX, ISO 9001, US FSVP).</p>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card"><div class="stat-number">9.5+</div><div class="stat-label">Years Experience</div></div>
-                <div class="stat-card"><div class="stat-number">$4.5M</div><div class="stat-label">Annual Freight Portfolio</div></div>
-                <div class="stat-card"><div class="stat-number">96%</div><div class="stat-label">On-Time Delivery</div></div>
-                <div class="stat-card"><div class="stat-number">25%</div><div class="stat-label">Cold-Chain Deviation Reduction</div></div>
-                <div class="stat-card"><div class="stat-number">5</div><div class="stat-label">Global Regions Managed</div></div>
-                <div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">Audit & Compliance Rate</div></div>
-            </div>
+        <section id="about" class="card">
+            <h2><i class="icon-user"></i> Professional Profile</h2>
+            [span_0](start_span)<p><strong>Global Supply Chain transformation expert with 9.5 years in high-stakes logistics, specializing in pharma/biologics cold-chain and petrochemicals.</strong> Directed a <strong>\$4.5M global freight portfolio</strong>[span_0](end_span) [span_1](start_span)across Americas, EMEA, APAC, and LATAM, achieving best-in-class operational metrics while navigating stringent GDP/GxP and SOX compliance[span_1](end_span).</p>
+            [span_2](start_span)<p>My core strength is bridging the gap between global process design (playbook authoring[span_2](end_span)[span_3](start_span), S&OE alignment[span_3](end_span)[span_4](start_span)) and technical execution (SAP ECC LE-TRA/SD UAT leadership[span_4](end_span)), ensuring sustainable operational excellence and a culture of 100% audit readiness.</p>
         </section>
-
-        <!-- KEY ACHIEVEMENTS -->
-        <section id="achievements">
-            <h2>Key Achievements</h2>
-            <div style="margin-top: 40px;">
-                <div class="experience-item">
-                    <h3>Global Transportation Playbook Deployment</h3>
-                    <p>Designed & deployed standardized playbook across 5 regions (15+ processes) – eliminated silos, ensured consistent execution globally.</p>
+        
+        <section id="metrics" class="card highlight-section">
+            <h2><i class="icon-bolt"></i> Proven Global Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number">96%</div>
+                    [span_5](start_span)<div class="metric-label">On-Time Delivery (OTD)[span_5](end_span)</div>
                 </div>
-                <div class="experience-item">
-                    <h3>96% OTD + 25% Cold-Chain Deviation Reduction</h3>
-                    <p>Through carrier governance, real-time monitoring, and automated KPI dashboards.</p>
+                <div class="metric-card">
+                    <div class="metric-number">25%</div>
+                    [span_6](start_span)<div class="metric-label">Cold-Chain Deviation Reduction[span_6](end_span)</div>
                 </div>
-                <div class="experience-item">
-                    <h3>Defect-Free SAP UAT Leadership</h3>
-                    <p>Led UAT for SAP ECC LE-TRA/SD across 3 cycles – zero critical issues post go-live for 2 regional expansions & 3 CMO onboardings.</p>
+                <div class="metric-card">
+                    <div class="metric-number">$4.5M</div>
+                    [span_7](start_span)<div class="metric-label">Freight Portfolio Managed[span_7](end_span)</div>
                 </div>
-                <div class="experience-item">
-                    <h3>20-Month Incident-Free Terminal Operations</h3>
-                    <p>Managed 1,50,000 KL petrochemical terminal (50,000+ MT/month) and authored 25+ SOPs.</p>
+                <div class="metric-card">
+                    <div class="metric-number">Defect-Free</div>
+                    [span_8](start_span)<div class="metric-label">SAP UAT Go-Lives (5 Projects)[span_8](end_span)</div>
                 </div>
             </div>
         </section>
-
-        <!-- EXPERIENCE -->
-        <section id="experience">
-            <h2>Professional Experience</h2>
-
+        
+        <section id="experience" class="card">
+            <h2><i class="icon-briefcase"></i> Professional Experience</h2>
+            
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
                         <div class="job-title">Assistant Manager – Global Transportation Operations</div>
-                        <div class="company">Biocon Biologics, Bengaluru</div>
+                        <div class="company">Biocon Biologics, Bengaluru (Pharma/Biologics)</div>
                     </div>
                     <div class="duration">July 2023 – August 2025</div>
                 </div>
                 <ul class="achievements">
-                    <li>Managed $4.5M global freight portfolio → 96% OTD & 25% cold-chain deviation reduction</li>
-                    <li>Authored Global Transportation Playbook across 5 regions (15+ processes)</li>
-                    <li>Led SAP ECC LE-TRA/SD UAT for 3 cycles – zero post-production critical issues</li>
-                    <li>Built 20+ automated KPI dashboards for control tower operations</li>
-                    <li>100% GDP/GxP/SOX compliance via documentation governance & audits</li>
+                    [span_9](start_span)<li>**Operational Excellence:** Managed $4.5M global freight portfolio[span_9](end_span)[span_10](start_span), achieving **96% OTD** and a **25% cold-chain deviation reduction**[span_10](end_span).</li>
+                    [span_11](start_span)<li>**Process Transformation:** Authored and deployed a Global Transportation Playbook across 5 regions, standardizing 15+ critical processes[span_11](end_span).</li>
+                    [span_12](start_span)<li>**SAP Leadership:** Led end-to-end UAT validation for SAP ECC **LE-TRA & SD** modules[span_12](end_span) [span_13](start_span)for 2 regional expansions and 3 CMO onboardings[span_13](end_span).</li>
+                    [span_14](start_span)<li>**Control Tower:** Built automated KPI dashboards tracking 20+ metrics[span_14](end_span), including real-time temperature alerts and carrier exception rates.</li>
                 </ul>
             </div>
-
+            
             <div class="experience-item">
                 <div class="experience-header">
-                    <div>
-                        <div class="job-title">Logistics Coordinator</div>
-                        <div class="company">Bulk Liquid Solutions, Bengaluru</div>
-                    </div>
+                    <div><div class="job-title">Logistics Coordinator</div><div class="company">Bulk Liquid Solutions, Bengaluru</div></div>
                     <div class="duration">May 2022 – June 2023</div>
                 </div>
-                <ul class="achievements">
-                    <li>Multimodal shipments (ISO tanks, flexi-bags) with 100% DG/customs compliance</li>
-                    <li>Monitored freight costs, demurrage & vendor KPIs</li>
-                </ul>
+                [span_15](start_span)<ul><li>Executed multimodal shipments (ISO tanks, flexi-bags) with 100% DG/customs compliance[span_15](end_span).</li></ul>
             </div>
-
             <div class="experience-item">
                 <div class="experience-header">
-                    <div>
-                        <div class="job-title">Senior Executive – Client Delivery & Quality</div>
-                        <div class="company">Enventure Engineering, Bengaluru</div>
-                    </div>
-                    <div class="duration">April 2021 – March 2022</div>
+                    <div><div class="job-title">Terminal Assistant – Operations</div><div class="company">IMC Limited, Kutch (Petrochemical Terminal)</div></div>
+                    <div class="duration">Nov 2015 – Aug 2020</div>
                 </div>
-                <ul class="achievements">
-                    <li>Improved CSAT scores & conducted ISO 9001 audits (zero NCs)</li>
-                    <li>Developed KPI/SLA dashboards</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <div class="job-title">Terminal Assistant – Operations</div>
-                        <div class="company">IMC Limited, Kutch</div>
-                    </div>
-                    <div class="duration">November 2015 – August 2020</div>
-                </div>
-                <ul class="achievements">
-                    <li>Oversaw 1,50,000 KL terminal (50,000+ MT/month)</li>
-                    <li>20-month incident-free record</li>
-                    <li>Drafted 25+ SOPs for safety & operations</li>
-                </ul>
+                [span_16](start_span)[span_17](start_span)<ul><li>Oversaw 1,50,000 KL petrochemical terminal operations; maintained a **20-month incident-free safety record**[span_16](end_span)[span_17](end_span)[span_18](start_span).</li><li>Drafted and updated 25+ SOPs for material handling, safety, and emergency response[span_18](end_span).</li></ul>
             </div>
         </section>
 
-        <!-- SKILLS & CERTIFICATIONS remain exactly as in the previous version -->
-
-        <footer>
-            <div class="container">
-                <p>© 2025 Vishnuprasad N | Global Supply Chain | SAP | Cold-Chain Logistics | <a href="https://linkedin.com/in/vp2194" style="color:white;">Connect on LinkedIn</a></p>
+        <section id="skills" class="card skill-section">
+            <h2><i class="icon-cogs"></i> Core Expertise & Technologies</h2>
+            
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3>SAP & Systems Expertise</h3>
+                    <ul>
+                        [span_19](start_span)[span_20](start_span)<li>**SAP ECC 6.0:** LE-TRA, SD, MM (UAT, Process Validation, Master Data)[span_19](end_span)[span_20](end_span)</li>
+                        [span_21](start_span)[span_22](start_span)<li>**S/4HANA (Trained):** Transportation Management (TM), IBP, GTS, Business Network[span_21](end_span)[span_22](end_span)</li>
+                        [span_23](start_span)<li>Tools & Analytics: Power BI[span_23](end_span)[span_24](start_span), Advanced MS Excel, Transportation Management Systems[span_24](end_span)</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Global Operations & Compliance</h3>
+                    <ul>
+                        [span_25](start_span)<li>Cold-Chain Logistics[span_25](end_span) [span_26](start_span)[span_27](start_span)& DG Compliance[span_26](end_span)[span_27](end_span)</li>
+                        [span_28](start_span)<li>Global Playbook Design[span_28](end_span) [span_29](start_span)& S&OE Alignment[span_29](end_span)</li>
+                        [span_30](start_span)<li>GDP/GxP, SOX, ISO 9001 Compliance, US FSVP[span_30](end_span)</li>
+                        [span_31](start_span)[span_32](start_span)<li>Multimodal Freight Management[span_31](end_span)[span_32](end_span)[span_33](start_span), Carrier Governance[span_33](end_span)</li>
+                    </ul>
+                </div>
             </div>
-        </footer>
+        </section>
+        
+        <section id="certifications" class="card">
+            <h2><i class="icon-badge"></i> Key Credentials</h2>
+            <div class="certifications-grid">
+                <div>
+                    <h3>SAP Learning Badges</h3>
+                    <ul>
+                        <li>SAP S/4HANA Transportation Management (TM)</li>
+                        <li>SAP Integrated Business Planning (IBP)</li>
+                        <li>SAP Global Trade Services (GTS)</li>
+                        <li>SAP Business Network</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Professional Certifications</h3>
+                    <ul>
+                        <li>CSCMP - Supply Chain & Transport Management Professional Fundamentals</li>
+                        <li>CILT - Procurement & Logistics Certification</li>
+                        <li>ISO 9001 QMS Internal Auditor</li>
+                        <li>Lean Six Sigma - White Belt, US FSVP, Global Sanctions Compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
     </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Vishnuprasad N | Global Supply Chain Transformation Leader | Always Connecting People, Process & Systems.</p>
+        </div>
+    </footer>
 </body>
-    </html>
+</html>
