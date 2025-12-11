@@ -54,46 +54,56 @@
     .section-title::after{content:'';width:80px;height:4px;background:var(--gold);position:absolute;bottom:-16px;left:50%;transform:translateX(-50%)}
 
     .card{background:white;border-radius:20px;padding:32px 24px;margin-bottom:40px;box-shadow:0 15px 40px rgba(15,23,42,0.08);border:1px solid var(--border);transition:.4s}
-    .card:hover{transform:translateY(-12px);box-shadow:0 25px 60px rgba(15,23,42,0.12)}
+    .card:hover{transform:translateY(-12px)}
 
-    /* INTERACTIVE METRICS */
-    .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin:40px 0}
-    .metric{text-align:center;padding:24px;background:white;border-radius:16px;box-shadow:0 10px 30px rgba(202,138,4,0.12);transition:.4s}
-    .metric:hover{transform:scale(1.08)}
-    .metric-number{font-size:3.2rem;font-weight:900;color:var(--gold);margin-bottom:8px}
-    .metric-label{font-weight:700;color:var(--navy;text-transform:uppercase;font-size:0.9rem;letter-spacing:1px}
-
-    /* INTERACTIVE TIMELINE */
-    .timeline-item{
-      background:white;border-radius:16px;padding:28px;margin:32px 0;
-      box-shadow:0 12px 35px rgba(15,23,42,0.1);cursor:pointer;transition:.4s;
-      border-left:5px solid var(--gold);
+    /* SUPER SMOOTH TIMELINE */
+    .timeline-container{
+      position:relative;padding:40px 0;
     }
-    .timeline-item:hover{transform:translateX(12px);box-shadow:0 20px 50px rgba(202,138,4,0.18)}
-    .timeline-header{display:flex;justify-content:space-between;align-items:center}
-    .timeline-title{font-size:1.5rem;font-weight:800;color:var(--navy)}
-    .timeline-toggle{font-size:1.8rem;color:var(--gold);transition:.3s}
-    .timeline-toggle.open{transform:rotate(45deg)}
-    .timeline-content{max-height:0;overflow:hidden;transition:max-height .6s ease}
-    .timeline-content.open{max-height:800px}
 
-    /* SKILLS GRID */
-    .skills-grid{display:grid;gap:20px;grid-template-columns:1fr}
-    .skill-box{background:white;padding:28px;border-radius:16px;box-shadow:0 12px 35px rgba(15,23,42,0.07);border-left:6px solid var(--gold);transition:.3s}
+    .timeline-item{
+      background:white;border-radius:20px;padding:32px 28px;margin:40px 0;
+      box-shadow:0 20px 50px rgba(15,23,42,0.12);border-left:6px solid var(--gold);
+      opacity:0;transform:translateY(60px);transition:all 1.2s cubic-bezier(0.25,0.8,0.25,1);
+    }
+
+    .timeline-item.visible{
+      opacity:1;transform:translateY(0);
+    }
+
+    .timeline-header{
+      cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+      padding-right:12px;
+    }
+
+    .timeline-title{font-size:1.65rem;font-weight:800;color:var(--navy);margin-bottom:6px}
+    .timeline-company{color:var(--accent);font-weight:600;font-size:1.2rem;margin-bottom:12px}
+    .timeline-toggle{font-size:2rem;color:var(--gold);transition:transform .4s;font-weight:300}
+
+    .timeline-content{
+      max-height:0;overflow:hidden;transition:max-height 0.8s cubic-bezier(0.4,0,0.2,1);
+      padding-left:8px;
+    }
+    .timeline-content.open{max-height:1200px}
+
+    .bullets{list-style:none;padding-left:0;margin-top:16px}
+    .bullets li{margin:16px 0;padding-left:32px;position:relative;color:#374151;font-weight:500}
+    .bullets li::before{content:"Check";color:var(--gold);position:absolute;left:0;font-weight:900}
+
+    .skills-grid{display:grid;gap:24px;grid-template-columns:1fr}
+    .skill-box{background:white;padding:32px;border-radius:18px;box-shadow:0 15px 40px rgba(15,23,42,0.09);border-left:7px solid var(--gold);transition:.3s}
     .skill-box:hover{border-left-color:var(--accent)}
 
-    @media(min-width:768px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(min-width:1024px){.skills-grid{grid-template-columns:repeat(3,1fr)}header{padding:220px 20px 140px}}
+    @media(min-width:768px){
+      .skills-grid{grid-template-columns:repeat(2,1fr)}
+      .contact-bar{flex-direction:row;gap:24px}
+    }
+    @media(min-width:1024px){
+      .skills-grid{grid-template-columns:repeat(3,1fr)}
+      header{padding:220px 20px 140px}
+    }
 
     footer{background:var(--navy);color:#94a3b8;text-align:center;padding:60px 20px;margin-top:80px}
-
-    /* PDF DOWNLOAD BUTTON */
-    .pdf-btn{
-      display:block;width:240px;margin:40px auto;padding:16px;background:var(--gold);color:#000;
-      text-align:center;border-radius:2px solid var(--gold);border-radius:50px;font-weight:700;
-      box-shadow:0 12px 35px rgba(202,138,4,0.3);transition:.4s;text-decoration:none
-    }
-    .pdf-btn:hover{background:white;color:var(--gold);transform:translateY(-4px)}
   </style>
 </head>
 <body>
@@ -104,27 +114,23 @@
   <h1 class="name">Vishnuprasad N</h1>
   <h2 class="headline">A Decade of Excellence in Global Supply Chain Transformation</h2>
   <p class="intro-text">
-    Global Supply Chain leader with 9.5 years delivering excellence across pharma/biologics and petrochemicals. Owned $4.5M freight portfolio across 5 continents — achieved 96% OTD and 25% cold-chain deviation reduction. Expert in global playbook design, SAP UAT leadership, and 100% GDP/GxP compliance.
+    Global Supply Chain leader with 9.5 years driving logistics excellence across pharma/biologics and petrochemicals. 
+    Managed $4.5M freight portfolio across Americas • EMEA • APAC • LATAM — delivered 96% OTD and 25% cold-chain deviation reduction. 
+    Expert in playbook design, SAP UAT leadership, and 100% GDP/GxP compliance.
   </p>
-
   <div class="contact-bar">
     <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a>
     <a href="https://linkedin.com/in/vp2194" target="_blank">linkedin.com/in/vp2194</a>
     <span>Bengaluru, India</span>
   </div>
-
-  <!-- PDF DOWNLOAD BUTTON -->
-  <a href="https://vp2194.github.io/vishnu-portfolio/Vishnuprasad_Resume.pdf" download class="pdf-btn">
-    Download Resume (PDF)
-  </a>
 </header>
 
 <nav>
   <div class="container">
     <ul class="nav-links">
-      <li><a href="#profile" class="active">Profile</a></li>
-      <li><a href="#metrics">Impact</a></li>
+      <li><a href="#summary" class="active">Summary</a></li>
       <li><a href="#timeline">Journey</a></li>
+      <li><a href="#impact">Impact</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#certs">Certifications</a></li>
     </ul>
@@ -133,83 +139,104 @@
 
 <div class="container">
 
-  <!-- ANIMATED METRICS -->
-  <section id="metrics">
-    <div class="metrics">
-      <div class="metric"><div class="metric-number" data-count="96">0</div><div class="metric-label">On-Time Delivery</div></div>
-      <div class="metric"><div class="metric-number" data-count="25">0</div><div class="metric-label">Deviation Reduction</div></div>
-      <div class="metric"><div class="metric-number" data-count="4.5">0</div><div class="metric-label">$M Freight Managed</div></div>
-      <div class="metric"><div class="metric-number" data-count="100">0</div><div class="metric-label">Compliance Rate</div></div>
+  <section id="summary" class="card">
+    <h2 class="section-title">Professional Summary</h2>
+    <p style="font-size:1.1rem;color:#475569;line-height:1.8">
+      Global Supply Chain professional with 9.5 years driving logistics excellence across pharma/biologics and petrochemical sectors. Managed $4.5M annual freight portfolio spanning Americas, EMEA, APAC, and LATAM, delivering 96% on-time delivery (OTD) and 25% reduction in cold-chain deviations through process standardization, KPI visibility enhancement, and SAP ECC LE-TRA/SD expertise. Proven track record in global playbook rollout, UAT leadership, S&OE alignment, and cross-regional stakeholder governance.
+    </p>
+  </section>
+
+  <section id="timeline">
+    <h2 class="section-title">Career Journey</h2>
+    <div class="timeline-container">
+
+      <div class="timeline-item">
+        <div class="timeline-header" onclick="this.parentElement.querySelector('.timeline-content').classList.toggle('open');this.querySelector('.timeline-toggle').classList.toggle('open')">
+          <div>
+            <div class="timeline-title">Assistant Manager – Global Transportation Operations</div>
+            <div class="timeline-company">Biocon Biologics • Jul 2023 – Aug 2025</div>
+          </div>
+          <div class="timeline-toggle">+</div>
+        </div>
+        <div class="timeline-content">
+          <ul class="bullets">
+            <li>Managed $4.5M global freight portfolio across 5 regions – achieved 96% OTD & 25% cold-chain reduction</li>
+            <li>Authored Global Transportation Playbook – standardized 15+ processes across continents</li>
+            <li>Led SAP ECC LE-TRA/SD UAT for 5 go-lives – zero post-production critical issues</li>
+            <li>Built real-time KPI dashboards with temperature & customs alerts</li>
+            <li>Partnered with S&OE for 4 major product launches</li>
+            <li>Delivered 100% GDP/GxP/SOX compliance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-header" onclick="this.parentElement.querySelector('.timeline-content').classList.toggle('open');this.querySelector('.timeline-toggle').classList.toggle('open')">
+          <div>
+            <div class="timeline-title">Logistics Coordinator</div>
+            <div class="timeline-company">Bulk Liquid Solutions • May 2022 – Jun 2023</div>
+          </div>
+          <div class="timeline-toggle">+</div>
+        </div>
+        <div class="timeline-content">
+          <ul class="bullets">
+            <li>Executed multimodal shipments – 100% customs & DG compliance</li>
+            <li>Controlled freight costs, demurrage & vendor performance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-header" onclick="this.parentElement.querySelector('.timeline-content').classList.toggle('open');this.querySelector('.timeline-toggle').classList.toggle('open')">
+          <div>
+            <div class="timeline-title">Senior Executive – Client Delivery & Quality</div>
+            <div class="timeline-company">Enventure Engineering • Apr 2021 – Mar 2022</div>
+          </div>
+          <div class="timeline-toggle">+</div>
+        </div>
+        <div class="timeline-content">
+          <ul class="bullets">
+            <li>Improved CSAT scores through proactive client management</li>
+            <li>Conducted ISO 9001 audits – zero non-conformities</li>
+            <li>Built KPI/SLA dashboards</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-header" onclick="this.parentElement.querySelector('.timeline-content').classList.toggle('open');this.querySelector('.timeline-toggle').classList.toggle('open')">
+          <div>
+            <div class="timeline-title">Terminal Assistant – Operations</div>
+            <div class="timeline-company">IMC Limited • Nov 2015 – Aug 2020</div>
+          </div>
+          <div class="timeline-toggle">+</div>
+        </div>
+        <div class="timeline-content">
+          <ul class="bullets">
+            <li>Ran 150K KL terminal – 50,000+ MT/month throughput</li>
+            <li>Achieved 20-month incident-free safety record</li>
+            <li>Drafted 25+ SOPs for safety & operations</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- INTERACTIVE TIMELINE -->
-  <section id="timeline">
-    <h2 class="section-title">Career Journey</h2>
-
-    <div class="timeline-item">
-      <div class="timeline-header" onclick="this.parentElement.querySelector('.timeline-content').classList.toggle('open');this.querySelector('.timeline-toggle').classList.toggle('open')">
-        <div>
-          <div class="timeline-title">Assistant Manager – Global Transportation Operations</div>
-          <div style="color:var(--accent);font-weight:600">Biocon Biologics • Jul 2023 – Aug 2025</div>
-        </div>
-        <div class="timeline-toggle">+</div>
-      </div>
-      <div class="timeline-content">
-        <ul>
-          <li>Managed $4.5M global freight portfolio – 96% OTD & 25% cold-chain reduction</li>
-          <li>Authored Global Transportation Playbook – 15+ processes standardized across 5 regions</li>
-          <li>Led defect-free SAP ECC LE-TRA/SD UAT for 5 go-lives</li>
-          <li>Built real-time KPI dashboards with temperature & customs alerts</li>
-          <li>100% GDP/GxP/SOX compliance</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-header" onclick="this.parentElement.querySelector('.timeline-content').classList.toggle('open');this.querySelector('.timeline-toggle').classList.toggle('open')">
-        <div>
-          <div class="timeline-title">Logistics Coordinator</div>
-          <div style="color:var(--accent);font-weight:600">Bulk Liquid Solutions • May 2022 – Jun 2023</div>
-        </div>
-        <div class="timeline-toggle">+</div>
-      </div>
-      <div class="timeline-content">
-        <ul><li>Executed multimodal shipments – 100% regulatory compliance</li><li>Controlled costs, demurrage & vendor performance</li></ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-header" onclick="this.parentElement.querySelector('.timeline-content').classList.toggle('open');this.querySelector('.timeline-toggle').classList.toggle('open')">
-        <div>
-          <div class="timeline-title">Senior Executive – Client Delivery & Quality</div>
-          <div style="color:var(--accent);font-weight:600">Enventure Engineering • Apr 2021 – Mar 2022</div>
-        </div>
-        <div class="timeline-toggle">+</div>
-      </div>
-      <div class="timeline-content">
-        <ul><li>Improved CSAT scores via client management</li><li>ISO 9001 audits – zero non-conformities</li><li>KPI/SLA dashboards</li></ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-header" onclick="this.parentElement.querySelector('.timeline-content').classList.toggle('open');this.querySelector('.timeline-toggle').classList.toggle('open')">
-        <div>
-          <div class="timeline-title">Terminal Assistant – Operations</div>
-          <div style="color:var(--accent);font-weight:600">IMC Limited • Nov 2015 – Aug 2020</div>
-        </div>
-        <div class="timeline-toggle">+</div>
-      </div>
-      <div class="timeline-content">
-        <ul><li>Ran 150K KL terminal – 50,000+ MT/month</li><li>20-month incident-free record</li><li>Drafted 25+ SOPs</li></ul>
-      </div>
-    </div>
+  <section id="impact" class="card">
+    <h2 class="section-title">Key Impact</h2>
+    <ul class="bullets" style="columns:2;column-gap:40px">
+      <li>Global Transportation Playbook deployed across 5 regions</li>
+      <li>96% OTD • 25% cold-chain deviation reduction</li>
+      <li>Defect-free SAP UAT for 5 go-lives</li>
+      <li>20-month incident-free safety record</li>
+    </ul>
   </section>
 
   <section id="skills" class="card">
     <h2 class="section-title">Core Expertise</h2>
     <div class="skills-grid">
-      <div class="skill-box"><h3>SAP</h3><p>ECC 6.0 Power User • S/4HANA TM, IBP, GTS</p></div>
+      <div class="skill-box"><h3>SAP Mastery</h3><p>ECC 6.0 Power User • S/4HANA TM, IBP, GTS, Business Network</p></div>
       <div class="skill-box"><h3>Operations</h3><p>Cold-Chain • DG • Multimodal • Control Tower • Playbook Design</p></div>
       <div class="skill-box"><h3>Excellence</h3><p>UAT Leadership • KPI Dashboards • CAPA • Power BI</p></div>
       <div class="skill-box"><h3>Compliance</h3><p>GDP/GxP • SOX • ISO 9001 • US FSVP</p></div>
@@ -220,7 +247,7 @@
     <h2 class="section-title">Certifications & Education</h2>
     <div class="skills-grid">
       <div class="skill-box"><h3>SAP Badges</h3><p>TM • IBP • GTS • Business Network</p></div>
-      <div class="skill-box"><h3>Certifications</h3><p>CSCMP • CILT • ISO 9001 Auditor • Lean Six Sigma • US FSVP</p></div>
+      <div class="skill-box"><h3>Professional</h3><p>CSCMP • CILT • ISO 9001 Auditor • Lean Six Sigma • US FSVP • Global Sanctions</p></div>
       <div class="skill-box"><h3>Education</h3><p>BSc Applied Sciences – PSG Tech<br>PG Diploma Foreign Trade</p></div>
     </div>
   </section>
@@ -234,31 +261,28 @@
 </footer>
 
 <script>
-  // Animate metrics on scroll
-  const counters = document.querySelectorAll('.metric-number');
-  const speed = 200;
-
-  const animateCounter = (el) => {
-    const target = +el.getAttribute('data-count');
-    const count = +el.innerText;
-    const inc = target / speed;
-    if(count < target) {
-      el.innerText = Math.ceil(count + inc);
-      setTimeout(() => animateCounter(el), 20);
-    } else { el.innerText = target + (target===4.5?'M':'%'); }
-  };
-
+  // Ultra-smooth timeline reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        counters.forEach(counter => animateCounter(counter));
-        observer.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.2, rootMargin: '0px 0px -100px 0px' });
 
-  observer.observe(document.querySelector('#metrics'));
+  document.querySelectorAll('.timeline-item').forEach(el => observer.observe(el));
+
+  // Nav active state on scroll
+  window.addEventListener('scroll', () => {
+    let current = 'summary';
+    document.querySelectorAll('section[id]').forEach(s => {
+      if (window.scrollY >= s.offsetTop - 250) current = s.getAttribute('id');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+    });
+  });
 </script>
 
 </body>
-                                                                                                                 </html>
+  </html>
