@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vishnuprasad N – The Global Supply Chain Transformation Leader trusted by Biocon Biologics to design & deploy playbooks, lead SAP UAT at scale, and deliver flawless cold-chain operations across 5 continents">
+  <meta name="description" content="Vishnuprasad N – Global Supply Chain Professional | 9.5 Years Driving Logistics Excellence Across Pharma/Biologics & Petrochemical Sectors">
   <title>Vishnuprasad N | Global Supply Chain Transformation Leader</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,8 @@
       --gold-light: #fbbf24;
       --accent: #0891b2;
       --light: #f8fafc;
+      --text-light: #e2e8f0;
+      --border: rgba(255,255,255,0.1);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,12 +27,12 @@
     body {
       font-family: 'Inter', sans-serif;
       background: #000;
-      color: #e2e8f0;
+      color: var(--text-light);
       line-height: 1.7;
       overflow-x: hidden;
     }
 
-    /* HERO – PURE EXECUTIVE DOMINANCE */
+    /* HERO – BRAND DOMINANCE */
     header {
       min-height: 100vh;
       background: linear-gradient(145deg, #000814 30%, #001d3d 100%);
@@ -88,7 +90,7 @@
     }
 
     @keyframes shine {
-      0%, 100% { background-position: -200%;
+      0%, 100% { background-position: -200%; }
       50% { background-position: 200%; }
     }
 
@@ -100,7 +102,7 @@
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
-      color: #f8fafc;
+      color: var(--text-light);
     }
 
     .sub-head {
@@ -130,6 +132,9 @@
       border: 1px solid rgba(255,255,255,0.15);
       border-radius: 60px;
       transition: all 0.4s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .contact-bar a:hover {
@@ -157,7 +162,7 @@
     }
 
     .nav-links a {
-      color: #e2e8f0;
+      color: var(--text-light);
       text-decoration: none;
       font-weight: 600;
       font-size: 1.1rem;
@@ -187,30 +192,60 @@
     /* Main Content */
     .container { max-width: 1300px; margin: 0 auto; padding: 5rem 2rem; }
 
+    .main-content {
+      display: grid;
+      gap: 4rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 1024px) {
+      .main-content { grid-template-columns: 2.5fr 1.5fr; }
+      .right-column { position: sticky; top: 120px; height: fit-content; }
+    }
+
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: 3.2rem;
-      color: var(--light);
+      color: var(--text-light);
       margin-bottom: 2.5rem;
       position: relative;
       display: inline-block;
     }
 
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+    }
+
     .card {
       background: rgba(15, 23, 42, 0.6);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid var(--border);
       border-radius: 32px;
       padding: 3.5rem;
       margin-bottom: 4rem;
       box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+      transition: all 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: var(--gold);
+      box-shadow: 0 40px 80px rgba(202,138,4,0.2);
     }
 
     .experience-item {
       margin-bottom: 3.5rem;
       padding-bottom: 2.5rem;
-      border-bottom: 1px dashed rgba(255,255,255,0.1);
+      border-bottom: 1px dashed var(--border);
     }
+
+    .experience-item:last-child { border-bottom: none; }
 
     .job-title {
       font-size: 2.1rem;
@@ -255,6 +290,36 @@
       top: -2px;
     }
 
+    .skills-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .skill-item {
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .skill-title {
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skill-list li {
+      padding: 0.5rem 0;
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+
     footer {
       background: #000;
       color: #475569;
@@ -267,7 +332,8 @@
       .brand-line::before, .brand-line::after { display: none; }
       .headline { font-size: 2.8rem; }
       .sub-head { font-size: 1.6rem; }
-      .contact-bar { flex-direction: column; align-items: center; }
+      .contact-bar { flex-direction: column; align-items: center; gap: 1.5rem; }
+      .nav-links { gap: 2rem; }
     }
   </style>
 </head>
@@ -275,15 +341,15 @@
 
   <header>
     <div class="container">
-      <div class="brand-line">Global Supply Chain Transformation Leader</div>
+      <div class="brand-line">Global Supply Chain Professional</div>
       <h1 class="name">Vishnuprasad N</h1>
-      <h2 class="headline">The Architect of Flawless Global Logistics Playbooks & SAP-Driven Operational Excellence</h2>
-      <p class="sub-head">Trusted to design, deploy, and govern mission-critical transportation frameworks that power biologics & high-value supply chains across Americas, EMEA, APAC & LATAM</p>
+      <h2 class="headline">9.5 Years Driving Logistics Excellence Across Pharma/Biologics & Petrochemical Sectors</h2>
+      <p class="sub-head">Managed global freight portfolios spanning Americas, EMEA, APAC, and LATAM, delivering on-time delivery leadership and cold-chain deviation reduction through process standardization, KPI visibility enhancement, and SAP ECC LE-TRA/SD expertise. Proven track record in global playbook rollout, UAT leadership, S&OE alignment, and cross-regional stakeholder governance.</p>
 
       <div class="contact-bar">
-        <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a>
-        <a href="https://linkedin.com/in/vp2194" target="_blank">linkedin.com/in/vp2194</a>
-        <span>Bengaluru, India</span>
+        <a href="mailto:vp2194@outlook.com"><i class="fas fa-envelope"></i> vp2194@outlook.com</a>
+        <a href="https://linkedin.com/in/vp2194" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/vp2194</a>
+        <span><i class="fas fa-map-marker-alt"></i> Bengaluru, India</span>
       </div>
     </div>
   </header>
@@ -291,71 +357,191 @@
   <nav>
     <div class="container">
       <ul class="nav-links">
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#impact">Key Achievements</a></a></li>
+        <li><a href="#profile" class="active">Profile</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Expertise</a></li>
-        <li><a href="#certs">Certifications</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#credentials">Credentials</a></li>
       </ul>
+    </div>
+  </nav>
+
+  <div class="container main-content">
+
+    <div class="left-column">
+
+      <section id="profile" class="card">
+        <h2 class="section-title">The Strategic Vision</h2>
+        <p>Global supply chain professional with 9.5 years driving logistics excellence across pharma/biologics and petrochemical sectors. Managed global freight portfolios spanning Americas, EMEA, APAC, and LATAM, delivering on-time delivery leadership and cold-chain deviation reduction through process standardization, KPI visibility enhancement, and SAP ECC LE-TRA/SD expertise.</p>
+        <p>Proven track record in global playbook rollout, UAT leadership, S&OE alignment, and cross-regional stakeholder governance.</p>
+      </section>
+
+      <section id="experience" class="card">
+        <h2 class="section-title">Proven Leadership</h2>
+
+        <div class="experience-item">
+          <div class="job-title">Assistant Manager – Global Transportation Operations</div>
+          <div class="company">Biocon Biologics, Bengaluru</div>
+          <span class="duration">July 2023 – August 2025</span>
+          <ul class="achievements">
+            <li>Managed global freight portfolio across five regions (Americas, EMEA, APAC, LATAM), achieving on-time delivery excellence and reduction in cold-chain temperature deviations through standardized processes and enhanced carrier governance</li>
+            <li>Authored and deployed Global Transportation Playbook across 5 regions, standardizing 15+ critical processes including documentation workflows, escalation protocols, lane readiness assessments, and regional handover procedures</li>
+            <li>Led end-to-end UAT validation for SAP ECC LE-TRA & SD modules across 3 implementation cycles: executed comprehensive test scenarios covering PGI workflows, invoice verification, master data accuracy checks, delivery block controls, shipment creation, and complete Order-to-Cash (O2C) processes for 2 regional expansions and 3 CMO onboardings</li>
+            <li>Built and maintained automated KPI dashboards tracking 20+ metrics including lane performance, real-time temperature alerts, carrier exception rates, and customs clearance delays</li>
+            <li>Partnered with global Sales and Operations Execution (S&OE) teams to align logistics capacity and lane readiness with product launch timelines and regional supply requirements across 4 major product rollouts</li>
+            <li>Ensured 100% compliance with Good Distribution Practice (GDP), Good Practice (GxP), Sarbanes-Oxley (SOX), and internal quality procedures through rigorous documentation governance and quarterly audit readiness programs</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-title">Terminal Assistant – Operations</div>
+          <div class="company">IMC Limited (Liquid Storage Terminal), Kutch</div>
+          <span class="duration">November 2015 – August 2020</span>
+          <ul class="achievements">
+            <li>Oversaw daily operations at a 150,000 kilolitre capacity liquid petrochemical storage terminal handling 50,000+ MT monthly throughput, including jetty operations, tank farm management, and dispatch planning for bulk liquid chemicals</li>
+            <li>Managed inventory accuracy, documentation compliance, tanker turnaround optimization, and movement control across 31 storage tanks</li>
+            <li>Contributed to 20-month incident-free terminal operations record through strict adherence to safety protocols and maintained ISO 9001 compliance throughout tenure</li>
+            <li>Drafted and updated 25+ Standard Operating Procedures (SOPs) for material handling, safety procedures, emergency response, and terminal operations, improving process standardization across shifts</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-title">Logistics Coordinator</div>
+          <div class="company">Bulk Liquid Solutions, Bengaluru</div>
+          <span class="duration">May 2022 – June 2023</span>
+          <ul class="achievements">
+            <li>Executed multimodal shipments for bulk liquid cargo (ISO tanks, flexi-bags) with 100% compliance to customs, excise, and dangerous goods regulations across domestic and international lanes</li>
+            <li>Monitored freight costs, demurrage charges, and vendor performance metrics to support data-driven operational decisions and quarterly vendor reviews</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="job-title">Senior Executive – Client Delivery & Quality</div>
+          <div class="company">Enventure Engineering, Bengaluru</div>
+          <span class="duration">April 2021 – March 2022</span>
+          <ul class="achievements">
+            <li>Served as primary client liaison for multiple accounts, improving Customer Satisfaction (CSAT) scores through proactive communication, timely delivery, and issue resolution</li>
+            <li>Conducted ISO 9001:2015 internal audits across multiple departments, achieving zero non-conformities through root cause analysis and corrective action implementation</li>
+            <li>Developed KPI/SLA dashboards to track project timelines, quality metrics, and process adherence</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="right-column">
+
+      <section id="achievements" class="card">
+        <h2 class="section-title">Signature Impact</h2>
+        <ul class="achievements">
+          <li>Global Playbook Deployment: Designed and implemented standardized transportation playbook including work instructions, process checklists, and regional training materials across 5 regions</li>
+          <li>Operational Excellence: Delivered on-time delivery leadership, cold-chain deviation reduction, and 100% audit compliance over multi-year tenure</li>
+          <li>UAT Leadership: Executed defect-free UAT cycles for 2 regional go-lives and 3 CMO integrations with zero post-production critical issues</li>
+          <li>Safety Record: Maintained 20-month incident-free operations at IMC petrochemical terminal</li>
+        </ul>
+      </section>
+
+      <section id="expertise" class="card">
+        <h2 class="section-title">Core Expertise</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-title">SAP Mastery</div>
+            <ul class="skill-list">
+              <li>ECC 6.0 Power User (UAT & Process Validation) - LE-TRA, SD, MM</li>
+              <li>S/4HANA Learning Badges - Transportation Management (TM), IBP, GTS, Business Network</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <div class="skill-title">Supply Chain Operations</div>
+            <ul class="skill-list">
+              <li>Cold-Chain Logistics | Dangerous Goods Handling | Multimodal Transportation</li>
+              <li>Carrier Governance | Freight Planning | Cost Management | Control Tower Operations</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <div class="skill-title">Process & Quality Excellence</div>
+            <ul class="skill-list">
+              <li>Global Playbook Design | UAT Leadership | Test Execution | KPI Dashboarding</li>
+              <li>CAPA Framework | Documentation Governance</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <div class="skill-title">Compliance & Regulatory</div>
+            <ul class="skill-list">
+              <li>GDP/GxP | SOX | ISO 9001 | US FSVP | Global Sanctions Compliance</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="credentials" class="card">
+        <h2 class="section-title">Credentials & Education</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-title">SAP Learning Badges</div>
+            <ul class="skill-list">
+              <li>SAP S/4HANA Transportation Management (TM)</li>
+              <li>SAP Integrated Business Planning (IBP)</li>
+              <li>SAP Global Trade Services (GTS)</li>
+              <li>SAP Business Network</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <div class="skill-title">Professional Certifications</div>
+            <ul class="skill-list">
+              <li>CSCMP – Supply Chain & Transport Management Professional Fundamentals</li>
+              <li>CILT – Procurement & Logistics Certification</li>
+              <li>Lean Six Sigma – White Belt</li>
+              <li>US FSVP (Foreign Supplier Verification Program)</li>
+              <li>ISO 9001 QMS Internal Auditor</li>
+              <li>Global Sanctions Compliance</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <div class="skill-title">Education</div>
+            <ul class="skill-list">
+              <li>BSc Applied Sciences – PSG College of Technology</li>
+              <li>PG Diploma in Foreign Trade – Tolani Commerce College</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
 
-  <div class="container">
+  <footer>
+    <div class="container">
+      © 2025 Vishnuprasad N — Global Supply Chain Transformation Leader
+    </div>
+  </footer>
 
-    <section id="profile" class="card">
-      <h2 class="section-title">The Vision</h2>
-      <p>Global supply chain transformation leader with 9.5+ years of experience in designing and executing high-stakes logistics strategies for pharma/biologics and petrochemical sectors.</p>
-      <p>Renowned for authoring the **Global Transportation Playbook** that standardized operations across 5 continents, leading defect-free SAP UAT cycles for regional expansions and CMO integrations, and building the control tower governance that ensures 100% GDP/GxP audit readiness.</p>
-    </section>
+  <script>
+    // Smooth scroll and active nav
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
 
-    <section id="impact" class="card">
-      <h2 class="section-title">Key Achievements</h2>
-      <ul class="achievements">
-        <li>Designed & deployed **Global Transportation Playbook** — the single source of truth for 5 regions</li>
-        <li>Led **defect-free SAP ECC LE-TRA & SD UAT** for 2 regional go-lives & 3 CMO onboardings — zero post-production critical issues</li>
-        <li>Established real-time KPI dashboards tracking 20+ metrics including temperature alerts & customs delays</li>
-        <li>Partnered with S&OE for 4 major product launches with flawless logistics alignment</li>
-        <li>20-month incident-free operations record at 150,000 KL petrochemical terminal</li>
-      </ul>
-    </section>
+    window.addEventListener('scroll', () => {
+      let current = '';
+      document.querySelectorAll('section[id]').forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
 
-    <section id="experience" class="card">
-      <h2 class="experience-item">
-        <div class="job-title">Assistant Manager – Global Transportation Operations</div>
-        <div class="company">Biocon Biologics</div>
-        <span class="duration">July 2023 – August 2025 · Bengaluru</span>
-        <ul class="achievements">
-          <li>Owned end-to-end global freight governance, playbook deployment, SAP UAT leadership, and S&OE alignment across 5 regions</li>
-          <li>Built & maintained real-time KPI dashboards and temperature monitoring</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="job-title">Terminal Assistant – Operations</div>
-        <div class="company">IMC Limited (150,000 KL Petrochemical Terminal)</div>
-        <span class="duration">Nov 2015 – Aug 2020 · Kutch</span>
-        <ul class="achievements">
-          <li>Ran 50,000+ MT/month throughput with 20-month incident-free record</li>
-          <li>Drafted 25+ SOPs for safety & operations</li>
-        </ul>
-      </div>
-
-      <!-- Other roles abbreviated — same premium style -->
-
-    </section>
-
-    <section id="skills" class="card">
-      <h2 class="section-title">Core Expertise</h2>
-      <p><strong>SAP ECC 6.0 Power User</strong> – LE-TRA, SD, MM UAT & Process Validation<br>
-      <strong>S/4HANA Trained</strong> – TM, IBP, GTS, Business Network<br>
-      <strong>Global Playbook Design | S&OE Alignment | Cold-Chain & DG Compliance | Control Tower Governance</strong></p>
-    </section>
-
-    <footer>
-      <div class="container">
-        © 2025 Vishnuprasad N — Global Supply Chain Transformation Leader
-      </div>
-    </footer>
-
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === `#${current}`) {
+          a.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
-  </html>
+</html>
