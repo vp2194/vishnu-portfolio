@@ -4,315 +4,232 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vishnuprasad N — Global Supply Chain Leader</title>
-  <meta name="description" content="Interactive portfolio with timeline, filters, year slider, icon toggle, and export one-pager." />
+  <meta name="description" content="Vishnuprasad N — 9.5 years in global supply chain, cold-chain, SAP, control tower. Based in Bengaluru, India." />
   <meta name="author" content="Vishnuprasad N" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#f8fafc; --white:#fff; --navy:#0f172a; --gold:#ca8a04; --muted:#64748b;
-      --accent:#0891b2; --card-shadow:0 12px 30px rgba(2,6,23,0.06);
-      --marker-size:14px; --spine-width:4px;
+      --bg:#f8fafc; --card:#ffffff; --navy:#0f172a; --gold:#ca8a04; --muted:#64748b;
+      --accent:#0891b2; --card-shadow:0 14px 40px rgba(2,6,23,0.06);
+      --maxw:1100px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
-    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--navy);-webkit-font-smoothing:antialiased;line-height:1.6;padding-bottom:80px}
+    body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
     a{color:inherit;text-decoration:none}
-    nav{position:sticky;top:0;background:var(--white);border-bottom:1px solid rgba(15,23,42,0.04);z-index:70}
-    .nav-inner{max-width:1200px;margin:0 auto;padding:.9rem 1rem;display:flex;justify-content:space-between;align-items:center}
-    .nav-links{display:flex;gap:1rem}
-    .nav-links a{font-weight:600;color:var(--muted)}
-    header.hero{padding:2.75rem 1.25rem;text-align:center;background:linear-gradient(180deg,#ffffff,#eef2f7)}
-    .brand{color:var(--gold);letter-spacing:4px;font-weight:800;margin-bottom:.4rem;text-transform:uppercase}
-    h1{font-family:Playfair Display,serif;font-size:clamp(2rem,5vw,3.4rem);margin-bottom:.3rem}
-    .lead{max-width:72ch;margin:0 auto;color:var(--muted)}
-    .container{max-width:1200px;margin:0 auto;padding:1rem}
-    .card{background:var(--white);border-radius:12px;padding:1rem;box-shadow:var(--card-shadow);border:1px solid rgba(15,23,42,0.04)}
+
+    /* Top nav */
+    nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid rgba(15,23,42,0.04);z-index:60}
+    .nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1rem}
+    .nav-name{font-weight:800}
+    .nav-links{display:flex;gap:1rem;align-items:center}
+    .nav-links a{padding:.4rem .6rem;border-radius:8px;font-weight:700;color:var(--muted)}
+    .nav-links a:hover{color:var(--gold);background:rgba(202,138,4,0.06);}
+
+    /* Hero */
+    header.hero{padding:5rem 1.25rem 3rem;text-align:center;background:linear-gradient(180deg,#ffffff,#eef2f7)}
+    .brand{color:var(--gold);letter-spacing:4px;font-weight:800;margin-bottom:.6rem;text-transform:uppercase}
+    h1{font-family:Playfair Display,serif;font-size:clamp(2rem,6vw,3.8rem);margin:.25rem 0}
+    .lead{max-width:70ch;margin:0 auto;color:var(--muted);font-weight:500}
+
+    .cta-bar{display:flex;gap:.6rem;justify-content:center;margin-top:1.1rem;flex-wrap:wrap}
+    .btn{padding:.6rem 1rem;border-radius:999px;border:2px solid var(--gold);background:var(--card);font-weight:800;cursor:pointer}
+    .btn.primary{background:var(--gold);color:#fff;border-color:var(--gold)}
+    .btn.ghost{background:transparent;border-color:rgba(15,23,42,0.06)}
+
+    /* Layout */
+    .container{max-width:var(--maxw);margin:0 auto;padding:2rem 1rem}
+    .card{background:var(--card);border-radius:12px;padding:1.25rem;box-shadow:var(--card-shadow);border:1px solid rgba(15,23,42,0.04);margin-bottom:1.25rem}
+    .grid{display:grid;gap:1.25rem}
+    @media(min-width:900px){.grid.cols-3{grid-template-columns:2fr 1fr 1fr}}
+
+    h2{font-family:Playfair Display,serif;margin-bottom:.6rem;font-size:1.6rem}
+    h3{margin-bottom:.4rem;font-size:1.05rem}
     .muted{color:var(--muted)}
-    .controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:1rem 0}
-    .chip{padding:.45rem .7rem;border-radius:999px;border:1px solid rgba(15,23,42,0.06);background:white;cursor:pointer;font-weight:700}
-    .chip.active{background:linear-gradient(90deg, rgba(202,138,4,0.12), rgba(2,129,178,0.06));border-color:var(--gold);color:var(--gold)}
-    .right{margin-left:auto;font-weight:600;color:var(--muted)}
-    /* Timeline */
-    .timeline-wrap{position:relative}
-    .timeline{position:relative;padding:1rem 0 2rem}
-    .timeline::before{content:"";position:absolute;left:28px;top:0;bottom:0;width:var(--spine-width);background:linear-gradient(180deg, rgba(202,138,4,0.15), rgba(2,129,178,0.06));border-radius:2px}
-    @media(min-width:900px){ .timeline{padding-left:88px} .timeline::before{left:48px} }
-    .timeline-item{position:relative;margin:1.1rem 0;padding:1rem 1rem 1rem 64px;border-radius:10px;background:var(--white);border:1px solid rgba(15,23,42,0.04);box-shadow:0 8px 18px rgba(2,6,23,0.04);overflow:visible}
-    .marker{position:absolute;left:16px;top:20px;width:var(--marker-size);height:var(--marker-size);border-radius:50%;background:var(--white);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(202,138,4,0.12)}
-    .marker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transform:scale(.6);transition:opacity .3s, transform .35s}
-    .timeline-item.visible .marker .dot{opacity:1;transform:scale(1)}
-    .timeline-item h4{margin-bottom:.25rem;font-size:1.05rem}
-    .meta{color:var(--muted);font-weight:600;margin-bottom:.45rem}
-    .summary{color:#334155}
-    .icon{width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:.5rem}
-    .more{max-height:0;overflow:hidden;transition:max-height .38s ease;padding-top:0}
-    .timeline-item.open .more{max-height:420px;padding-top:.6rem}
-    .expand-btn{background:transparent;border:0;color:var(--accent);font-weight:700;cursor:pointer;padding:.2rem .4rem;border-radius:8px}
-    .expand-btn:focus{outline:3px solid rgba(2,129,178,0.12)}
-    .hidden{display:none !important;opacity:0}
-    /* horizontal */
-    @media(min-width:1200px){
-      .timeline-h{display:flex;gap:2rem;overflow:auto;padding:1.25rem 0;align-items:flex-start}
-      .timeline-h::before{content:"";position:sticky;left:0;top:40px;height:var(--spine-width);width:100%;background:linear-gradient(90deg, rgba(202,138,4,0.12), rgba(2,129,178,0.04));border-radius:2px}
-      .timeline-h .timeline-item{min-width:320px;flex:0 0 360px;padding:1rem;margin:0;border-radius:12px}
-      .timeline-h .marker{left:calc(50% - var(--marker-size)/2);top:-10px}
-    }
-    .timeline-item{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.22,.9,.35,1), transform .55s cubic-bezier(.22,.9,.35,1)}
-    .timeline-item.visible{opacity:1;transform:none}
-    @media (prefers-reduced-motion: reduce){
-      .timeline-item,.marker,.timeline-item.visible{transition:none!important;transform:none!important;opacity:1!important}
-      .more{transition:none!important}
-    }
-    .flex{display:flex;align-items:center;gap:.6rem}
-    .tag{padding:.35rem .6rem;border-radius:999px;border:1px solid rgba(15,23,42,0.06);font-weight:600}
-    .controls-block{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
-    .slider-wrap{display:flex;align-items:center;gap:.6rem}
-    input[type="range"]{appearance:none;height:6px;border-radius:999px;background:linear-gradient(90deg,#ffd27a,#bde7f5);outline:none}
-    .icon-toggle{display:flex;gap:.5rem;align-items:center}
-    button.btn{padding:.5rem .7rem;border-radius:8px;border:1px solid rgba(15,23,42,0.06);background:white;cursor:pointer;font-weight:700}
-    button.btn.primary{background:var(--gold);color:white;border-color:var(--gold)}
+    .bullets{margin-top:.5rem;padding-left:1.1rem;color:#334155}
+
+    /* Experience details toggle */
+    .exp-more{max-height:0;overflow:hidden;transition:max-height .36s ease;padding-top:0}
+    .exp-open .exp-more{max-height:380px;padding-top:.6rem}
+
+    .expand{background:transparent;border:0;color:var(--accent);font-weight:700;cursor:pointer}
+
+    /* Skills / tags */
+    .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
+    .tag{padding:.35rem .7rem;border-radius:999px;border:1px solid rgba(15,23,42,0.06);font-weight:700;font-size:.9rem;background:white}
+
     footer{padding:2rem 1rem;text-align:center;color:var(--muted)}
-    /* print one-pager CSS for new window handled in JS */
+    @media (prefers-reduced-motion:reduce){*{transition:none!important}}
   </style>
 </head>
 <body>
+
   <nav aria-label="Primary">
     <div class="nav-inner">
-      <div><strong>Vishnuprasad N</strong></div>
-      <div class="nav-links"><a href="#summary">Summary</a><a href="#timeline-section">Journey</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+      <div class="nav-name">Vishnuprasad N</div>
+      <div class="nav-links" role="navigation" aria-label="Primary Links">
+        <a href="#summary">Summary</a>
+        <a href="#career">Career</a>
+        <a href="#impact">Impact</a>
+        <a href="#skills">Skills</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
 
-  <header class="hero" aria-labelledby="hero-title">
+  <header class="hero" role="banner" aria-labelledby="hero-title">
     <div class="brand">Global Supply Chain Transformation Leader</div>
     <h1 id="hero-title">Vishnuprasad N</h1>
-    <p class="lead muted">9.5 years across pharma/biologics & petrochemicals. Managed $4.5M freight across Americas • EMEA • APAC • LATAM — 96% OTD, 25% cold-chain reduction.</p>
+    <p class="lead">Global Supply Chain leader with 9.5+ years across pharma/biologics and petrochemicals. Experienced in cold-chain operations, SAP UAT leadership, control tower & playbook rollout across multiple regions — delivered measurable improvements in OTD and temperature-controlled logistics.</p>
+
+    <div class="cta-bar" role="region" aria-label="Primary actions">
+      <a class="btn primary" href="#contact">Contact</a>
+      <a class="btn ghost" href="https://linkedin.com/in/vp2194" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </header>
 
-  <main class="container">
-    <section id="summary" class="card">
-      <h2>Professional Summary</h2>
-      <p class="muted">Global Supply Chain professional with expertise in cold-chain logistics, SAP UAT, control tower, playbook governance and KPI-driven operations.</p>
+  <main class="container" id="main-content">
+
+    <section id="summary" class="card" aria-labelledby="summary-title">
+      <h2 id="summary-title">Professional Summary</h2>
+      <p class="muted">Global Supply Chain professional with 9.5+ years delivering logistics excellence across Americas, EMEA, APAC and LATAM. Managed a $4.5M freight portfolio, achieved 96% on-time delivery (OTD), and reduced cold-chain deviations by 25% through process standardization, KPI-driven dashboards and SAP-led transformations. Core strengths: cold-chain risk management, vendor governance, SOP/playbook design, SAP UAT and control tower operations.</p>
     </section>
 
-    <!-- Controls: filters, year slider, icon toggle, export -->
-    <div class="controls card" role="toolbar" aria-label="Timeline controls">
-      <div class="controls-block" role="group" aria-label="Region filters">
-        <button class="chip active" data-filter="all" aria-pressed="true">All</button>
-        <button class="chip" data-filter="Americas">Americas</button>
-        <button class="chip" data-filter="EMEA">EMEA</button>
-        <button class="chip" data-filter="APAC">APAC</button>
-        <button class="chip" data-filter="LATAM">LATAM</button>
-      </div>
+    <section id="career" class="card" aria-labelledby="career-title">
+      <h2 id="career-title">Career</h2>
+      <div class="grid cols-3">
 
-      <div style="margin-left:auto;display:flex;gap:.75rem;align-items:center;flex-wrap:wrap">
-        <div class="slider-wrap" aria-hidden="false" style="display:flex;flex-direction:column;align-items:flex-end">
-          <label for="yearRange" style="font-weight:700;font-size:.85rem">Jump to year</label>
-          <input id="yearRange" type="range" min="2015" max="2025" value="2023" step="1" aria-label="Year slider" style="width:220px">
-          <div id="yearDisplay" class="muted" style="text-align:right;font-weight:700">2023</div>
+        <div>
+          <article id="role-biocon" style="margin-bottom:1rem">
+            <h3>Assistant Manager – Global Transportation Operations</h3>
+            <div class="muted">Biocon Biologics • Jul 2023 – Aug 2025</div>
+            <ul class="bullets">
+              <li>Managed $4.5M global freight portfolio spanning Americas, EMEA, APAC & LATAM — 96% OTD, 25% cold-chain deviation reduction.</li>
+              <li>Authored Global Transportation Playbook; standardized 15+ operational processes and SOPs across regions.</li>
+            </ul>
+            <div style="margin-top:.5rem">
+              <button class="expand" aria-expanded="false" data-target="biocon-more">Show achievements</button>
+            </div>
+            <div id="biocon-more" class="exp-more">
+              <ul class="bullets">
+                <li>Led SAP ECC LE-TRA/SD UAT for multiple go-lives—zero post-production critical issues.</li>
+                <li>Built KPI dashboards with temperature alerts and customs exception monitoring.</li>
+                <li>Partnered with S&OE for cross-functional launch readiness and surge handling.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article id="role-bulk" style="margin-top:1rem">
+            <h3>Logistics Coordinator</h3>
+            <div class="muted">Bulk Liquid Solutions • May 2022 – Jun 2023</div>
+            <ul class="bullets">
+              <li>Executed multimodal shipments with 100% customs & dangerous-goods (DG) compliance.</li>
+              <li>Controlled freight costs, demurrage exposure and vendor performance metrics.</li>
+            </ul>
+            <div style="margin-top:.5rem">
+              <button class="expand" aria-expanded="false" data-target="bulk-more">Show achievements</button>
+            </div>
+            <div id="bulk-more" class="exp-more">
+              <ul class="bullets">
+                <li>Implemented vendor scorecards and reduced demurrage incidents through improved cutoffs and escalation.</li>
+              </ul>
+            </div>
+          </article>
         </div>
 
-        <div class="icon-toggle" role="radiogroup" aria-label="Icon style">
-          <label style="font-weight:700" id="iconLabel">Icons</label>
-          <label><input type="radio" name="iconset" value="outline" checked> Outline</label>
-          <label><input type="radio" name="iconset" value="solid"> Solid</label>
+        <div>
+          <article style="margin-bottom:1rem">
+            <h3>Key Impact</h3>
+            <ul class="bullets">
+              <li>96% OTD across multi-region shipments</li>
+              <li>25% reduction in cold-chain deviations</li>
+              <li>Global Transportation Playbook rolled out across 5 regions</li>
+              <li>Zero critical post-prod SAP issues after UAT-led go-lives</li>
+            </ul>
+          </article>
+
+          <article style="margin-top:1rem">
+            <h3>Other Roles</h3>
+            <div class="muted">Senior Executive – Client Delivery & Quality (Enventure Engineering) • Terminal Assistant – Operations (IMC Limited)</div>
+            <ul class="bullets">
+              <li>ISO 9001 audits (zero non-conformities), KPI dashboards, improved CSAT.</li>
+              <li>Managed large terminal operations, safety programs and SOP rollouts.</li>
+            </ul>
+          </article>
         </div>
 
-        <button class="btn" id="resetFilters" title="Reset filters">Reset</button>
-        <button class="btn primary" id="exportOnePager" title="Export current filtered items as one-page PDF">Export One-Pager</button>
-      </div>
-    </div>
-
-    <!-- Timeline -->
-    <section id="timeline-section" style="margin-top:1rem">
-      <h2 style="margin-bottom:.5rem">Career Journey — Interactive Timeline</h2>
-      <div class="timeline-wrap card">
-
-        <!-- Vertical timeline container -->
-        <div class="timeline" id="timeline-vertical" aria-hidden="false">
-
-          <!-- Item 1: Biocon -->
-          <article class="timeline-item" data-order="1" data-region="Americas,EMEA,APAC,LATAM" data-year-start="2023" data-year-end="2025" tabindex="0" aria-labelledby="t1">
-            <div class="marker" aria-hidden="true"><span class="dot"></span></div>
-            <h4 id="t1"><span class="icon" data-icon="ship" aria-hidden="true"></span> Assistant Manager – Global Transportation Operations</h4>
-            <div class="meta">Biocon Biologics • Jul 2023 – Aug 2025</div>
-            <p class="summary">Managed a $4.5M global freight portfolio across Americas, EMEA, APAC & LATAM — achieved 96% OTD and drove a 25% reduction in cold-chain deviations.</p>
-            <div style="margin-top:.6rem" class="flex">
-              <button class="expand-btn" aria-expanded="false">Show details</button>
-              <div style="margin-left:auto" class="muted">Regions: Americas • EMEA • APAC • LATAM</div>
-            </div>
-            <div class="more" aria-hidden="true">
-              <ul style="margin-top:.5rem;color:#334155;line-height:1.6">
-                <li>Authored Global Transportation Playbook and standardized 15+ processes.</li>
-                <li>Led SAP ECC LE-TRA/SD UAT for 5 go-lives with zero post-prod critical issues.</li>
-                <li>Built KPI dashboards with temperature & customs alerting.</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Item 2: Bulk Liquid -->
-          <article class="timeline-item" data-order="2" data-region="Americas,APAC" data-year-start="2022" data-year-end="2023" tabindex="0" aria-labelledby="t2">
-            <div class="marker" aria-hidden="true"><span class="dot"></span></div>
-            <h4 id="t2"><span class="icon" data-icon="truck" aria-hidden="true"></span> Logistics Coordinator</h4>
-            <div class="meta">Bulk Liquid Solutions • May 2022 – Jun 2023</div>
-            <p class="summary">Executed multimodal shipments with 100% customs & DG compliance; managed freight costs, demurrage and vendor performance metrics.</p>
-            <div style="margin-top:.6rem" class="flex">
-              <button class="expand-btn" aria-expanded="false">Show details</button>
-              <div style="margin-left:auto" class="muted">Regions: Americas • APAC</div>
-            </div>
-            <div class="more" aria-hidden="true">
-              <ul style="margin-top:.5rem;color:#334155;line-height:1.6">
-                <li>Optimized route selection & vendor scorecards to reduce demurrage and expedite customs clearance.</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Item 3: Enventure -->
-          <article class="timeline-item" data-order="3" data-region="EMEA" data-year-start="2021" data-year-end="2022" tabindex="0" aria-labelledby="t3">
-            <div class="marker" aria-hidden="true"><span class="dot"></span></div>
-            <h4 id="t3"><span class="icon" data-icon="clipboard" aria-hidden="true"></span> Senior Executive – Client Delivery & Quality</h4>
-            <div class="meta">Enventure Engineering • Apr 2021 – Mar 2022</div>
-            <p class="summary">Improved CSAT through proactive client engagement; conducted ISO 9001 audits with zero non-conformities and built KPI dashboards.</p>
-            <div style="margin-top:.6rem" class="flex">
-              <button class="expand-btn" aria-expanded="false">Show details</button>
-              <div style="margin-left:auto" class="muted">Regions: EMEA</div>
-            </div>
-            <div class="more" aria-hidden="true">
-              <ul style="margin-top:.5rem;color:#334155;line-height:1.6">
-                <li>Designed SLA dashboards and structured CAPA workflows for client delivery.</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- Item 4: IMC -->
-          <article class="timeline-item" data-order="4" data-region="APAC" data-year-start="2015" data-year-end="2020" tabindex="0" aria-labelledby="t4">
-            <div class="marker" aria-hidden="true"><span class="dot"></span></div>
-            <h4 id="t4"><span class="icon" data-icon="terminal" aria-hidden="true"></span> Terminal Assistant – Operations</h4>
-            <div class="meta">IMC Limited • Nov 2015 – Aug 2020</div>
-            <p class="summary">Operated a 150K KL terminal with 50,000+ MT/month throughput; achieved a 20-month incident-free safety record and authored 25+ SOPs.</p>
-            <div style="margin-top:.6rem" class="flex">
-              <button class="expand-btn" aria-expanded="false">Show details</button>
-              <div style="margin-left:auto" class="muted">Regions: APAC</div>
-            </div>
-            <div class="more" aria-hidden="true">
-              <ul style="margin-top:.5rem;color:#334155;line-height:1.6">
-                <li>Led safety program and SOP rollout across terminal operations.</li>
-              </ul>
-            </div>
-          </article>
-
-        </div>
-
-        <!-- Horizontal timeline will be populated by JS -->
-        <div class="timeline-h" id="timeline-horizontal" aria-hidden="true" style="display:none"></div>
+        <aside id="contact" style="padding:1rem">
+          <h3>Contact</h3>
+          <p class="muted">📧 <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a><br>📍 Bengaluru, India</p>
+          <div style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap">
+            <a class="btn" href="mailto:vp2194@outlook.com">Email</a>
+            <a class="btn ghost" href="https://linkedin.com/in/vp2194" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </aside>
 
       </div>
     </section>
 
-    <section id="skills" class="card" style="margin-top:1rem">
-      <h3>Core Expertise</h3>
-      <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem">
-        <div class="tag">SAP (ECC, TM, IBP)</div>
-        <div class="tag">Cold-Chain & GDP</div>
-        <div class="tag">Control Tower</div>
-        <div class="tag">UAT & Playbook</div>
-        <div class="tag">Power BI</div>
-        <div class="tag">EXIM & Compliance</div>
+    <section id="impact" class="card" aria-labelledby="impact-title">
+      <h2 id="impact-title">Impact Highlights</h2>
+      <ul class="bullets">
+        <li>Delivered 25% reduction in cold-chain deviations using real-time alerts and playbook remediation processes.</li>
+        <li>Maintained 96% OTD across a $4.5M freight portfolio through vendor governance and control tower visibility.</li>
+        <li>Authored global playbooks and SOPs to align cross-regional operations and compliance (GDP/GxP/SOX).</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="card" aria-labelledby="skills-title">
+      <h2 id="skills-title">Core Expertise & Tools</h2>
+      <div class="tags" role="list">
+        <span class="tag">Cold-Chain & GDP</span>
+        <span class="tag">SAP ECC / LE-TRA / SD</span>
+        <span class="tag">S/4HANA TM, IBP (familiar)</span>
+        <span class="tag">Control Tower & Playbooks</span>
+        <span class="tag">UAT Leadership</span>
+        <span class="tag">Power BI & KPI Dashboards</span>
+        <span class="tag">EXIM, DG, Customs Compliance</span>
+        <span class="tag">Vendor Governance & Cost Control</span>
       </div>
     </section>
 
-    <section id="contact" class="card" style="margin-top:1rem">
-      <h3>Contact</h3>
-      <p class="muted">📧 <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a> • 📞 +91-8807293646 • Bengaluru, India</p>
-      <p style="margin-top:.6rem"><a href="https://linkedin.com/in/vp2194" target="_blank" rel="noopener">LinkedIn</a></p>
+    <section id="certs" class="card" aria-labelledby="certs-title">
+      <h2 id="certs-title">Certifications & Education</h2>
+      <p class="muted">SAP TM • IBP • GTS • Business Network • CSCMP • CILT • ISO 9001 Internal Auditor • Lean Six Sigma • BSc Applied Sciences • PG Diploma in Foreign Trade</p>
     </section>
 
   </main>
 
-  <footer>© 2025 Vishnuprasad N — Interactive timeline & export</footer>
+  <footer>© 2025 Vishnuprasad N — Global Supply Chain Transformation Leader</footer>
 
   <script>
-  (function(){
-    // Respect reduced motion
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Elements collection
-    const timelineItems = Array.from(document.querySelectorAll('.timeline-item'));
-    const chips = Array.from(document.querySelectorAll('.chip'));
-    const yearRange = document.getElementById('yearRange');
-    const yearDisplay = document.getElementById('yearDisplay');
-    const resetBtn = document.getElementById('resetFilters');
-    const exportBtn = document.getElementById('exportOnePager');
-    const iconRadios = Array.from(document.querySelectorAll('input[name="iconset"]'));
-    const timelineVertical = document.getElementById('timeline-vertical');
-    const timelineHorizontal = document.getElementById('timeline-horizontal');
-
-    // Determine min/max year from data attributes
-    let minYear = 9999, maxYear = 0;
-    timelineItems.forEach(it => {
-      const s = Number(it.dataset.yearStart || it.getAttribute('data-year-start') || 0);
-      const e = Number(it.dataset.yearEnd || it.getAttribute('data-year-end') || 0);
-      if(s && s < minYear) minYear = s;
-      if(e && e > maxYear) maxYear = e;
-    });
-    if(!isFinite(minYear) || !isFinite(maxYear)){ minYear = 2015; maxYear = new Date().getFullYear(); }
-    yearRange.min = minYear;
-    yearRange.max = maxYear;
-    yearRange.value = Math.min(maxYear, Math.max(minYear, 2023));
-    yearDisplay.textContent = yearRange.value;
-
-    // Icon sets: maps to simple inline svg path generators for outline and solid
-    const ICONS = {
-      outline: {
-        ship: `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h18M6 7v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7" stroke="#0f172a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-        truck: `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 13h13v-6H3v6zM16 13h3l2 3v1H16v-4zM7 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM19 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" stroke="#0f172a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-        clipboard: `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6v4H9V2zM7 6h10v14H7z" stroke="#0f172a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
-        terminal: `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="6" rx="1" stroke="#0f172a" stroke-width="1.3"/><rect x="3" y="13" width="18" height="8" rx="1" stroke="#0f172a" stroke-width="1.3"/></svg>`
-      },
-      solid: {
-        ship: `<svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 9H3v2h18V9zM5 14v2h14v-2H5z" fill="#0f172a"/></svg>`,
-        truck: `<svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M3 13h13V7H3v6zm13 0h5l2 3v1H16v-4zM7 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="#0f172a"/></svg>`,
-        clipboard: `<svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6v4H9V2zM7 6h10v14H7z" fill="#0f172a"/></svg>`,
-        terminal: `<svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="6" rx="1" fill="#0f172a"/><rect x="3" y="13" width="18" height="8" rx="1" fill="#0f172a"/></svg>`
-      }
-    };
-
-    // Function to render icons based on selected icon set
-    function refreshIcons(set){
-      document.querySelectorAll('.icon').forEach(span=>{
-        const key = span.getAttribute('data-icon') || '';
-        span.innerHTML = ICONS[set][key] || '';
+    // Simple expand/collapse for experience details
+    document.querySelectorAll('.expand').forEach(btn=>{
+      btn.addEventListener('click', (e)=>{
+        const targetId = btn.getAttribute('data-target');
+        const el = document.getElementById(targetId);
+        if(!el) return;
+        const open = el.parentElement.classList.toggle('exp-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Hide achievements' : 'Show achievements';
       });
-    }
-    // Initial icon set
-    refreshIcons('outline');
-
-    // Icon radio listeners
-    iconRadios.forEach(r=>{
-      r.addEventListener('change', ()=> refreshIcons(document.querySelector('input[name="iconset"]:checked').value));
     });
 
-    // Intersection reveal for vertical items
-    if(!reduced){
-      const obs = new IntersectionObserver((entries, o)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
-            const el = entry.target;
-            const order = Number(el.dataset.order || 0);
-            setTimeout(()=> el.classList.add('visible'), Math.max(0,(order-1))*90);
-            o.unobserve(el);
-          }
-        });
-      }, {root:null, rootMargin:'0px 0px -8% 0px', threshold:0.12});
-      timelineItems.forEach(i => obs.observe(i));
-    } else {
-      timelineItems.forEach(i => i.classList.add('visible'));
-    }
+    // Keyboard: toggle with Enter/Space when focused on role container
+    document.querySelectorAll('#career article').forEach(article=>{
+      article.setAttribute('tabindex','0');
+      article.addEventListener('keydown', (e)=> {
+        if(e.key === 'Enter' || e.key === ' ') {
+          const btn = article.querySelector('.expand');
+          if(btn) btn.click();
+        }
+      });
+    });
+  </script>
 
-    // Expand/collapse
-    timelineItems.forEach(item=>{
-      const btn = item.querySelector('.expand-btn');
-      const more = item.querySelector('.more');
-      btn.addEventListener('click', ()=>{
-        const open = item.classL
+</body>
+  </html>
