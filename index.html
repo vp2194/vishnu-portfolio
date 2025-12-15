@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vishnuprasad N — Global Supply Chain Leader</title>
-  <meta name="description" content="Vishnuprasad N — A decade of experience in global supply chain, cold-chain, SAP, control tower. Based in Bengaluru, India." />
+  <title>Vishnuprasad N — Global Supply Chain Transformation Leader</title>
+  <meta name="description" content="Vishnuprasad N — Global Supply Chain Leader with a decade of experience in pharma/biologics and petrochemicals. Expertise in cold-chain operations, SAP transformations, control tower execution, and playbook rollouts." />
+  <meta name="keywords" content="global supply chain leader, cold-chain logistics, SAP ECC LE-TRA, control tower, pharma supply chain, Bengaluru, Vishnuprasad N" />
   <meta name="author" content="Vishnuprasad N" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     :root{
-      --bg:#f8fafc; --card:#ffffff; --navy:#0f172a; --gold:#ca8a04; --muted:#64748b;
-      --accent:#0891b2; --card-shadow:0 14px 40px rgba(2,6,23,0.06); --maxw:1100px;
+      --bg:#f8fafc; --card:#ffffff; --navy:#0f172a; --gold:#d97706; --muted:#64748b;
+      --accent:#0891b2; --card-shadow:0 14px 40px rgba(2,6,23,0.06); --maxw:1200px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
@@ -20,46 +22,66 @@
     a{color:inherit;text-decoration:none}
 
     /* NAV */
-    nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid rgba(15,23,42,0.04);z-index:60}
-    .nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1rem}
-    .nav-name{font-weight:800}
-    .nav-links{display:flex;gap:1rem;align-items:center}
-    .nav-links a{padding:.4rem .6rem;border-radius:8px;font-weight:700;color:var(--muted)}
-    .nav-links a:hover{color:var(--gold);background:rgba(202,138,4,0.06)}
+    nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid rgba(15,23,42,0.04);z-index:60;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+    .nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:.9rem 1rem}
+    .nav-name{font-weight:800;font-size:1.1rem}
+    .nav-links{display:flex;gap:1.2rem;align-items:center}
+    .nav-links a{padding:.5rem .8rem;border-radius:8px;font-weight:700;color:var(--muted);transition:all .2s}
+    .nav-links a:hover{color:var(--gold);background:rgba(202,138,4,0.08)}
 
     /* HERO */
-    header.hero{padding:4.5rem 1.25rem 3rem;text-align:center;background:linear-gradient(180deg,#ffffff,#eef2f7)}
-    .brand{color:var(--gold);letter-spacing:4px;font-weight:800;margin-bottom:.6rem;text-transform:uppercase}
-    h1{font-family:Playfair Display,serif;font-size:clamp(2rem,6vw,3.8rem);margin:.25rem 0}
-    .lead{max-width:70ch;margin:0 auto;color:var(--muted);font-weight:500}
+    header.hero{padding:5.5rem 1.25rem 4rem;text-align:center;background:linear-gradient(180deg,#ffffff 30%,#eef2f7)}
+    .brand{color:var(--gold);letter-spacing:4px;font-weight:800;margin-bottom:.6rem;text-transform:uppercase;font-size:1rem}
+    h1{font-family:Playfair Display,serif;font-size:clamp(2.5rem,7vw,4.5rem);margin:.4rem 0;color:var(--navy)}
+    .lead{max-width:80ch;margin:1rem auto 0;color:var(--muted);font-weight:500;font-size:1.1rem}
 
-    .cta-bar{display:flex;gap:.6rem;justify-content:center;margin-top:1.1rem;flex-wrap:wrap}
-    .btn{padding:.6rem 1rem;border-radius:999px;border:2px solid var(--gold);background:var(--card);font-weight:800;cursor:pointer}
-    .btn.primary{background:var(--gold);color:#fff;border-color:var(--gold)}
-    .btn.ghost{background:transparent;border-color:rgba(15,23,42,0.06)}
+    .cta-bar{display:flex;gap:.8rem;justify-content:center;margin-top:1.8rem;flex-wrap:wrap}
+    .btn{padding:.75rem 1.4rem;border-radius:999px;border:2px solid var(--gold);font-weight:800;cursor:pointer;transition:all .3s;font-size:1rem}
+    .btn.primary{background:var(--gold);color:#fff;border-color:var(--gold);box-shadow:0 4px 12px rgba(217,119,6,0.2)}
+    .btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,119,6,0.3)}
+    .btn.ghost{background:transparent;border-color:rgba(15,23,42,0.1);color:var(--navy)}
+    .btn.ghost:hover{background:rgba(15,23,42,0.04)}
 
     /* LAYOUT */
-    .container{max-width:var(--maxw);margin:0 auto;padding:2rem 1rem}
-    .card{background:var(--card);border-radius:12px;padding:1.25rem;box-shadow:var(--card-shadow);border:1px solid rgba(15,23,42,0.04);margin-bottom:1.25rem}
-    .grid{display:grid;gap:1.25rem}
+    .container{max-width:var(--maxw);margin:0 auto;padding:2.5rem 1rem}
+    .card{background:var(--card);border-radius:16px;padding:2rem;box-shadow:var(--card-shadow);border:1px solid rgba(15,23,42,0.06);margin-bottom:2rem;opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease}
+    .card.visible{opacity:1;transform:translateY(0)}
+
+    .grid{display:grid;gap:2rem}
     @media(min-width:900px){.grid.cols-3{grid-template-columns:2fr 1fr 1fr}}
 
-    h2{font-family:Playfair Display,serif;margin-bottom:.6rem;font-size:1.5rem}
-    h3{margin-bottom:.4rem;font-size:1.05rem}
+    h2{font-family:Playfair Display,serif;margin-bottom:1rem;font-size:2rem;color:var(--navy)}
+    h3{margin-bottom:.6rem;font-size:1.2rem;font-weight:700}
     .muted{color:var(--muted)}
-    .bullets{margin-top:.5rem;padding-left:1.1rem;color:#334155}
+    .bullets{margin-top:.8rem;padding-left:1.4rem;color:#334155}
+    .bullets li{margin-bottom:.4rem}
 
     /* Expand/collapse */
-    .exp-more{max-height:0;overflow:hidden;transition:max-height .36s ease;padding-top:0}
-    .exp-open .exp-more{max-height:380px;padding-top:.6rem}
-    .expand{background:transparent;border:0;color:var(--accent);font-weight:700;cursor:pointer}
+    .exp-more{max-height:0;overflow:hidden;transition:max-height .5s ease;padding-top:0}
+    .exp-open .exp-more{max-height:500px;padding-top:1rem}
+    .expand{background:transparent;border:0;color:var(--accent);font-weight:700;cursor:pointer;font-size:1rem;transition:color .2s}
+    .expand:hover{color:var(--gold)}
 
     /* Skills / tags */
-    .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
-    .tag{padding:.35rem .7rem;border-radius:999px;border:1px solid rgba(15,23,42,0.06);font-weight:700;font-size:.9rem;background:white}
+    .tags{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.2rem}
+    .tag{padding:.5rem 1rem;border-radius:999px;border:1px solid rgba(15,23,42,0.08);font-weight:700;font-size:.95rem;background:#f1f5f9;transition:all .2s}
+    .tag:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
 
-    footer{padding:2rem 1rem;text-align:center;color:var(--muted)}
-    @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+    /* Impact cards */
+    .impact-grid{display:grid;gap:1.5rem;margin-top:1.5rem}
+    @media(min-width:600px){.impact-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}}
+    .impact-card{background:var(--card);border-radius:12px;padding:1.5rem;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.05);border:1px solid rgba(15,23,42,0.06)}
+    .impact-number{font-size:3rem;font-weight:900;color:var(--gold);line-height:1}
+    .impact-desc{margin-top:.8rem;font-weight:600}
+
+    /* Contact icons */
+    .contact-info p{margin-bottom:.6rem}
+    .contact-info a{color:var(--accent);font-weight:600}
+    .contact-info i{margin-right:.5rem;color:var(--gold)}
+
+    footer{padding:3rem 1rem;text-align:center;color:var(--muted);font-size:.95rem;border-top:1px solid rgba(15,23,42,0.08)}
+
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
   </style>
 </head>
 <body>
@@ -82,14 +104,12 @@
     <div class="brand">Global Supply Chain Transformation Leader</div>
     <h1 id="hero-title">Vishnuprasad N</h1>
     <p class="lead">
-      Global Supply Chain leader with <strong>a decade of experience</strong> across pharma/biologics and petrochemicals.
-      Experienced in cold-chain operations, SAP UAT leadership, control-tower execution and playbook rollouts across regions —
-      delivered measurable improvements in OTD and temperature-controlled logistics.
+      Driving multi-million dollar freight portfolios to <strong>96% On-Time Delivery</strong> and <strong>25% reductions in cold-chain deviations</strong> through SAP-led transformations, real-time control tower insights, and standardized global playbooks across pharma/biologics and petrochemicals.
     </p>
 
     <div class="cta-bar" role="region" aria-label="Primary actions">
-      <a class="btn primary" href="#contact">Contact</a>
-      <a class="btn ghost" href="https://linkedin.com/in/vp2194" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn primary" href="#contact">Get in Touch</a>
+      <a class="btn ghost" href="https://linkedin.com/in/vp2194" target="_blank" rel="noopener">LinkedIn Profile</a>
     </div>
   </header>
 
@@ -99,88 +119,87 @@
     <section id="summary" class="card" aria-labelledby="summary-title">
       <h2 id="summary-title">Professional Summary</h2>
       <p class="muted">
-        Global Supply Chain professional with <strong>a decade of experience</strong> driving transportation and logistics
-        excellence across pharma/biologics and petrochemicals. Proven track record managing a <strong>$4.5M multi-region
-        freight portfolio</strong>, achieving <strong>96% On-Time Delivery (OTD)</strong>, and reducing <strong>cold-chain deviations
-        by 25%</strong> through process standardization, control-tower insights, and proactive risk governance.
+        Results-oriented Global Supply Chain leader with <strong>a decade of hands-on experience</strong> delivering operational excellence in transportation and logistics for pharma/biologics and petrochemical sectors. 
+        Proven expertise managing a <strong>$4.5M multi-region freight portfolio</strong>, achieving <strong>96% OTD</strong>, and driving <strong>25% cold-chain deviation reductions</strong> through data-driven governance, playbook standardization, and proactive risk management.
         <br><br>
-        Core expertise includes cold-chain risk management, vendor governance, SAP-led transformations (ECC / LE-TRA / SD),
-        KPI dashboarding, playbook & SOP rollout, and cross-functional launch readiness. Recognized for harmonizing processes
-        across regions and strengthening operational resilience.
+        Specialize in SAP transformations (ECC / LE-TRA / SD), control tower execution, KPI dashboarding, vendor performance optimization, and cross-functional launch readiness — consistently delivering measurable resilience and efficiency gains.
       </p>
     </section>
 
     <!-- CAREER -->
     <section id="career" class="card" aria-labelledby="career-title">
-      <h2 id="career-title">Career</h2>
+      <h2 id="career-title">Career Experience</h2>
 
       <div class="grid cols-3">
 
         <div>
-          <article id="role-biocon" style="margin-bottom:1rem">
+          <article id="role-biocon">
             <h3>Assistant Manager – Global Transportation Operations</h3>
-            <div class="muted">Biocon Biologics • Jul 2023 – Aug 2025</div>
+            <div class="muted">Biocon Biologics • Jul 2023 – Present</div>
             <ul class="bullets">
-              <li>Managed a $4.5M global freight portfolio spanning Americas, EMEA, APAC & LATAM — 96% OTD, 25% cold-chain deviation reduction.</li>
-              <li>Authored Global Transportation Playbook; standardized 15+ operational processes and SOPs across regions.</li>
+              <li>Managed $4.5M global freight portfolio across Americas, EMEA, APAC & LATAM — delivered 96% OTD and 25% cold-chain deviation reduction.</li>
+              <li>Authored and rolled out Global Transportation Playbook; standardized 15+ processes and SOPs across regions.</li>
             </ul>
-            <div style="margin-top:.5rem">
-              <button class="expand" aria-expanded="false" data-target="biocon-more">Show achievements</button>
+            <div style="margin-top:.8rem">
+              <button class="expand" aria-expanded="false" data-target="biocon-more">Show more achievements</button>
             </div>
             <div id="biocon-more" class="exp-more">
               <ul class="bullets">
-                <li>Led SAP ECC LE-TRA/SD UAT for multiple go-lives — zero post-production critical issues.</li>
-                <li>Built KPI dashboards with temperature & customs alerting for real-time control tower visibility.</li>
-                <li>Partnered with S&OE for launch readiness and surge handling during major product rollouts.</li>
+                <li>Led SAP ECC LE-TRA/SD UAT for multiple go-lives — achieved zero critical post-production issues.</li>
+                <li>Designed and implemented KPI dashboards with real-time temperature and customs alerts for control tower visibility.</li>
+                <li>Collaborated with S&OE teams on launch readiness and surge capacity planning for major product introductions.</li>
               </ul>
             </div>
           </article>
 
-          <article id="role-bulk" style="margin-top:1rem">
+          <article id="role-bulk" style="margin-top:2rem">
             <h3>Logistics Coordinator</h3>
             <div class="muted">Bulk Liquid Solutions • May 2022 – Jun 2023</div>
             <ul class="bullets">
-              <li>Executed multimodal shipments with 100% customs & dangerous-goods (DG) compliance.</li>
-              <li>Controlled freight costs, demurrage exposure and vendor performance metrics.</li>
+              <li>Executed multimodal shipments with 100% customs and dangerous goods (DG) compliance.</li>
+              <li>Optimized freight costs, demurrage exposure, and vendor performance through structured governance.</li>
             </ul>
-            <div style="margin-top:.5rem">
-              <button class="expand" aria-expanded="false" data-target="bulk-more">Show achievements</button>
+            <div style="margin-top:.8rem">
+              <button class="expand" aria-expanded="false" data-target="bulk-more">Show more achievements</button>
             </div>
             <div id="bulk-more" class="exp-more">
               <ul class="bullets">
-                <li>Implemented vendor scorecards and reduced demurrage incidents through improved cutoffs and escalation handling.</li>
+                <li>Introduced vendor scorecards and escalation protocols, significantly reducing demurrage incidents.</li>
               </ul>
             </div>
           </article>
         </div>
 
         <div>
-          <article style="margin-bottom:1rem">
-            <h3>Key Impact</h3>
+          <article style="margin-bottom:2rem">
+            <h3>Key Career Impact</h3>
             <ul class="bullets">
-              <li>96% OTD across multi-region shipments</li>
-              <li>25% reduction in cold-chain deviations via KPI-driven alerts & CAPA</li>
-              <li>Global Transportation Playbook rolled out across 5 regions</li>
-              <li>Zero critical post-production SAP issues after rigorous UAT</li>
+              <li>96% On-Time Delivery across multi-region operations</li>
+              <li>25% reduction in cold-chain temperature deviations</li>
+              <li>Global playbook deployment across 5 regions</li>
+              <li>Zero critical issues post SAP go-lives</li>
             </ul>
           </article>
 
-          <article style="margin-top:1rem">
-            <h3>Other Experience</h3>
-            <div class="muted">Senior Executive – Client Delivery & Quality (Enventure Engineering) • Terminal Assistant – Operations (IMC Limited)</div>
+          <article>
+            <h3>Prior Roles</h3>
+            <div class="muted">Senior Executive – Client Delivery & Quality (Enventure Engineering)<br>Terminal Assistant – Operations (IMC Limited)</div>
             <ul class="bullets">
-              <li>ISO 9001 audits (zero non-conformities), KPI dashboards and client delivery improvements.</li>
-              <li>Managed terminal throughput, safety programs and SOP rollouts for large operations.</li>
+              <li>Led ISO 9001 audits with zero non-conformities and built client KPI dashboards.</li>
+              <li>Managed terminal throughput, safety programs, and operational SOP rollouts.</li>
             </ul>
           </article>
         </div>
 
-        <aside id="contact" style="padding:1rem">
+        <aside id="contact" style="padding:1.5rem;background:#f1f5f9;border-radius:12px">
           <h3>Contact</h3>
-          <p class="muted">📧 <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a><br>📍 Bengaluru, India</p>
-          <div style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap">
-            <a class="btn" href="mailto:vp2194@outlook.com">Email</a>
-            <a class="btn ghost" href="https://linkedin.com/in/vp2194" target="_blank" rel="noopener">LinkedIn</a>
+          <div class="contact-info muted">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
+          </div>
+          <div style="margin-top:1.5rem;display:flex;gap:.8rem;flex-wrap:wrap">
+            <a class="btn primary" href="mailto:vp2194@outlook.com">Send Email</a>
+            <a class="btn ghost" href="https://linkedin.com/in/vp2194" target="_blank" rel="noopener">View LinkedIn</a>
           </div>
         </aside>
 
@@ -190,43 +209,52 @@
     <!-- IMPACT -->
     <section id="impact" class="card" aria-labelledby="impact-title">
       <h2 id="impact-title">Impact Highlights</h2>
-      <ul class="bullets">
-        <li>Delivered 25% reduction in cold-chain deviations using real-time alerts and playbook remediation processes.</li>
-        <li>Maintained 96% OTD across a $4.5M freight portfolio through vendor governance and control tower visibility.</li>
-        <li>Authored global playbooks and SOPs to align cross-regional operations and compliance (GDP/GxP/SOX).</li>
-      </ul>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-number">96%</div>
+          <div class="impact-desc">On-Time Delivery across $4.5M multi-region freight portfolio</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">25%</div>
+          <div class="impact-desc">Reduction in cold-chain deviations through real-time alerts & CAPA</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">15+</div>
+          <div class="impact-desc">Processes standardized via Global Transportation Playbook rollout</div>
+        </div>
+      </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="card" aria-labelledby="skills-title">
       <h2 id="skills-title">Core Expertise & Tools</h2>
       <div class="tags" role="list">
-        <span class="tag">Cold-Chain & GDP</span>
-        <span class="tag">SAP ECC / LE-TRA / SD</span>
-        <span class="tag">S/4HANA TM, IBP (familiar)</span>
-        <span class="tag">Control Tower & Playbooks</span>
-        <span class="tag">UAT Leadership</span>
-        <span class="tag">Power BI & KPI Dashboards</span>
-        <span class="tag">EXIM, DG, Customs Compliance</span>
-        <span class="tag">Vendor Governance & Cost Control</span>
+        <span class="tag"><i class="fas fa-snowflake"></i> Cold-Chain & GDP</span>
+        <span class="tag"><i class="fas fa-truck"></i> SAP ECC / LE-TRA / SD</span>
+        <span class="tag"><i class="fas fa-chart-line"></i> S/4HANA TM & IBP (familiar)</span>
+        <span class="tag"><i class="fas fa-tower-broadcast"></i> Control Tower & Playbooks</span>
+        <span class="tag"><i class="fas fa-check-circle"></i> UAT Leadership</span>
+        <span class="tag"><i class="fas fa-chart-bar"></i> Power BI & KPI Dashboards</span>
+        <span class="tag"><i class="fas fa-globe"></i> EXIM, DG, Customs Compliance</span>
+        <span class="tag"><i class="fas fa-handshake"></i> Vendor Governance & Cost Control</span>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS (grouped for impact) -->
+    <!-- CERTIFICATIONS -->
     <section id="certs" class="card" aria-labelledby="certs-title">
       <h2 id="certs-title">Certifications & Education</h2>
 
-      <h3 style="margin-top:.6rem">Global Supply Chain & Logistics Credentials</h3>
-      <p class="muted">CSCMP – Supply Chain Certification • CILT – Logistics & Transport Certification • PG Diploma in Foreign Trade</p>
+      <h3 style="margin-top:1.2rem">Supply Chain & Logistics</h3>
+      <p class="muted">CSCMP Supply Chain Certification • CILT Logistics & Transport • PG Diploma in Foreign Trade</p>
 
-      <h3 style="margin-top:1rem">SAP Certifications</h3>
+      <h3 style="margin-top:1.5rem">SAP Credentials</h3>
       <p class="muted">SAP Transportation Management (TM) • SAP IBP • SAP Global Trade Services (GTS) • SAP Business Network</p>
 
-      <h3 style="margin-top:1rem">Quality, Compliance & Risk Credentials</h3>
+      <h3 style="margin-top:1.5rem">Quality & Compliance</h3>
       <p class="muted">ISO 9001 Internal Auditor • Lean Six Sigma • US FDA FSVP • Global Sanctions & Compliance</p>
 
-      <h3 style="margin-top:1rem">Academic Qualifications</h3>
-      <p class="muted">BSc in Applied Sciences – PSG Tech • PG Diploma in Foreign Trade</p>
+      <h3 style="margin-top:1.5rem">Academic</h3>
+      <p class="muted">BSc Applied Sciences – PSG Tech • PG Diploma in Foreign Trade</p>
     </section>
 
   </main>
@@ -234,27 +262,39 @@
   <footer>© 2025 Vishnuprasad N — Global Supply Chain Transformation Leader</footer>
 
   <script>
-    // Expand/collapse for experience details
-    document.querySelectorAll('.expand').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const targetId = btn.getAttribute('data-target');
-        const el = document.getElementById(targetId);
-        if(!el) return;
-        const wasOpen = el.parentElement.classList.toggle('exp-open');
-        btn.setAttribute('aria-expanded', wasOpen ? 'true' : 'false');
-        btn.textContent = wasOpen ? 'Hide achievements' : 'Show achievements';
+    // Smooth scrolling for nav links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
       });
     });
 
-    // Keyboard: allow Enter/Space to open the expand button when article focused
-    document.querySelectorAll('#career article').forEach(article=>{
-      article.setAttribute('tabindex','0');
-      article.addEventListener('keydown', (e)=>{
-        if(e.key === 'Enter' || e.key === ' '){
-          const btn = article.querySelector('.expand');
-          if(btn){ e.preventDefault(); btn.click(); }
+    // Expand/collapse functionality
+    document.querySelectorAll('.expand').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const el = document.getElementById(targetId);
+        if (!el) return;
+        const parent = el.parentElement;
+        const isOpen = parent.classList.toggle('exp-open');
+        btn.setAttribute('aria-expanded', isOpen);
+        btn.textContent = isOpen ? 'Hide achievements' : 'Show more achievements';
+      });
+    });
+
+    // Fade-in animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
       });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
     });
   </script>
 
