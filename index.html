@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <title>Vishnuprasad N — Global Transportation & Trade Governance</title>
 
@@ -12,41 +12,194 @@
 
 <meta name="author" content="Vishnuprasad N" />
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Open Graph for LinkedIn preview -->
+<meta property="og:title" content="Vishnuprasad N — Global Transportation & Trade Governance" />
+<meta property="og:description" content="$4.5M multi-region freight governance | 96% OTD | 25% deviation reduction | Control Tower & Trade Compliance." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vp2194.github.io/vishnu-portfolio/" />
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
---bg:#f8fafc; --card:#ffffff; --navy:#0f172a; --gold:#d97706; --muted:#64748b;
---accent:#0891b2; --card-shadow:0 14px 40px rgba(2,6,23,0.06); --maxw:1200px;
+--bg:#f8fafc; 
+--card:#ffffff; 
+--navy:#0f172a; 
+--gold:#d97706; 
+--muted:#64748b;
+--accent:#0891b2; 
+--maxw:1100px;
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--navy);line-height:1.6}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--navy);line-height:1.6}
 a{text-decoration:none;color:inherit}
 
-nav{position:sticky;top:0;background:#fff;border-bottom:1px solid rgba(15,23,42,0.05);z-index:50}
-.nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:1rem}
-.nav-links{display:flex;gap:1rem}
-.nav-links a{font-weight:600;color:var(--muted)}
-.nav-links a:hover{color:var(--gold)}
+nav{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid rgba(0,0,0,0.05);
+z-index:50;
+}
 
-.hero{padding:5rem 1.5rem;text-align:center;background:linear-gradient(180deg,#ffffff 30%,#eef2f7)}
-.brand{color:var(--gold);letter-spacing:3px;font-weight:800;margin-bottom:.5rem;text-transform:uppercase}
-h1{font-family:'Playfair Display',serif;font-size:3.5rem;margin:.5rem 0}
-.lead{max-width:800px;margin:1rem auto;color:var(--muted);font-size:1.1rem}
+.nav-inner{
+max-width:var(--maxw);
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1rem;
+flex-wrap:wrap;
+gap:.8rem;
+}
 
-.container{max-width:var(--maxw);margin:0 auto;padding:2rem 1rem}
-.card{background:#fff;border-radius:16px;padding:2rem;box-shadow:var(--card-shadow);margin-bottom:2rem}
-h2{font-family:'Playfair Display',serif;margin-bottom:1rem}
-h3{margin-bottom:.5rem}
+.nav-links{
+display:flex;
+gap:1rem;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+font-weight:600;
+color:var(--muted);
+font-size:.95rem;
+}
+
+.nav-links a:hover{
+color:var(--gold);
+}
+
+.hero{
+padding:4rem 1.5rem;
+text-align:center;
+background:linear-gradient(180deg,#ffffff 30%,#eef2f7);
+}
+
+.brand{
+color:var(--gold);
+letter-spacing:3px;
+font-weight:800;
+text-transform:uppercase;
+font-size:.9rem;
+margin-bottom:.5rem;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.2rem,6vw,3.5rem);
+margin:.5rem 0;
+}
+
+.lead{
+max-width:800px;
+margin:1rem auto;
+color:var(--muted);
+font-size:1.05rem;
+}
+
+.hero-links{
+margin-top:1.2rem;
+display:flex;
+gap:1rem;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:.6rem 1.2rem;
+border-radius:999px;
+font-weight:600;
+border:2px solid var(--gold);
+transition:.2s;
+}
+
+.btn.primary{
+background:var(--gold);
+color:#fff;
+}
+
+.btn.primary:hover{
+background:#b45309;
+}
+
+.btn.ghost{
+background:transparent;
+color:var(--navy);
+border-color:rgba(0,0,0,0.1);
+}
+
+.btn.ghost:hover{
+background:rgba(0,0,0,0.05);
+}
+
+.container{
+max-width:var(--maxw);
+margin:0 auto;
+padding:2rem 1rem;
+}
+
+.card{
+background:#fff;
+border-radius:14px;
+padding:1.8rem;
+margin-bottom:1.8rem;
+box-shadow:0 10px 25px rgba(0,0,0,0.04);
+}
+
+h2{
+font-family:'Playfair Display',serif;
+margin-bottom:1rem;
+font-size:1.7rem;
+}
+
+h3{
+margin-top:1rem;
+margin-bottom:.3rem;
+font-size:1.05rem;
+}
+
 .muted{color:var(--muted)}
-.bullets{padding-left:1.2rem;margin-top:.5rem}
-.bullets li{margin-bottom:.4rem}
 
-.impact-grid{display:grid;gap:1.5rem}
-@media(min-width:700px){.impact-grid{grid-template-columns:repeat(2,1fr)}}
-.impact-card{text-align:center;padding:1.5rem;border:1px solid rgba(15,23,42,0.05);border-radius:12px}
-.impact-number{font-size:2.8rem;font-weight:900;color:var(--gold)}
-footer{text-align:center;padding:2rem;color:var(--muted)}
+.bullets{
+padding-left:1.2rem;
+margin-top:.5rem;
+}
+
+.bullets li{
+margin-bottom:.4rem;
+}
+
+.impact-grid{
+display:grid;
+gap:1rem;
+}
+
+@media(min-width:600px){
+.impact-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+.impact-card{
+text-align:center;
+padding:1.5rem;
+border:1px solid rgba(0,0,0,0.05);
+border-radius:12px;
+}
+
+.impact-number{
+font-size:2.5rem;
+font-weight:800;
+color:var(--gold);
+}
+
+footer{
+text-align:center;
+padding:2rem;
+font-size:.9rem;
+color:var(--muted);
+}
 </style>
 </head>
 
@@ -68,11 +221,17 @@ footer{text-align:center;padding:2rem;color:var(--muted)}
 <header class="hero">
 <div class="brand">Global Transportation & Trade Governance</div>
 <h1>Vishnuprasad N</h1>
+
 <p class="lead">
 Managing a <strong>$4.5M multi-region freight portfolio</strong> delivering 
 <strong>96% on-time performance</strong> and driving 
 <strong>25% reduction in temperature deviations</strong> through structured escalation governance, vendor performance control, and SAP-enabled control tower execution across regulated and industrial supply networks.
 </p>
+
+<div class="hero-links">
+<a class="btn primary" href="mailto:vp2194@outlook.com">Contact Me</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/vp2194" target="_blank">LinkedIn Profile</a>
+</div>
 </header>
 
 <main class="container">
@@ -93,10 +252,8 @@ Experienced in SAP ECC (SD, LE-TRA), export controls, sanctions screening, HS cl
 <ul class="bullets">
 <li>Owned governance of a $4.5M global freight portfolio across five regions.</li>
 <li>Delivered 96% OTD and reduced temperature deviations by 25% through escalation trigger standardization and vendor KPI control.</li>
-<li>Governed 5 freight forwarders and 2 temperature-control providers via structured SLA frameworks and QBR reviews.</li>
+<li>Governed 5 freight forwarders and 2 temperature-control providers via SLA frameworks and QBR reviews.</li>
 </ul>
-
-<br>
 
 <h3>Logistics Coordinator – International EXIM</h3>
 <div class="muted">Bulk Liquid Solutions • 2022 – 2023</div>
@@ -104,8 +261,6 @@ Experienced in SAP ECC (SD, LE-TRA), export controls, sanctions screening, HS cl
 <li>Managed multimodal petrochemical shipments with full DG and customs compliance.</li>
 <li>Validated HS codes, export documentation, and carrier performance governance.</li>
 </ul>
-
-<br>
 
 <h3>Senior Executive – Operations & Quality Governance</h3>
 <div class="muted">Enventure Engineering • 2019 – 2022</div>
@@ -120,19 +275,19 @@ Experienced in SAP ECC (SD, LE-TRA), export controls, sanctions screening, HS cl
 <div class="impact-grid">
 <div class="impact-card">
 <div class="impact-number">96%</div>
-<div>On-Time Delivery across multi-region freight portfolio</div>
+<div>On-Time Delivery</div>
 </div>
 <div class="impact-card">
 <div class="impact-number">25%</div>
-<div>Reduction in temperature deviations</div>
+<div>Temperature Deviation Reduction</div>
+</div>
+<div class="impact-card">
+<div class="impact-number">$4.5M</div>
+<div>Freight Portfolio Governance</div>
 </div>
 <div class="impact-card">
 <div class="impact-number">100%</div>
-<div>DG & customs compliance in multimodal shipments</div>
-</div>
-<div class="impact-card">
-<div class="impact-number">0</div>
-<div>ISO 9001 non-conformities</div>
+<div>DG & Customs Compliance</div>
 </div>
 </div>
 </section>
@@ -141,11 +296,11 @@ Experienced in SAP ECC (SD, LE-TRA), export controls, sanctions screening, HS cl
 <h2>Industry Knowledge Initiative</h2>
 <p class="muted">
 <strong>SCM Simplified</strong> — A professional learning initiative focused on simplifying global transportation governance, trade compliance, and control tower frameworks for supply chain professionals.
-<br><br>
-Develops structured explainers on escalation architecture, KPI threshold logic, vendor performance governance, and multimodal logistics strategy — translating operational complexity into practical decision frameworks.
 </p>
 <p style="margin-top:1rem;">
-<a href="https://www.linkedin.com/in/scmsimplified-learn" target="_blank" style="color:var(--accent);font-weight:600;">View SCM Simplified on LinkedIn →</a>
+<a href="https://www.linkedin.com/in/scmsimplified-learn" target="_blank" style="color:var(--accent);font-weight:600;">
+View SCM Simplified →
+</a>
 </p>
 </section>
 
@@ -153,7 +308,7 @@ Develops structured explainers on escalation architecture, KPI threshold logic, 
 <h2>Contact</h2>
 <p>Email: <a href="mailto:vp2194@outlook.com">vp2194@outlook.com</a></p>
 <p>Location: Bengaluru, India</p>
-<p><a href="https://linkedin.com/in/vp2194" target="_blank">LinkedIn Profile</a></p>
+<p><a href="https://www.linkedin.com/in/vp2194" target="_blank">Main LinkedIn Profile</a></p>
 </section>
 
 </main>
