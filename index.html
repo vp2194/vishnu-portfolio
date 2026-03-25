@@ -6,99 +6,136 @@
 
 <title>Vishnuprasad N | Transportation Governance</title>
 
-<meta name="description" content="Global Transportation & Trade Governance professional managing $4.5M freight portfolio with 96% OTD and 25% deviation reduction through execution control frameworks." />
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body{
 font-family:Inter,sans-serif;
 margin:0;
-background:linear-gradient(180deg,#0f172a,#020617);
+background:
+radial-gradient(circle at 20% 20%, rgba(245,158,11,0.15), transparent 40%),
+radial-gradient(circle at 80% 30%, rgba(14,165,233,0.12), transparent 40%),
+linear-gradient(180deg,#020617,#020617);
 color:#e2e8f0;
 }
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:2.5rem 1.2rem;
+padding:1.5rem 1rem;
 }
 
 /* HERO */
 .hero{
-display:flex;
-align-items:center;
-justify-content:flex-start;
-gap:2rem;
-flex-wrap:wrap;
 margin-bottom:2rem;
+padding:1.2rem;
+border-radius:16px;
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(16px);
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
-.hero img{
-width:130px;
-height:130px;
+.hero-wrap{
+display:flex;
+align-items:center;
+gap:1rem;
+}
+
+.hero-img{
+width:72px;
+height:72px;
 border-radius:50%;
 object-fit:cover;
-padding:4px;
-background:linear-gradient(135deg,#1e293b,#334155);
-box-shadow:0 8px 25px rgba(0,0,0,0.6);
-filter:saturate(0.95) contrast(1.05);
+border:2px solid rgba(255,255,255,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.7);
+transition:.3s;
+}
+
+.hero-img:hover{
+transform:scale(1.05);
 }
 
 .hero-text h1{
-font-size:2.2rem;
-font-weight:700;
+font-size:1.5rem;
 margin:0;
 }
 
-.hero-text p{
-margin-top:.4rem;
+.hero-sub{
+font-size:.85rem;
 color:#94a3b8;
+margin-top:.2rem;
+}
+
+.hero-metrics{
+font-size:.8rem;
+color:#f59e0b;
+margin-top:.3rem;
+}
+
+/* DESKTOP */
+@media(min-width:768px){
+.hero-img{width:120px;height:120px;}
+.hero-text h1{font-size:2.2rem;}
+.hero-sub{font-size:1rem;}
+.hero-metrics{font-size:.95rem;}
 }
 
 /* CARD */
 .card{
-background:rgba(255,255,255,0.04);
-backdrop-filter:blur(10px);
-padding:1.6rem;
-border-radius:14px;
-margin-bottom:1.6rem;
-border:1px solid rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(18px);
+padding:1.4rem;
+border-radius:16px;
+margin-bottom:1.4rem;
+border:1px solid rgba(255,255,255,0.06);
+box-shadow:0 8px 25px rgba(0,0,0,0.5);
+transition:.25s ease;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 35px rgba(0,0,0,0.7);
+border:1px solid rgba(245,158,11,0.25);
 }
 
 h2{
-font-size:1.3rem;
-margin-bottom:.6rem;
-color:#f8fafc;
+font-size:1.2rem;
+margin-bottom:.5rem;
 }
 
 .muted{
 color:#94a3b8;
+font-size:.9rem;
 }
 
 /* IMPACT */
 .impact{
 display:grid;
-gap:1rem;
-margin-top:1rem;
+gap:.8rem;
+margin-top:.8rem;
 }
 
 @media(min-width:600px){
-.impact{
-grid-template-columns:repeat(4,1fr);
-}
+.impact{grid-template-columns:repeat(4,1fr);}
 }
 
 .box{
-background:rgba(255,255,255,0.05);
-padding:1.2rem;
+background:rgba(255,255,255,0.04);
+padding:1rem;
 border-radius:12px;
 text-align:center;
-border:1px solid rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.06);
+transition:.25s;
+}
+
+.box:hover{
+transform:scale(1.03);
+border:1px solid rgba(245,158,11,0.4);
 }
 
 .big{
-font-size:1.9rem;
+font-size:1.7rem;
 font-weight:700;
 color:#f59e0b;
 }
@@ -106,30 +143,38 @@ color:#f59e0b;
 /* FLOW */
 .flow{
 display:grid;
-gap:.8rem;
-margin-top:1rem;
+gap:.6rem;
+margin-top:.8rem;
 }
 
 .step{
-background:rgba(255,255,255,0.05);
-padding:.8rem 1rem;
-border-radius:8px;
+background:rgba(255,255,255,0.04);
+padding:.7rem .9rem;
+border-radius:10px;
 border-left:3px solid #f59e0b;
-position:relative;
+font-size:.9rem;
+transition:.2s;
+}
+
+.step:hover{
+background:rgba(245,158,11,0.08);
 }
 
 .step strong{
 display:block;
-color:#f8fafc;
+font-size:.85rem;
+color:#e2e8f0;
 }
 
-.step::after{
-content:"→";
-position:absolute;
-right:12px;
-top:50%;
-transform:translateY(-50%);
-color:#64748b;
+/* LINKS */
+a{
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
+}
+
+a:hover{
+text-decoration:underline;
 }
 </style>
 </head>
@@ -140,118 +185,81 @@ color:#64748b;
 
 <!-- HERO -->
 <section class="hero">
-<img src="profile.jpg" alt="Vishnuprasad N">
+<div class="hero-wrap">
+
+<img src="./profile.jpg" alt="Vishnuprasad N" class="hero-img">
 
 <div class="hero-text">
 <h1>Vishnuprasad N</h1>
-<p>Transportation Governance | $4.5M Portfolio | 96% OTD | 25% Deviation Reduction</p>
+<p class="hero-sub">Global Transportation Governance</p>
+<p class="hero-metrics">$4.5M Portfolio • 96% OTD • 25% Deviation Reduction</p>
+</div>
+
 </div>
 </section>
 
 <!-- IMPACT -->
 <div class="card">
 <h2>Impact</h2>
-<p class="muted">Global transportation execution across regulated supply chains</p>
+<p class="muted">Execution across regulated global supply chains</p>
 
 <div class="impact">
 <div class="box"><div class="big">96%</div>On-Time Delivery</div>
 <div class="box"><div class="big">25%</div>Deviation Reduction</div>
 <div class="box"><div class="big">$4.5M</div>Freight Portfolio</div>
-<div class="box"><div class="big">100%</div>Compliance Reliability</div>
+<div class="box"><div class="big">100%</div>Compliance</div>
 </div>
 </div>
 
-<!-- EXECUTION ENVIRONMENT -->
+<!-- EXECUTION -->
 <div class="card">
 <h2>Execution Environment</h2>
-<p class="muted">Operating within regulated, compliance-critical global supply chains</p>
 
 <div class="flow">
-<div class="step">
-<strong>Regulatory Frameworks</strong>
-GDP, GxP, SOX compliance across biopharma and cold-chain logistics
-</div>
-
-<div class="step">
-<strong>Trade Compliance</strong>
-Export controls, sanctions screening, HS classification, US/EU regulatory alignment
-</div>
-
-<div class="step">
-<strong>System Layer</strong>
-SAP ECC (SD, LE-TRA, MM) with GTS exposure across classification, legal control, and compliance validation
-</div>
-
-<div class="step">
-<strong>Execution Governance</strong>
-S&OE participation, deviation management, audit readiness, and CAPA-driven control systems
-</div>
+<div class="step"><strong>Regulatory</strong>GDP, GxP, SOX</div>
+<div class="step"><strong>Trade</strong>Sanctions, HS, export control</div>
+<div class="step"><strong>Systems</strong>SAP ECC + GTS</div>
+<div class="step"><strong>Governance</strong>S&OE, CAPA, audit</div>
 </div>
 </div>
 
-<!-- FRAMEWORK 1 -->
+<!-- FRAMEWORK -->
 <div class="card">
-<h2>Escalation & Execution Control</h2>
-<p class="muted">Execution stability is driven by structured escalation, not visibility.</p>
+<h2>Escalation Control</h2>
 
 <div class="flow">
-<div class="step"><strong>Trigger</strong>Delay, temperature, documentation, customs</div>
-<div class="step"><strong>Classification</strong>Severity tiers based on impact</div>
-<div class="step"><strong>Ownership</strong>Defined responsibility across teams</div>
-<div class="step"><strong>Decision SLA</strong>Time-bound response windows</div>
-<div class="step"><strong>Recovery</strong>Pre-defined corrective actions</div>
-<div class="step"><strong>Feedback</strong>CAPA into SOPs and vendor governance</div>
+<div class="step"><strong>Trigger</strong>Delay, temperature</div>
+<div class="step"><strong>Classify</strong>Severity tiers</div>
+<div class="step"><strong>Own</strong>Accountability</div>
+<div class="step"><strong>Act</strong>Recovery</div>
 </div>
 </div>
 
-<!-- FRAMEWORK 2 -->
-<div class="card">
-<h2>Cost–Service–Risk Decision Model</h2>
-<p class="muted">All transportation decisions operate within constraint trade-offs.</p>
-
-<div class="flow">
-<div class="step"><strong>Inputs</strong>Capacity, urgency, regulatory constraints</div>
-<div class="step"><strong>Decision</strong>Mode, route, carrier selection</div>
-<div class="step"><strong>Risk Layer</strong>Temperature, customs, infrastructure</div>
-<div class="step"><strong>Output</strong>Optimized cost vs service vs compliance</div>
-</div>
-</div>
-
-<!-- SCM SIMPLIFIED -->
+<!-- SCM -->
 <div class="card">
 <h2>SCMsimplified</h2>
 
-<p class="muted"><strong>Transportation Governance & Execution Systems Simplified</strong></p>
-
-<p class="muted">Built by a Global Transportation Control Tower Practitioner</p>
-
-<p class="muted" style="margin-top:.8rem;">
-Based on real-world execution:<br>
-<strong>$4.5M freight portfolio | 96% OTD | 25% deviation reduction</strong>
-</p>
-
-<div class="flow" style="margin-top:1rem;">
-<div class="step"><strong>Decision Frameworks</strong>Structured models for transportation and trade decisions</div>
-<div class="step"><strong>Execution Case Breakdowns</strong>Real-world escalation and deviation scenarios</div>
-<div class="step"><strong>Control Tower Operating Models</strong>Designing governance and execution systems</div>
+<div class="flow">
+<div class="step"><strong>Frameworks</strong>Decision models</div>
+<div class="step"><strong>Cases</strong>Execution breakdowns</div>
+<div class="step"><strong>Models</strong>Control tower design</div>
 </div>
 
-<p style="margin-top:1rem;">
+<p style="margin-top:.8rem;">
 <a href="https://www.linkedin.com/in/scmsimplified-learn" target="_blank">
-LinkedIn → scmsimplified-learn
+View →
 </a>
 </p>
-
 </div>
 
 <!-- CONTACT -->
 <div class="card">
 <h2>Contact</h2>
 <p>Email: vp2194@outlook.com</p>
-<p><a href="https://www.linkedin.com/in/vp2194" target="_blank">LinkedIn</a></p>
+<p><a href="https://www.linkedin.com/in/vp2194">LinkedIn</a></p>
 </div>
 
 </div>
 
 </body>
-                    </html>
+</html>
