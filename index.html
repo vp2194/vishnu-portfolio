@@ -14,95 +14,136 @@
 body{
 font-family:Inter,sans-serif;
 margin:0;
-background:#f8fafc;
-color:#0f172a;
+background:linear-gradient(180deg,#0f172a,#020617);
+color:#e2e8f0;
 }
 
 .container{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
-padding:2rem 1rem;
+padding:2.5rem 1.2rem;
 }
 
-.card{
-background:#fff;
-padding:1.5rem;
-border-radius:12px;
-margin-bottom:1.5rem;
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
+/* HERO */
+.hero{
+display:flex;
+align-items:center;
+justify-content:flex-start;
+gap:2rem;
+flex-wrap:wrap;
+margin-bottom:2rem;
 }
 
-h1{text-align:center}
-h2{margin-bottom:.5rem}
-
-.muted{color:#64748b}
-
-.impact{
-display:grid;
-gap:1rem;
+.hero img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid rgba(255,255,255,0.2);
 }
 
-@media(min-width:600px){
-.impact{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-.box{
-text-align:center;
-padding:1rem;
-border:1px solid #eee;
-border-radius:10px;
-}
-
-.big{
-font-size:2rem;
+.hero-text h1{
+font-size:2.2rem;
 font-weight:700;
-color:#d97706;
+margin:0;
 }
 
-/* FLOW */
-.flow{
+.hero-text p{
+margin-top:.4rem;
+color:#94a3b8;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(10px);
+padding:1.6rem;
+border-radius:14px;
+margin-bottom:1.6rem;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+h2{
+font-size:1.3rem;
+margin-bottom:.6rem;
+color:#f8fafc;
+}
+
+.muted{
+color:#94a3b8;
+}
+
+/* IMPACT */
+.impact{
 display:grid;
 gap:1rem;
 margin-top:1rem;
 }
 
+@media(min-width:600px){
+.impact{
+grid-template-columns:repeat(4,1fr);
+}
+}
+
+.box{
+background:rgba(255,255,255,0.05);
+padding:1.2rem;
+border-radius:12px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.big{
+font-size:1.9rem;
+font-weight:700;
+color:#f59e0b;
+}
+
+/* FLOW */
+.flow{
+display:grid;
+gap:.8rem;
+margin-top:1rem;
+}
+
 .step{
-border-left:4px solid #d97706;
+background:rgba(255,255,255,0.05);
 padding:.8rem 1rem;
-background:#f9fafb;
-border-radius:6px;
+border-radius:8px;
+border-left:3px solid #f59e0b;
 position:relative;
 }
 
 .step strong{
 display:block;
-margin-bottom:.2rem;
+color:#f8fafc;
 }
 
 .step::after{
 content:"→";
 position:absolute;
-right:10px;
+right:12px;
 top:50%;
 transform:translateY(-50%);
-color:#94a3b8;
-font-weight:700;
+color:#64748b;
 }
 </style>
 </head>
 
 <body>
 
-<section class="container">
-<h1>Vishnuprasad N</h1>
-<p class="muted" style="text-align:center">
-Transportation Governance | $4.5M Portfolio | 96% OTD | 25% Deviation Reduction
-</p>
-</section>
-
 <div class="container">
+
+<!-- HERO -->
+<section class="hero">
+<img src="profile.jpg" alt="Vishnuprasad N">
+
+<div class="hero-text">
+<h1>Vishnuprasad N</h1>
+<p>Transportation Governance | $4.5M Portfolio | 96% OTD | 25% Deviation Reduction</p>
+</div>
+</section>
 
 <!-- IMPACT -->
 <div class="card">
@@ -182,4 +223,4 @@ LinkedIn → scmsimplified-learn
 </div>
 
 </body>
-</html>
+  </html>
